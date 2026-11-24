@@ -1,0 +1,211 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024">
+  <title>A sunny corner bakery</title>
+  <desc>A cheerful pastel bakery with striped awning, cakes in the window, bicycle, flowers, cat, bunting, clouds and smiling sun.</desc>
+
+  <rect id="sky" x="0" y="0" width="1024" height="1024" fill="#79d5f4" />
+  <rect id="ground" x="0" y="870" width="1024" height="154" fill="#ffd4c7" />
+
+  <g id="sun">
+    <circle id="sun-disc" cx="872" cy="145" r="70" fill="#ffdf5c" />
+    <rect id="sun-ray-top" x="879" y="12" width="14" height="42" rx="7" fill="#ffda4d" />
+    <rect id="sun-ray-left" x="757" y="120" width="42" height="14" rx="7" fill="#ffda4d" />
+    <rect id="sun-ray-right" x="951" y="130" width="42" height="14" rx="7" fill="#ffda4d" />
+    <rect id="sun-ray-diag-one" x="793" y="55" width="14" height="40" rx="7" transform="rotate(-43 800 75)" fill="#ffda4d" />
+    <rect id="sun-ray-diag-two" x="938" y="54" width="14" height="40" rx="7" transform="rotate(43 945 74)" fill="#ffda4d" />
+    <rect id="sun-ray-low-left" x="784" y="188" width="14" height="42" rx="7" transform="rotate(46 791 209)" fill="#ffda4d" />
+    <rect id="sun-ray-low-right" x="943" y="190" width="14" height="42" rx="7" transform="rotate(-43 950 211)" fill="#ffda4d" />
+    <circle id="sun-eye-a" cx="850" cy="130" r="8" fill="#60402f" />
+    <circle id="sun-eye-b" cx="909" cy="130" r="8" fill="#60402f" />
+    <path id="sun-smile" d="M868 138 Q873 153 884 153 Q895 153 899 138" fill="none" stroke="#60402f" stroke-width="8" stroke-linecap="round" />
+    <circle id="sun-cheek-a" cx="835" cy="145" r="11" fill="#f59aab" />
+    <circle id="sun-cheek-b" cx="924" cy="145" r="11" fill="#f59aab" />
+  </g>
+
+  <g id="clouds" fill="#fffaf4">
+    <path id="cloud-left" d="M35 115 C35 90 53 73 78 73 C84 73 89 74 94 76 C101 51 119 35 145 35 C169 35 188 49 195 73 C202 70 209 69 216 70 C237 72 253 90 253 111 C253 136 234 153 211 153 L76 153 C52 153 35 137 35 115Z" />
+    <path id="cloud-right" d="M573 76 C573 57 587 45 606 45 C608 30 627 19 650 19 C675 19 692 34 697 51 C713 48 725 61 725 77 C725 94 711 107 694 107 L607 107 C588 107 573 94 573 76Z" />
+    <path id="cloud-small" d="M36 758 C36 742 48 731 64 731 C69 718 80 711 94 711 C111 711 123 721 126 735 C139 732 151 741 151 755 C151 769 140 779 125 779 L62 779 C47 779 36 770 36 758Z" />
+  </g>
+
+  <g id="bakery-building">
+    <path id="shop-body" d="M171 312 L480 112 L790 312 L790 890 L165 890Z" fill="#fff0d8" />
+    <path id="roof-pink" d="M158 274 L261 155 L377 155 L480 100 L789 288 Q799 301 787 317 L774 328 L480 140 L188 332 Q158 333 158 303Z" fill="#ef5c91" />
+    <path id="roof-light" d="M199 312 L480 140 L760 312 L760 335 L200 335Z" fill="#fff5df" />
+    <path id="chimney" d="M634 133 L705 133 L705 250 L634 250Z" fill="#a86c42" />
+    <rect id="chimney-cap" x="623" y="132" width="92" height="35" rx="10" fill="#fff3dc" />
+  </g>
+
+  <g id="upper-window">
+    <path id="upper-window-frame" d="M421 310 L421 218 Q421 165 480 140 Q539 165 539 218 L539 310Z" fill="#76cdf0" />
+    <rect id="upper-window-bar-v" x="474" y="153" width="12" height="157" fill="#fff4df" />
+    <rect id="upper-window-bar-h" x="423" y="216" width="114" height="12" fill="#fff4df" />
+  </g>
+
+  <g id="bunting">
+    <path id="bunting-rope" d="M735 327 Q865 379 1004 328" fill="none" stroke="#9c613c" stroke-width="8" stroke-linecap="round" />
+    <path id="flag-yellow" d="M770 342 L830 356 L806 407 Q800 418 793 406Z" fill="#ffdc50" />
+    <path id="flag-pink" d="M842 359 L900 367 L875 416 Q869 426 863 414Z" fill="#ef6d9d" />
+    <path id="flag-purple" d="M914 363 L985 344 L972 402 Q967 416 956 405Z" fill="#b59be9" />
+  </g>
+
+  <g id="awning">
+    <path id="awning-top" d="M170 333 L790 333 L807 425 L162 425Z" fill="#fff8ea" />
+    <path id="awning-pink-one" d="M170 333 L286 333 L257 449 Q251 478 215 478 Q169 478 165 438Z" fill="#ed578d" />
+    <path id="awning-pink-two" d="M365 333 L444 333 L439 449 Q434 478 397 478 Q353 478 347 437Z" fill="#ed578d" />
+    <path id="awning-pink-three" d="M525 333 L606 333 L622 438 Q623 478 579 478 Q537 478 532 448Z" fill="#ed578d" />
+    <path id="awning-pink-four" d="M711 333 L790 333 L807 426 Q810 478 763 478 Q723 478 716 444Z" fill="#ed578d" />
+    <path id="awning-cream-one" d="M286 333 L365 333 L347 438 Q343 478 302 478 Q264 478 257 449Z" fill="#fff7e9" />
+    <path id="awning-cream-two" d="M444 333 L525 333 L532 448 Q530 478 486 478 Q443 478 439 449Z" fill="#fff7e9" />
+    <path id="awning-cream-three" d="M606 333 L711 333 L716 444 Q710 478 675 478 Q629 478 622 438Z" fill="#fff7e9" />
+  </g>
+
+  <g id="front-window">
+    <rect id="window-blue" x="394" y="490" width="359" height="237" rx="39" fill="#76d5f5" />
+    <rect id="window-shelf-top" x="401" y="627" width="346" height="18" rx="9" fill="#ac7040" />
+    <rect id="window-shelf-bottom" x="401" y="705" width="346" height="18" rx="9" fill="#ac7040" />
+    <path id="cake" d="M438 552 Q447 540 460 548 Q473 537 486 548 Q499 538 512 548 Q526 538 540 551 L570 551 L570 581 Q566 592 552 592 L453 592 Q438 590 438 578Z" fill="#fff2d8" />
+    <path id="cake-cream" d="M438 569 Q450 582 462 569 Q475 582 488 569 Q501 582 514 569 Q527 582 540 569 Q553 582 570 569 L570 590 Q566 599 552 599 L454 599 Q438 596 438 584Z" fill="#d88c4e" />
+    <circle id="berry-one" cx="476" cy="540" r="14" fill="#ed5984" />
+    <circle id="berry-two" cx="510" cy="538" r="14" fill="#ed5984" />
+    <circle id="berry-three" cx="541" cy="543" r="14" fill="#ed5984" />
+    <circle id="berry-leaf-one" cx="474" cy="526" r="6" fill="#69b557" />
+    <circle id="berry-leaf-two" cx="508" cy="523" r="6" fill="#69b557" />
+    <circle id="berry-leaf-three" cx="539" cy="528" r="6" fill="#69b557" />
+    <path id="cake-stand" d="M487 598 L522 598 L522 621 Q522 629 534 630 L534 638 L475 638 L475 630 Q487 629 487 621Z" fill="#fff5dd" />
+    <path id="croissant" d="M631 697 Q638 663 672 659 Q711 654 733 696 Q720 713 704 711 Q686 707 674 697 Q660 710 646 710Z" fill="#f7b33e" />
+    <path id="croissant-light" d="M658 690 Q668 667 683 665 L678 698 M690 664 Q704 675 709 698" fill="none" stroke="#ffd56a" stroke-width="8" stroke-linecap="round" />
+    <ellipse id="bread" cx="478" cy="691" rx="61" ry="29" fill="#f6b53f" />
+    <path id="bread-cut-a" d="M454 669 L462 691" fill="none" stroke="#ffe1a0" stroke-width="8" stroke-linecap="round" />
+    <path id="bread-cut-b" d="M480 665 L487 690" fill="none" stroke="#ffe1a0" stroke-width="8" stroke-linecap="round" />
+    <path id="bread-cut-c" d="M506 667 L512 689" fill="none" stroke="#ffe1a0" stroke-width="8" stroke-linecap="round" />
+    <ellipse id="bun" cx="586" cy="689" rx="38" ry="30" fill="#e9a13f" />
+    <path id="bun-cut" d="M570 674 L601 701 M601 674 L570 701" fill="none" stroke="#ffe2aa" stroke-width="7" stroke-linecap="round" />
+    <g id="cupcake-display">
+      <path id="cupcake-pink" d="M597 587 Q600 565 627 564 Q654 565 658 588 L650 635 L606 635Z" fill="#f05f98" />
+      <path id="cupcake-icing" d="M595 586 Q597 570 609 568 Q614 551 628 559 Q640 548 649 565 Q661 568 661 584 Q656 592 646 585 Q636 599 625 586 Q614 599 606 586 Q600 592 595 586Z" fill="#ffd8df" />
+      <circle id="cupcake-cherry" cx="628" cy="559" r="10" fill="#ee6b8f" />
+      <circle id="cupcake-dot-a" cx="613" cy="579" r="4" fill="#fff9e8" />
+      <circle id="cupcake-dot-b" cx="631" cy="574" r="4" fill="#fff9e8" />
+      <circle id="cupcake-dot-c" cx="646" cy="581" r="4" fill="#fff9e8" />
+    </g>
+    <g id="cupcake-display-two">
+      <path id="cupcake-lilac" d="M676 589 Q680 568 706 568 Q733 568 738 589 L730 635 L686 635Z" fill="#a990dc" />
+      <path id="cupcake-lilac-icing" d="M673 587 Q675 572 689 570 Q695 554 707 562 Q720 551 728 568 Q740 571 741 585 Q735 595 726 587 Q716 600 705 588 Q694 599 685 587 Q679 594 673 587Z" fill="#fff1dc" />
+      <circle id="cupcake-lilac-cherry" cx="707" cy="561" r="10" fill="#ee6b8f" />
+      <circle id="cupcake-lilac-dot-a" cx="691" cy="580" r="4" fill="#ef9bb2" />
+      <circle id="cupcake-lilac-dot-b" cx="710" cy="576" r="4" fill="#ffda55" />
+      <circle id="cupcake-lilac-dot-c" cx="725" cy="583" r="4" fill="#77c8e7" />
+    </g>
+    <path id="window-glint-one" d="M657 535 L678 511" fill="none" stroke="#fffdf3" stroke-width="11" stroke-linecap="round" />
+    <path id="window-glint-two" d="M688 535 L710 511" fill="none" stroke="#fffdf3" stroke-width="11" stroke-linecap="round" />
+  </g>
+
+  <g id="door">
+    <path id="door-pink" d="M193 890 L193 570 Q193 489 280 489 Q367 489 367 570 L367 890Z" fill="#ed5b91" />
+    <path id="door-glass" d="M224 637 L224 571 Q224 520 280 520 Q336 520 336 571 L336 637Z" fill="#72d1ef" />
+    <rect id="door-cross-v" x="274" y="521" width="12" height="116" fill="#fff3df" />
+    <rect id="door-cross-h" x="225" y="576" width="110" height="12" fill="#fff3df" />
+    <circle id="door-knob" cx="334" cy="665" r="17" fill="#ffda4f" />
+    <path id="door-heart" d="M279 759 C251 731 222 757 279 800 C336 757 307 731 279 759Z" fill="#fff2d8" />
+    <path id="door-stitch-box" d="M225 689 Q225 681 237 681 L322 681 Q338 681 338 697 L338 785 Q338 798 324 798 L238 798 Q225 798 225 785Z" fill="none" stroke="#fff6df" stroke-width="7" stroke-dasharray="18 13" stroke-linecap="round" />
+  </g>
+
+  <g id="cupcake-sign">
+    <circle id="sign-round" cx="108" cy="434" r="84" fill="#fff0d5" />
+    <path id="sign-cake" d="M65 425 Q73 405 90 402 Q99 380 115 392 Q132 380 143 402 Q160 405 168 425 L158 478 Q151 491 137 491 L87 491 Q73 491 68 478Z" fill="#ee6497" />
+    <path id="sign-icing" d="M62 425 Q68 408 81 411 Q88 393 101 405 Q112 391 124 405 Q137 392 146 411 Q161 407 170 425 Q164 438 151 428 Q141 444 127 431 Q116 445 103 431 Q90 443 79 429 Q69 438 62 425Z" fill="#fff8e8" />
+    <circle id="sign-cherry" cx="104" cy="383" r="17" fill="#ee597f" />
+    <path id="sign-stem" d="M104 368 Q108 358 118 355" fill="none" stroke="#745036" stroke-width="7" stroke-linecap="round" />
+    <circle id="sign-dot-a" cx="83" cy="426" r="7" fill="#ffda4d" />
+    <circle id="sign-dot-b" cx="105" cy="424" r="7" fill="#f4a06c" />
+    <circle id="sign-dot-c" cx="130" cy="426" r="7" fill="#fff" />
+  </g>
+
+  <g id="plants">
+    <path id="left-pot" d="M42 784 L153 784 L140 900 Q137 909 124 909 L69 909 Q57 909 54 899Z" fill="#b99ae5" />
+    <circle id="left-pot-dot-a" cx="77" cy="810" r="10" fill="#fff4df" />
+    <circle id="left-pot-dot-b" cx="128" cy="812" r="10" fill="#fff4df" />
+    <circle id="left-pot-dot-c" cx="62" cy="853" r="10" fill="#fff4df" />
+    <circle id="left-pot-dot-d" cx="109" cy="865" r="10" fill="#fff4df" />
+    <path id="left-plant-stem" d="M97 784 L97 700" fill="none" stroke="#6d9c4b" stroke-width="10" />
+    <circle id="left-leaf-one" cx="72" cy="717" r="38" fill="#5fa94c" />
+    <circle id="left-leaf-two" cx="111" cy="702" r="42" fill="#5fa94c" />
+    <circle id="left-leaf-three" cx="139" cy="731" r="38" fill="#5fa94c" />
+    <circle id="left-flower-one" cx="73" cy="718" r="10" fill="#fff8e8" />
+    <circle id="left-flower-two" cx="124" cy="714" r="10" fill="#fff8e8" />
+    <circle id="left-flower-three" cx="106" cy="754" r="10" fill="#fff8e8" />
+  </g>
+
+  <g id="bakery-flowers">
+    <path id="flower-box" d="M510 796 L674 796 L654 914 Q650 925 635 925 L549 925 Q535 925 531 913Z" fill="#f47aa3" />
+    <path id="flower-leaf-a" d="M594 799 Q548 753 524 775 Q524 816 582 828Z" fill="#63b34c" />
+    <path id="flower-leaf-b" d="M614 803 Q660 755 680 781 Q680 815 624 830Z" fill="#63b34c" />
+    <circle id="flower-a" cx="552" cy="760" r="17" fill="#fff" />
+    <circle id="flower-a-center" cx="552" cy="760" r="7" fill="#ffdb55" />
+    <circle id="flower-b" cx="611" cy="757" r="18" fill="#fff" />
+    <circle id="flower-b-center" cx="611" cy="757" r="7" fill="#ffdb55" />
+    <circle id="flower-c" cx="644" cy="777" r="15" fill="#ffda52" />
+    <circle id="flower-c-center" cx="644" cy="777" r="6" fill="#ee8b89" />
+  </g>
+
+  <g id="bicycle">
+    <circle id="rear-wheel" cx="685" cy="871" r="78" fill="#624637" />
+    <circle id="rear-wheel-inner" cx="685" cy="871" r="61" fill="#fff1d4" />
+    <circle id="front-wheel" cx="908" cy="871" r="78" fill="#624637" />
+    <circle id="front-wheel-inner" cx="908" cy="871" r="61" fill="#fff1d4" />
+    <circle id="rear-hub" cx="685" cy="871" r="15" fill="#ee5791" />
+    <circle id="front-hub" cx="908" cy="871" r="15" fill="#ee5791" />
+    <path id="wheel-spokes-one" d="M685 810 L685 932 M624 871 L746 871 M641 827 L729 915 M641 915 L729 827" fill="none" stroke="#edc58c" stroke-width="5" />
+    <path id="wheel-spokes-two" d="M908 810 L908 932 M847 871 L969 871 M864 827 L952 915 M864 915 L952 827" fill="none" stroke="#edc58c" stroke-width="5" />
+    <path id="bike-frame" d="M685 871 L753 755 L829 871 L685 871 L785 871 L753 755 L908 871 L863 764 L908 871" fill="none" stroke="#72dcb9" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" />
+    <path id="bike-handle" d="M863 764 Q879 735 910 743 L925 761" fill="none" stroke="#72dcb9" stroke-width="13" stroke-linecap="round" />
+    <path id="bike-seat" d="M737 744 L785 744" fill="none" stroke="#88553a" stroke-width="15" stroke-linecap="round" />
+    <path id="bike-pedal" d="M782 871 L804 892 M782 871 L764 850" fill="none" stroke="#88553a" stroke-width="8" stroke-linecap="round" />
+    <path id="bike-basket" d="M859 700 L986 700 L969 788 Q965 800 950 800 L884 800 Q871 800 868 787Z" fill="#d99a52" />
+    <path id="basket-line-a" d="M875 728 L975 728 M872 759 L971 759" fill="none" stroke="#bc793e" stroke-width="7" />
+    <path id="basket-line-b" d="M897 704 L903 791 M935 704 L941 791" fill="none" stroke="#bc793e" stroke-width="7" />
+    <path id="flower-stems" d="M916 704 Q909 665 890 639 M941 704 Q951 664 972 642 M934 704 Q934 657 935 630" fill="none" stroke="#5ca75a" stroke-width="7" stroke-linecap="round" />
+    <circle id="basket-flower-one" cx="889" cy="633" r="23" fill="#ee5f8e" />
+    <circle id="basket-flower-two" cx="935" cy="625" r="22" fill="#fff8e8" />
+    <circle id="basket-flower-three" cx="975" cy="643" r="22" fill="#ffd452" />
+    <circle id="basket-center-one" cx="889" cy="633" r="8" fill="#ffdc4f" />
+    <circle id="basket-center-two" cx="935" cy="625" r="8" fill="#ffdc4f" />
+    <circle id="basket-center-three" cx="975" cy="643" r="8" fill="#f29a72" />
+  </g>
+
+  <g id="cat">
+    <path id="cat-bed" d="M138 918 Q138 891 167 879 L367 879 Q398 889 407 918 L407 940 Q407 950 394 950 L151 950 Q138 950 138 940Z" fill="#baa1aa" />
+    <path id="cat-body" d="M194 878 Q187 844 205 822 L224 800 L249 823 Q278 811 308 823 L334 800 L350 832 Q370 854 357 883 Q336 908 280 904 Q221 907 194 878Z" fill="#f5b55b" />
+    <path id="cat-face" d="M207 856 L224 817 L249 838 Q278 826 307 838 L334 817 L348 858 Q345 896 278 898 Q210 896 207 856Z" fill="#fff0d6" />
+    <path id="cat-ear-inner-a" d="M221 823 L239 840 L222 846Z" fill="#ed8791" />
+    <path id="cat-ear-inner-b" d="M314 840 L332 823 L331 847Z" fill="#ed8791" />
+    <path id="cat-eye-a" d="M241 861 Q249 870 257 861" fill="none" stroke="#60402f" stroke-width="6" stroke-linecap="round" />
+    <path id="cat-eye-b" d="M299 861 Q307 870 315 861" fill="none" stroke="#60402f" stroke-width="6" stroke-linecap="round" />
+    <path id="cat-nose" d="M273 873 Q280 867 287 873 Q280 881 273 873Z" fill="#e98291" />
+    <path id="cat-mouth" d="M280 879 L280 885 M280 885 Q272 892 267 886 M280 885 Q288 892 293 886" fill="none" stroke="#60402f" stroke-width="4" stroke-linecap="round" />
+    <circle id="cat-cheek-a" cx="231" cy="879" r="8" fill="#f39da5" />
+    <circle id="cat-cheek-b" cx="327" cy="879" r="8" fill="#f39da5" />
+    <path id="cat-tail" d="M344 871 Q380 842 373 879 Q369 898 345 895" fill="none" stroke="#f5b55b" stroke-width="17" stroke-linecap="round" />
+  </g>
+
+  <g id="floating-details">
+    <path id="star-one" d="M302 31 L309 49 L329 56 L309 63 L302 84 L295 63 L276 56 L295 49Z" fill="#ffda4d" />
+    <path id="star-two" d="M964 254 L972 273 L992 280 L972 287 L964 308 L956 287 L936 280 L956 273Z" fill="#ffda4d" />
+    <path id="star-three" d="M840 489 L847 507 L866 514 L847 521 L840 542 L833 521 L814 514 L833 507Z" fill="#ffda4d" />
+    <path id="heart-one" d="M431 66 C407 43 389 65 431 101 C473 65 455 43 431 66Z" fill="#ef6394" />
+    <path id="heart-two" d="M928 469 C900 441 879 468 928 510 C977 468 956 441 928 469Z" fill="#ef6394" />
+    <circle id="dot-one" cx="339" cy="113" r="10" fill="#f7bfd0" />
+    <circle id="dot-two" cx="138" cy="210" r="10" fill="#f7bfd0" />
+    <circle id="dot-three" cx="837" cy="291" r="10" fill="#f7bfd0" />
+    <circle id="dot-four" cx="68" cy="230" r="10" fill="#fffaf0" />
+  </g>
+
+  <g id="ground-details" fill="#fff0da">
+    <rect id="ground-mark-one" x="18" y="934" width="100" height="33" rx="17" />
+    <rect id="ground-mark-two" x="120" y="973" width="83" height="31" rx="16" />
+    <rect id="ground-mark-three" x="316" y="967" width="101" height="31" rx="16" />
+    <rect id="ground-mark-four" x="500" y="936" width="83" height="32" rx="16" />
+    <rect id="ground-mark-five" x="757" y="964" width="115" height="32" rx="16" />
+    <rect id="ground-mark-six" x="924" y="935" width="79" height="32" rx="16" />
+  </g>
+</svg>

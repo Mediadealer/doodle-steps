@@ -4,8 +4,9 @@
 //   node tools/make-picture.js --id treehouse --name "Treehouse" --steps 45 \
 //        --prompt "a cozy treehouse in a big oak tree at sunset, a rope ladder, a sleeping cat, lanterns"
 //
-// Default route ("svg"): Kie's GPT Image 2.6 Sunburst draws the picture and
-// returns it as real vector art, which converts directly. About 9 credits.
+// Default route ("svg"): Kie's GPT Image 2.6 Sunburst is shown a sheet of the
+// app's own hand-made pictures (tools/style-ref.png) and draws a new scene in
+// that style, returned as real vector art. About 11 credits (6 US cents).
 //
 //   --route trace    generate a flat PNG with another model (default Seedream 5
 //                    Lite, about 5.5 credits) and trace it with png2svg.js
@@ -22,6 +23,7 @@ const { spawnSync } = require('child_process');
 
 const root = path.join(__dirname, '..');
 const argv = process.argv.slice(2);
+const STYLE_REF = 'https://mediadealer.github.io/doodle-steps/tools/style-ref.png';
 const opt = { steps: '45', colors: '16', route: 'svg' };
 for (let i = 0; i < argv.length; i++) if (argv[i].startsWith('--')) opt[argv[i].slice(2)] = argv[++i];
 if (!/^[a-z][a-z0-9]*$/.test(opt.id || '') || (!opt.prompt && !opt.image) || !['svg', 'trace'].includes(opt.route)) {
@@ -41,9 +43,12 @@ if (opt.image) {
   if (/\.svg$/i.test(opt.image)) { if (path.resolve(root, opt.image) !== path.resolve(root, svg)) fs.copyFileSync(path.resolve(root, opt.image), path.join(root, svg)); }
   else run('png2svg.js', [opt.image, svg, '--colors', opt.colors]);
 } else if (opt.route === 'svg') {
-  const model = opt.model || 'gpt-image-2-6/sunburst-text-to-image';
-  run('gen-image.js', ['--prompt', opt.prompt, '--out', svg, '--model', model, '--format', 'svg']);
-  source = `AI-generated with Kie.ai (${model}, SVG output)`;
+  // The style sheet (four of the app's hand-made pictures) is what makes the
+  // result match the rest of the app. Pass --ref none to generate without it.
+  const ref = opt.ref === 'none' ? null : opt.ref || STYLE_REF;
+  const model = opt.model || (ref ? 'gpt-image-2-6/sunburst-image-to-image' : 'gpt-image-2-6/sunburst-text-to-image');
+  run('gen-image.js', ['--prompt', opt.prompt, '--out', svg, '--model', model, '--format', 'svg', ...(ref ? ['--ref', ref] : [])]);
+  source = `AI-generated with Kie.ai (${model}, SVG output${ref ? ', style reference tools/style-ref.png' : ''})`;
 } else {
   const model = opt.model || 'seedream/5-lite-text-to-image';
   const image = `art/${opt.id}.png`;
