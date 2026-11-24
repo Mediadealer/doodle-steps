@@ -34,6 +34,9 @@
   };
   const LIPS ='M272 362Q286 354 300 360Q314 354 328 362Q300 386 272 362Z';
 
+  // Shape helpers, shared with the one-picture-per-file pictures in pictures/.
+  window.DS = { E, C, H, SP, ST, INK, LIPS };
+
   window.LESSONS = [
     {
       id: 'chick', name: 'Chick', bg: '#bfe6ff',
