@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 
@@ -23,6 +23,7 @@
     <header class="home-head">
       <h1><span>Doodle</span> <span>Steps</span></h1>
       <p>Pick a picture. Color one shape at a time.</p>
+      <button id="raceBtn" class="btn race-btn">Race a friend</button>
     </header>
     <div id="cards" class="cards"></div>
   </main>
@@ -34,6 +35,11 @@
       <div id="dots" class="dots"></div>
       <button id="restartBtn" class="btn round" aria-label="Start this picture over">↺</button>
       <button id="soundBtn" class="btn round" aria-label="Sound on or off">♪</button>
+    </div>
+
+    <div id="raceStrip" class="race-strip" hidden>
+      <div class="lane me"><span>You</span><div class="bar"><i id="myBar"></i></div><b id="myCount"></b></div>
+      <div class="lane them"><span id="themName">Friend</span><div class="bar"><i id="themBar"></i></div><b id="themCount"></b></div>
     </div>
 
     <div class="work">
@@ -71,11 +77,17 @@
   <div id="finish" class="finish" hidden>
     <div id="confetti" class="confetti"></div>
     <div class="finish-card">
-      <h2>You did it!</h2>
+      <h2 id="finishTitle">You did it!</h2>
+      <p id="raceResult" class="race-result" hidden></p>
       <div class="compare">
         <figure>
           <img id="finalPic" alt="Your finished drawing">
           <figcaption>Yours</figcaption>
+        </figure>
+        <figure id="theirFig" hidden>
+          <img id="theirPic" alt="Your friend's drawing" hidden>
+          <div id="theirWait" class="orig waiting">Still drawing…</div>
+          <figcaption id="theirCap">Friend</figcaption>
         </figure>
         <figure>
           <div id="origPic" class="orig"></div>
@@ -86,14 +98,58 @@
       <div class="finish-btns">
         <button id="saveBtn" class="btn">Save picture</button>
         <button id="againBtn" class="btn">Draw again</button>
+        <button id="raceAgainBtn" class="btn" hidden>Race again</button>
         <button id="moreBtn" class="btn next ready">More pictures</button>
       </div>
     </div>
   </div>
 
+  <!-- Race a friend -->
+  <div id="race" class="finish" hidden>
+    <div class="finish-card race-card">
+      <button id="raceClose" class="btn round race-close" aria-label="Close">✕</button>
+      <h2>Race a friend</h2>
+
+      <div id="raceMenu">
+        <label class="field">Your name
+          <input id="raceName" type="text" maxlength="12" autocomplete="off" placeholder="Player">
+        </label>
+        <div class="race-choices">
+          <div class="choice">
+            <button id="hostBtn" class="btn next ready">Start a race</button>
+            <p>You get a code to share with your friend.</p>
+          </div>
+          <div class="choice">
+            <input id="codeIn" type="text" maxlength="4" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="CODE" aria-label="Race code">
+            <button id="joinBtn" class="btn">Join a race</button>
+            <p>Type the code your friend gives you.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="raceHost" hidden>
+        <p class="code-label">Your race code</p>
+        <div id="raceCode" class="race-code">····</div>
+        <p id="hostStatus" class="race-status" role="status"></p>
+        <p class="code-label">Pick the picture to race on</p>
+        <div id="racePicker" class="race-picker"></div>
+        <button id="startRaceBtn" class="btn next" disabled>Start the race</button>
+      </div>
+
+      <div id="raceGuest" hidden>
+        <p id="guestStatus" class="race-status" role="status"></p>
+        <div id="guestPic" class="guest-pic"></div>
+        <p id="guestPicName" class="code-label"></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="count" class="count" hidden></div>
+  <div id="toast" class="toast" hidden role="status"></div>
+
   <svg id="measure" width="0" height="0" style="position:absolute" aria-hidden="true"></svg>
 
-  <script src="lessons.js?v=5"></script>
-  <script src="app.js?v=5"></script>
+  <script src="lessons.js?v=6"></script>
+  <script src="app.js?v=6"></script>
 </body>
 </html>

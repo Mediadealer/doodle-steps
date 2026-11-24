@@ -38,6 +38,17 @@
   let stars = [], coverage = 0, spill = 0;
   let autoTimer = 0, lastMeasure = 0;
   let soundOn = store.get('sound', true);
+  let outsidePx = 0;
+
+  // racing a friend (see the "racing" section near the bottom)
+  const RACE_NEXT = 0.8;       // races ask for a fuller shape than solo play
+  const race = {
+    peer: null, conn: null, host: false, connected: false,
+    on: false,                 // a race is being drawn right now
+    them: 'Friend', pick: null,
+    t0: 0, myTime: null, theirTime: null, theirImg: null,
+    theirStep: 0, theirCov: 0, theirLeft: false, lastSent: 0,
+  };
 
   // ---------- sound ----------
   let actx;
@@ -172,16 +183,28 @@
       coverage = inside / Math.max(1, cur.exact.area);
       spill = outside / Math.max(1, cur.exact.area);
     }
+    outsidePx = outside;
     updateNext();
+    raceTick(false);
   }
 
+  // In a race, scribbling over the whole page is not allowed: too much paint
+  // outside the shape blocks Next until it is erased.
+  const needed = () => (race.on ? RACE_NEXT : CAN_NEXT);
+  function isMessy() {
+    if (!race.on || !cur) return false;
+    const ref = cur.points ? cur.tol.area : cur.exact.area;
+    return outsidePx > Math.max(ref * 0.5, 250);
+  }
+  const canFinish = () => !!cur && coverage >= needed() && !isMessy();
+
   function updateNext() {
-    const ready = coverage >= CAN_NEXT;
+    const ready = canFinish();
     const last = stepIdx === lesson.steps.length - 1;
     nextBtn.disabled = !ready;
     nextBtn.classList.toggle('ready', ready);
-    nextBtn.style.setProperty('--p', Math.round(Math.min(1, coverage / CAN_NEXT) * 100) + '%');
-    nextLabel.textContent = ready ? (last ? 'Finish!' : 'Next →') : (coverage > 0.02 ? 'Keep going!' : (cur.step.line ? 'Trace the line' : 'Color it in'));
+    nextBtn.style.setProperty('--p', Math.round(Math.min(1, coverage / needed()) * 100) + '%');
+    nextLabel.textContent = isMessy() ? 'Too messy! Tidy up' : ready ? (last ? 'Finish!' : 'Next →') : (coverage > 0.02 ? 'Keep going!' : (cur.step.line ? 'Trace the line' : 'Color it in'));
   }
 
   // ---------- guide (the dashed shape to colour) ----------
@@ -276,7 +299,7 @@
     if (!live || e.pointerId !== live.id) return;
     live = null;
     measure();
-    if (coverage >= AUTO_NEXT) autoTimer = setTimeout(finishStep, 450);
+    if (coverage >= AUTO_NEXT && canFinish()) autoTimer = setTimeout(finishStep, 450);
   }
   stage.addEventListener('pointerup', endStroke);
   stage.addEventListener('pointercancel', endStroke);
@@ -314,7 +337,12 @@
   });
   eraseBtn.addEventListener('click', () => setErasing(!erasing));
   nextBtn.addEventListener('click', finishStep);
-  $('#homeBtn').addEventListener('click', () => { clearTimeout(autoTimer); show('home'); });
+  $('#homeBtn').addEventListener('click', () => {
+    if (race.on && !confirm('Leave the race?')) return;
+    clearTimeout(autoTimer);
+    if (race.on) endRace();
+    show('home');
+  });
 
   function paintSound() {
     soundBtn.classList.toggle('off', !soundOn);
@@ -327,6 +355,7 @@
   // Progress is kept on the device after every step, so a long picture can be
   // finished later. Only the four most recent unfinished pictures are kept.
   function saveProgress(nextStep) {
+    if (race.on) return;
     const p = store.get('progress', {});
     p[lesson.id] = { step: nextStep, stars, img: paper.canvas.toDataURL('image/png'), t: Date.now() };
     Object.keys(p).sort((a, b) => p[b].t - p[a].t).slice(4).forEach(id => delete p[id]);
@@ -348,8 +377,8 @@
     pop.hidden = true;
     show('draw');
 
-    if (fresh) clearProgress(l.id);
-    const saved = store.get('progress', {})[l.id];
+    if (fresh && !race.on) clearProgress(l.id);
+    const saved = race.on ? null : store.get('progress', {})[l.id];
     if (saved && saved.img && saved.step > 0 && saved.step < l.steps.length) {
       stars = Array.isArray(saved.stars) ? saved.stars.slice(0, saved.step) : [];
       const img = new Image();
@@ -396,11 +425,12 @@
 
     drawGuide();
     measure();
+    raceTick(true);
   }
 
   function finishStep() {
     clearTimeout(autoTimer);
-    if (busy || !cur || coverage < CAN_NEXT) return;
+    if (busy || !cur || !canFinish()) return;
     busy = true;
 
     const q = coverage - 0.5 * Math.min(1, spill);
@@ -454,7 +484,7 @@
     const best = store.get('best', {});
     best[lesson.id] = Math.max(best[lesson.id] || 0, avg);
     store.set('best', best);
-    clearProgress(lesson.id);
+    if (!race.on) clearProgress(lesson.id);
 
     $('#finalPic').src = finalCanvas().toDataURL('image/png');
     $('#origPic').innerHTML = picSvg(lesson);
@@ -471,6 +501,8 @@
       p.style.animationDelay = Math.random() * 1.2 + 's';
       conf.append(p);
     }
+    if (race.on) raceFinished();
+    renderRaceResult();
     show('finish');
     fanfare();
   }
@@ -493,9 +525,315 @@
   $('#againBtn').addEventListener('click', () => startLesson(lesson, true));
   $('#restartBtn').addEventListener('click', () => {
     if (busy || !lesson) return;
+    if (race.on) { toast('No starting over in a race!'); return; }
     if (stepIdx === 0 || confirm('Start this picture over from the beginning?')) startLesson(lesson, true);
   });
-  $('#moreBtn').addEventListener('click', () => show('home'));
+  $('#moreBtn').addEventListener('click', () => { endRace(); show('home'); });
+
+
+  // ---------- racing ----------
+  // Two browsers connect straight to each other (WebRTC, via the PeerJS
+  // library and its free matchmaking server). No accounts: the host gets a
+  // four-letter code and the friend types it in. Only names, progress numbers
+  // and the two finished drawings are exchanged.
+  const PEER_SRC = 'https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js';
+  const PREFIX = 'doodlesteps-race-';
+  const LETTERS = 'ABCDEFGHJKMNPQRSTUVWXYZ';
+  const raceEl = $('#race'), toastEl = $('#toast'), countEl = $('#count');
+  const nameIn = $('#raceName'), codeIn = $('#codeIn');
+  let toastTimer = 0, joinTimer = 0;
+
+  nameIn.value = store.get('name', '');
+  const myName = () => (nameIn.value.trim() || 'Player').slice(0, 12);
+
+  function toast(text) {
+    toastEl.textContent = text;
+    toastEl.hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => { toastEl.hidden = true; }, 3500);
+  }
+
+  function raceView(v) {
+    $('#raceMenu').hidden = v !== 'menu';
+    $('#raceHost').hidden = v !== 'host';
+    $('#raceGuest').hidden = v !== 'guest';
+    raceEl.hidden = false;
+  }
+  const hostStatus = t => { $('#hostStatus').textContent = t; };
+  const guestStatus = t => { $('#guestStatus').textContent = t; };
+
+  function loadPeer() {
+    if (window.Peer) return Promise.resolve();
+    return new Promise((res, rej) => {
+      const s = document.createElement('script');
+      s.src = PEER_SRC;
+      s.onload = res;
+      s.onerror = () => { s.remove(); rej(new Error('offline')); };
+      document.head.append(s);
+    });
+  }
+
+  const send = msg => { try { if (race.conn && race.conn.open) race.conn.send(msg); } catch { /* ignore */ } };
+
+  function errText(e) {
+    if (e && e.type === 'peer-unavailable') return 'No race found with that code.';
+    if (e && (e.type === 'network' || e.type === 'server-error' || e.type === 'socket-error')) return 'Could not reach the race server. Check the internet and try again.';
+    return 'Something went wrong. Close this and try again.';
+  }
+
+  function endRace() {
+    clearTimeout(joinTimer);
+    race.on = false; race.connected = false;
+    try { if (race.peer) race.peer.destroy(); } catch { /* ignore */ }
+    race.peer = race.conn = null;
+    $('#raceStrip').hidden = true;
+    raceEl.hidden = true;
+    countEl.hidden = true;
+  }
+
+  // ----- lobby -----
+  function buildPicker() {
+    const box = $('#racePicker');
+    box.innerHTML = '';
+    if (!race.pick) race.pick = LESSONS[0].id;
+    for (const l of LESSONS) {
+      const b = document.createElement('button');
+      b.innerHTML = picSvg(l);
+      b.title = `${l.name} (${l.steps.length} steps)`;
+      b.classList.toggle('on', l.id === race.pick);
+      b.addEventListener('click', () => {
+        race.pick = l.id;
+        box.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b));
+        send({ t: 'pick', id: l.id });
+      });
+      box.append(b);
+    }
+  }
+
+  function showGuestPick(id) {
+    const l = LESSONS.find(x => x.id === id);
+    if (!l) return;
+    $('#guestPic').innerHTML = picSvg(l);
+    $('#guestPicName').textContent = `${l.name} · ${l.steps.length} steps`;
+  }
+
+  function lobby() {
+    race.on = false;
+    $('#raceStrip').hidden = true;
+    if (race.host) {
+      buildPicker();
+      $('#startRaceBtn').disabled = !race.connected;
+      $('#startRaceBtn').classList.toggle('ready', race.connected);
+      hostStatus(race.connected ? `${race.them} is here. Pick a picture and start!` : 'Waiting for your friend to join…');
+      raceView('host');
+    } else {
+      guestStatus(race.connected ? `Connected to ${race.them}. Waiting for them to start…` : 'Your friend left.');
+      raceView('guest');
+    }
+  }
+
+  async function hostRace() {
+    store.set('name', myName());
+    endRace();
+    race.host = true; race.them = 'Friend';
+    $('#raceCode').textContent = '····';
+    lobby();
+    hostStatus('Getting a code…');
+    try { await loadPeer(); } catch { hostStatus('Could not reach the race server. Check the internet and try again.'); return; }
+    openHost(0);
+  }
+
+  function openHost(tries) {
+    let code = '';
+    for (let i = 0; i < 4; i++) code += LETTERS[Math.floor(Math.random() * LETTERS.length)];
+    const peer = new window.Peer(PREFIX + code);
+    race.peer = peer;
+    peer.on('open', () => {
+      $('#raceCode').textContent = code;
+      hostStatus('Waiting for your friend to join…');
+    });
+    peer.on('connection', c => {
+      if (race.conn) {                         // only two players per race
+        c.on('open', () => { try { c.send({ t: 'full' }); } catch { /* ignore */ } setTimeout(() => c.close(), 500); });
+        return;
+      }
+      wire(c);
+    });
+    peer.on('error', e => {
+      if (race.peer !== peer) return;
+      if (e.type === 'unavailable-id' && tries < 5) { peer.destroy(); openHost(tries + 1); }
+      else hostStatus(errText(e));
+    });
+  }
+
+  async function joinRace() {
+    const code = codeIn.value.toUpperCase().replace(/[^A-Z]/g, '');
+    if (code.length !== 4) { codeIn.focus(); return; }
+    store.set('name', myName());
+    endRace();
+    race.host = false; race.them = 'Friend';
+    $('#guestPic').innerHTML = ''; $('#guestPicName').textContent = '';
+    raceView('guest');
+    guestStatus('Connecting…');
+    try { await loadPeer(); } catch { guestStatus('Could not reach the race server. Check the internet and try again.'); return; }
+    const peer = new window.Peer();
+    race.peer = peer;
+    peer.on('open', () => {
+      wire(peer.connect(PREFIX + code, { reliable: true }));
+      joinTimer = setTimeout(() => {
+        if (race.peer === peer && !race.connected) guestStatus('Could not connect. Check the code, or try a different Wi-Fi.');
+      }, 12000);
+    });
+    peer.on('error', e => { if (race.peer === peer) { clearTimeout(joinTimer); guestStatus(errText(e)); } });
+  }
+
+  function wire(c) {
+    race.conn = c;
+    c.on('open', () => {
+      race.connected = true; race.theirLeft = false;
+      clearTimeout(joinTimer);
+      send({ t: 'hello', name: myName() });
+      if (race.host) send({ t: 'pick', id: race.pick });
+    });
+    c.on('data', onData);
+    c.on('close', () => onGone(c));
+    c.on('error', () => onGone(c));
+  }
+
+  function onGone(c) {
+    if (race.conn !== c) return;
+    race.conn = null; race.connected = false; race.theirLeft = true;
+    if (race.on) { toast(`${race.them} left the race`); raceTick(true); }
+    else if (!raceEl.hidden) lobby();
+    if (!finish.hidden) renderRaceResult();
+  }
+
+  // Everything from the other player is treated as untrusted: checked for
+  // shape, and only ever shown as plain text or as an image.
+  function onData(m) {
+    if (!m || typeof m !== 'object') return;
+    switch (m.t) {
+      case 'hello':
+        race.them = (typeof m.name === 'string' && m.name.trim() ? m.name.trim() : 'Friend').slice(0, 12);
+        if (!raceEl.hidden) lobby();
+        break;
+      case 'pick':
+        if (!race.host && typeof m.id === 'string') showGuestPick(m.id);
+        break;
+      case 'full':
+        guestStatus('That race already has two players.');
+        break;
+      case 'start':
+        if (!race.host && !race.on && typeof m.id === 'string') beginRace(m.id);
+        break;
+      case 'prog':
+        race.theirStep = Math.max(0, Math.floor(+m.step) || 0);
+        race.theirCov = Math.min(1, Math.max(0, +m.cov || 0));
+        raceTick(false);
+        break;
+      case 'done':
+        if (race.theirTime != null || !(+m.time > 0)) break;
+        race.theirTime = +m.time;
+        if (typeof m.img === 'string' && m.img.startsWith('data:image/jpeg;base64,') && m.img.length < 600000) race.theirImg = m.img;
+        if (race.on && race.myTime == null) toast(`${race.them} finished! Keep going!`);
+        raceTick(false);
+        if (!finish.hidden) renderRaceResult();
+        break;
+    }
+  }
+
+  // ----- the race itself -----
+  function beginRace(id) {
+    const l = LESSONS.find(x => x.id === id);
+    if (!l) return;
+    Object.assign(race, { on: true, myTime: null, theirTime: null, theirImg: null, theirStep: 0, theirCov: 0 });
+    raceEl.hidden = true;
+    $('#themName').textContent = race.them;
+    $('#raceStrip').hidden = false;
+    startLesson(l, true);
+    busy = true;                                // hands off until GO
+    let n = 3;
+    countEl.hidden = false;
+    countEl.textContent = n;
+    tone(440);
+    const tick = setInterval(() => {
+      n--;
+      if (!race.on) { clearInterval(tick); countEl.hidden = true; busy = false; return; }
+      if (n > 0) { countEl.textContent = n; tone(440); }
+      else if (n === 0) { countEl.textContent = 'GO!'; tone(880, 0, 0.35); busy = false; race.t0 = performance.now(); }
+      else { clearInterval(tick); countEl.hidden = true; }
+    }, 900);
+  }
+
+  // update the two progress bars and tell the other player where we are
+  function raceTick(force) {
+    if (!race.on || !lesson) return;
+    const n = lesson.steps.length;
+    const mine = race.myTime != null ? n : stepIdx + Math.min(1, coverage / needed()) * 0.95;
+    const theirs = race.theirTime != null ? n : Math.min(n, race.theirStep + race.theirCov * 0.95);
+    $('#myBar').style.width = (mine / n) * 100 + '%';
+    $('#themBar').style.width = (theirs / n) * 100 + '%';
+    $('#myCount').textContent = `${Math.min(n, race.myTime != null ? n : stepIdx + 1)}/${n}`;
+    $('#themCount').textContent = race.theirLeft && race.theirTime == null ? 'left' : `${Math.min(n, race.theirTime != null ? n : race.theirStep + 1)}/${n}`;
+    const now = performance.now();
+    if (force || now - race.lastSent > 400) {
+      race.lastSent = now;
+      send({ t: 'prog', step: stepIdx, cov: Math.min(1, coverage / needed()) });
+    }
+  }
+
+  function raceFinished() {
+    race.myTime = Math.max(1, Math.round(performance.now() - race.t0));
+    const c = document.createElement('canvas');
+    c.width = c.height = 450;
+    c.getContext('2d').drawImage(finalCanvas(), 0, 0, 450, 450);
+    send({ t: 'done', time: race.myTime, img: c.toDataURL('image/jpeg', 0.8) });
+    raceTick(false);
+  }
+
+  const secs = ms => {
+    const s = Math.round(ms / 1000);
+    return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+  };
+
+  function renderRaceResult() {
+    const racing = race.on && race.myTime != null;
+    $('#theirFig').hidden = !racing;
+    $('#raceResult').hidden = !racing;
+    $('#raceAgainBtn').hidden = !racing;
+    $('#againBtn').hidden = racing;
+    if (!racing) { $('#finishTitle').textContent = 'You did it!'; return; }
+
+    const theirPic = $('#theirPic'), wait = $('#theirWait');
+    $('#theirCap').textContent = race.them;
+    theirPic.hidden = !race.theirImg;
+    wait.hidden = !!race.theirImg;
+    if (race.theirImg) theirPic.src = race.theirImg;
+
+    if (race.theirTime == null) {
+      $('#finishTitle').textContent = 'You win!';
+      $('#raceResult').textContent = race.theirLeft ? `${race.them} left the race. Your time: ${secs(race.myTime)}` : `Your time: ${secs(race.myTime)}. ${race.them} is still drawing…`;
+      wait.textContent = race.theirLeft ? 'Left the race' : 'Still drawing…';
+    } else {
+      const won = race.myTime <= race.theirTime;
+      $('#finishTitle').textContent = won ? 'You win!' : `${race.them} wins!`;
+      $('#raceResult').textContent = `You ${secs(race.myTime)} · ${race.them} ${secs(race.theirTime)}`;
+      wait.textContent = 'No picture';
+    }
+    $('#raceAgainBtn').disabled = !race.connected;
+  }
+
+  $('#raceBtn').addEventListener('click', () => { endRace(); raceView('menu'); });
+  $('#raceClose').addEventListener('click', endRace);
+  $('#hostBtn').addEventListener('click', hostRace);
+  $('#joinBtn').addEventListener('click', joinRace);
+  codeIn.addEventListener('keydown', e => { if (e.key === 'Enter') joinRace(); });
+  $('#startRaceBtn').addEventListener('click', () => {
+    if (!race.connected) return;
+    send({ t: 'start', id: race.pick });
+    beginRace(race.pick);
+  });
+  $('#raceAgainBtn').addEventListener('click', () => { show('home'); lobby(); });
 
   show('home');
 })();

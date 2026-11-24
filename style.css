@@ -71,7 +71,8 @@ body {
 .card-steps.going { opacity: 1; color: #128a7d; font-weight: 600; }
 
 /* ---------- draw ---------- */
-.draw { height: 100dvh; display: grid; grid-template-rows: auto 1fr; }
+.draw { height: 100dvh; display: grid; grid-template-rows: auto auto 1fr; }
+.draw > .work { grid-row: 3; }
 .topbar { display: flex; align-items: center; gap: 12px; padding: 12px 16px; }
 .dots { flex: 1; display: flex; justify-content: center; align-items: center; gap: 7px; flex-wrap: wrap; }
 .dot {
@@ -182,3 +183,48 @@ body {
   .next.ready, .pop, .finish-card { animation: none; }
   .confetti { display: none; }
 }
+
+/* ---------- racing ---------- */
+.race-btn { margin-top: 16px; background: var(--coral); color: #fff; font-size: 1.2rem; padding: 10px 22px; }
+
+.race-strip { display: grid; gap: 4px; padding: 0 16px 10px; max-width: 760px; width: 100%; margin: 0 auto; }
+.lane { display: grid; grid-template-columns: 84px 1fr 54px; align-items: center; gap: 10px; font-weight: 600; font-size: .95rem; }
+.lane span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lane b { text-align: right; font-variant-numeric: tabular-nums; }
+.bar { height: 14px; border: 3px solid var(--ink); border-radius: 99px; background: var(--card); overflow: hidden; }
+.bar i { display: block; height: 100%; width: 0; background: var(--teal); transition: width .25s; }
+.lane.them .bar i { background: var(--coral); }
+
+.race-card { width: min(560px, 100%); }
+.race-close { position: absolute; top: 12px; right: 12px; width: 44px; min-height: 44px; font-size: 1.1rem; }
+.field { display: block; font-weight: 600; text-align: left; margin-bottom: 16px; }
+.field input, #codeIn {
+  display: block; width: 100%; margin-top: 6px; font: inherit; font-size: 1.2rem; font-weight: 600; color: var(--ink);
+  padding: 10px 14px; border: 3px solid var(--ink); border-radius: 14px; background: var(--card);
+  -webkit-user-select: text; user-select: text;
+}
+#codeIn { text-align: center; letter-spacing: .3em; text-transform: uppercase; margin: 0 0 10px; }
+.race-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+.choice { background: var(--card); border: 3px solid var(--line); border-radius: 18px; padding: 14px; display: flex; flex-direction: column; justify-content: flex-end; min-height: 170px; }
+.choice .btn { width: 100%; font-size: 1.1rem; min-height: 52px; }
+.choice p { margin: 10px 0 0; font-size: .92rem; opacity: .7; font-weight: 500; }
+@media (max-width: 460px) { .race-choices { grid-template-columns: 1fr; } .choice { min-height: 0; } }
+
+.code-label { margin: 10px 0 4px; font-weight: 600; opacity: .7; }
+.race-code { font-size: 3.4rem; font-weight: 700; letter-spacing: .25em; padding-left: .25em; color: var(--teal); line-height: 1.1; -webkit-user-select: text; user-select: text; }
+.race-status { min-height: 1.5em; margin: 6px 0 4px; font-size: 1.1rem; font-weight: 600; }
+.race-picker { display: grid; grid-template-columns: repeat(auto-fill, minmax(74px, 1fr)); gap: 8px; max-height: 190px; overflow-y: auto; padding: 6px; margin-bottom: 14px; border: 3px solid var(--line); border-radius: 16px; background: var(--card); }
+.race-picker button { padding: 0; border: 3px solid transparent; border-radius: 12px; background: none; cursor: pointer; overflow: hidden; line-height: 0; }
+.race-picker button.on { border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal); }
+.race-picker svg { width: 100%; height: auto; border-radius: 8px; }
+#startRaceBtn { width: 100%; }
+.guest-pic { width: 190px; margin: 12px auto 0; border: 3px solid var(--ink); border-radius: 18px; overflow: hidden; line-height: 0; box-shadow: 0 5px 0 var(--ink); }
+.guest-pic:empty { display: none; }
+.guest-pic svg { width: 100%; height: auto; }
+
+.race-result { margin: -4px 0 12px; font-size: 1.15rem; font-weight: 600; }
+.compare .waiting { display: grid; place-items: center; rotate: 0deg; background: var(--card); border-style: dashed; font-weight: 600; opacity: .7; padding: 8px; }
+.compare #theirPic { rotate: 1deg; }
+
+.count { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; background: rgba(43, 43, 58, .55); color: #fff; font-size: min(40vw, 16rem); font-weight: 700; -webkit-text-stroke: 6px var(--ink); paint-order: stroke fill; }
+.toast { position: fixed; left: 50%; top: 84px; translate: -50% 0; z-index: 15; max-width: calc(100vw - 32px); background: var(--ink); color: #fff; font-weight: 600; font-size: 1.1rem; padding: 12px 20px; border-radius: 99px; box-shadow: 0 6px 18px rgba(0, 0, 0, .25); }
