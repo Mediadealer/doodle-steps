@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Doodle Steps</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Doodle Steps">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#fff8ec">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Home: pick a picture -->
+  <main id="home" class="home">
+    <header class="home-head">
+      <h1><span>Doodle</span> <span>Steps</span></h1>
+      <p>Pick a picture. Color one shape at a time.</p>
+    </header>
+    <div id="cards" class="cards"></div>
+  </main>
+
+  <!-- Draw screen -->
+  <main id="draw" class="draw" hidden>
+    <div class="topbar">
+      <button id="homeBtn" class="btn round" aria-label="Back to pictures">←</button>
+      <div id="dots" class="dots"></div>
+      <button id="soundBtn" class="btn round" aria-label="Sound on or off">♪</button>
+    </div>
+
+    <div class="work">
+      <div id="stage" class="stage">
+        <canvas id="paper" width="900" height="900"></canvas>
+        <canvas id="ink" width="900" height="900"></canvas>
+        <canvas id="guide" width="900" height="900"></canvas>
+        <div id="pop" class="pop" hidden></div>
+      </div>
+
+      <aside class="panel">
+        <div class="ref">
+          <div id="refPic" class="ref-pic"></div>
+          <div class="step-card">
+            <div id="stepCount" class="step-count"></div>
+            <div class="step-name"><i id="swatch" class="swatch"></i><span id="stepName"></span></div>
+            <div id="stepHint" class="step-hint"></div>
+          </div>
+        </div>
+
+        <div id="brushes" class="brushes" role="group" aria-label="Brush size"></div>
+
+        <div class="tools">
+          <button id="undoBtn" class="btn">↶ Undo</button>
+          <button id="eraseBtn" class="btn">Eraser</button>
+          <button id="clearBtn" class="btn">Clear</button>
+        </div>
+
+        <button id="nextBtn" class="btn next" disabled><span id="nextLabel">Keep going!</span></button>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Finished -->
+  <div id="finish" class="finish" hidden>
+    <div id="confetti" class="confetti"></div>
+    <div class="finish-card">
+      <h2>You did it!</h2>
+      <img id="finalPic" alt="Your finished drawing">
+      <div id="finalStars" class="final-stars"></div>
+      <div class="finish-btns">
+        <button id="saveBtn" class="btn">Save picture</button>
+        <button id="againBtn" class="btn">Draw again</button>
+        <button id="moreBtn" class="btn next ready">More pictures</button>
+      </div>
+    </div>
+  </div>
+
+  <svg id="measure" width="0" height="0" style="position:absolute" aria-hidden="true"></svg>
+
+  <script src="lessons.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
