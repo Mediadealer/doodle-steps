@@ -1,0 +1,164 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024">
+  <title>Happy Dumpling Tea Table</title>
+  <desc>A bright sticker-book scene with a bamboo steamer of smiling dumplings, tea things, chopsticks, steam and a patterned tablecloth.</desc>
+
+  <rect id="tablecloth-base" x="0" y="0" width="1024" height="1024" fill="#f7b6d2" />
+  <rect id="cloth-light-1" x="0" y="0" width="1024" height="84" fill="#ffd9e8" />
+  <rect id="cloth-light-2" x="0" y="168" width="1024" height="84" fill="#ffd9e8" />
+  <rect id="cloth-light-3" x="0" y="336" width="1024" height="84" fill="#ffd9e8" />
+  <rect id="cloth-light-4" x="0" y="504" width="1024" height="84" fill="#ffd9e8" />
+  <rect id="cloth-light-5" x="0" y="672" width="1024" height="84" fill="#ffd9e8" />
+  <rect id="cloth-light-6" x="0" y="840" width="1024" height="84" fill="#ffd9e8" />
+  <rect id="cloth-vert-1" x="78" y="0" width="82" height="1024" fill="#ffd9e8" />
+  <rect id="cloth-vert-2" x="242" y="0" width="82" height="1024" fill="#ffd9e8" />
+  <rect id="cloth-vert-3" x="406" y="0" width="82" height="1024" fill="#ffd9e8" />
+  <rect id="cloth-vert-4" x="570" y="0" width="82" height="1024" fill="#ffd9e8" />
+  <rect id="cloth-vert-5" x="734" y="0" width="82" height="1024" fill="#ffd9e8" />
+  <rect id="cloth-vert-6" x="898" y="0" width="82" height="1024" fill="#ffd9e8" />
+
+  <g id="floating-decor">
+    <circle id="dot-a" cx="74" cy="116" r="13" fill="#ffe46c" />
+    <circle id="dot-b" cx="928" cy="120" r="10" fill="#fff3a0" />
+    <path id="star-a" d="M150 64l9 24 25 7-25 8-9 25-9-25-25-8 25-7z" fill="#ffdf59" />
+    <path id="star-b" d="M887 258l8 20 22 7-22 7-8 22-8-22-22-7 22-7z" fill="#ffdf59" />
+    <path id="heart-a" d="M74 202c-29-28-70 13 0 62 70-49 29-90 0-62z" fill="#f47fae" />
+    <path id="heart-b" d="M941 398c-22-22-54 11 0 49 54-38 22-71 0-49z" fill="#f47fae" />
+    <circle id="spark-a" cx="972" cy="58" r="6" fill="#fff7df" />
+    <circle id="spark-b" cx="50" cy="316" r="7" fill="#fff7df" />
+  </g>
+
+  <g id="steam">
+    <path id="steam-left" d="M286 252c-32-31 30-49 2-83-24-30 10-50 20-68 12-22-1-43-18-55 38 18 48 51 27 78-26 34-43 42-15 74 29 34-24 46-16 72z" fill="#fff2d8" />
+    <path id="steam-mid" d="M506 244c-24-30 34-48 9-79-24-30 18-48 23-77 4-25-11-43-28-57 41 16 53 49 30 78-25 32-35 44-9 72 28 31-14 49-25 63z" fill="#fff2d8" />
+    <path id="steam-right" d="M756 236c-25-27 28-43 5-71-24-29 17-47 23-75 5-24-8-41-25-55 39 17 48 48 27 75-24 31-33 41-7 69 26 28-10 44-23 57z" fill="#fff2d8" />
+  </g>
+
+  <g id="teacup">
+    <ellipse id="cup-saucer" cx="184" cy="356" rx="132" ry="38" fill="#b887dc" />
+    <ellipse id="cup-saucer-light" cx="184" cy="347" rx="102" ry="25" fill="#d7b5ee" />
+    <path id="cup-body" d="M91 238c0-31 42-51 94-51s95 20 95 51v78c0 52-40 76-95 76s-94-24-94-76z" fill="#fff1df" />
+    <path id="cup-rim" d="M87 237c0-31 44-55 98-55s99 24 99 55-45 53-99 53-98-22-98-53z" fill="#fff7e9" />
+    <ellipse id="tea" cx="185" cy="235" rx="80" ry="29" fill="#c6d849" />
+    <circle id="tea-shine-1" cx="218" cy="225" r="7" fill="#fffdf0" />
+    <circle id="tea-shine-2" cx="240" cy="232" r="4" fill="#fffdf0" />
+    <path id="cup-scallop" d="M91 263c14 25 31 30 48 8 13 25 31 30 47 7 15 24 33 23 48-2 16 20 35 14 46-13v30H91z" fill="#f58db9" />
+    <circle id="cup-cheek-a" cx="123" cy="287" r="7" fill="#fff0ed" />
+    <circle id="cup-cheek-b" cx="246" cy="287" r="7" fill="#fff0ed" />
+    <path id="cup-flower" d="M184 277c-12-22-38-6-27 9-24-5-30 22-10 27-16 17 7 36 23 19 9 23 36 14 29-7 23 5 30-21 9-29 12-21-14-34-24-19z" fill="#f26391" />
+    <circle id="cup-flower-center" cx="184" cy="300" r="8" fill="#ffe05a" />
+  </g>
+
+  <g id="teapot">
+    <path id="pot-handle" d="M820 168c124-74 188 82 92 144-26 17-51 18-72 6l4-30c22 8 40 3 56-12 53-49 2-111-70-76z" fill="#f485b0" />
+    <path id="pot-body" d="M570 186c17-67 75-103 151-103 94 0 153 57 159 151 7 106-42 159-156 159-111 0-169-56-154-207z" fill="#fff0dd" />
+    <path id="pot-spout" d="M591 181c-29-6-57-45-83-59-22-12-43 4-57 17 36 8 51 30 58 62 8 39 19 65 49 76l42-20z" fill="#fff0dd" />
+    <ellipse id="pot-lid" cx="725" cy="113" rx="119" ry="48" fill="#fff6e7" />
+    <circle id="pot-knob" cx="737" cy="68" r="32" fill="#f36d98" />
+    <path id="pot-rim" d="M608 117c34 18 77 27 119 27 51 0 92-10 123-28 15 10 21 23 19 36-5 30-34 39-57 27-15 25-46 26-67 6-22 25-55 22-72-3-22 18-53 5-55-24-1-17 9-31 20-41z" fill="#f58bb8" />
+    <circle id="pot-dot-1" cx="648" cy="149" r="9" fill="#fff5e5" />
+    <circle id="pot-dot-2" cx="712" cy="160" r="9" fill="#fff5e5" />
+    <circle id="pot-dot-3" cx="778" cy="151" r="9" fill="#fff5e5" />
+    <path id="pot-flower" d="M726 207c-18-35-58-11-42 15-37-8-46 31-15 41-25 25 10 55 35 29 13 36 56 21 45-12 36 8 46-33 14-44 18-31-20-50-37-29z" fill="#f06491" />
+    <circle id="pot-flower-center" cx="725" cy="253" r="10" fill="#ffe15d" />
+    <circle id="pot-leaf-a" cx="652" cy="254" r="14" fill="#5dc68d" />
+    <circle id="pot-leaf-b" cx="804" cy="258" r="14" fill="#5dc68d" />
+  </g>
+
+  <g id="steamer">
+    <ellipse id="basket-shadow" cx="484" cy="797" rx="389" ry="74" fill="#d989a9" />
+    <path id="basket-body" d="M102 504c0-122 173-207 384-207s388 85 388 207v209c0 120-168 187-388 187S102 833 102 713z" fill="#e8a34e" />
+    <ellipse id="basket-top" cx="486" cy="507" rx="384" ry="211" fill="#ffd176" />
+    <ellipse id="basket-inside" cx="486" cy="514" rx="346" ry="177" fill="#9c5b2d" />
+    <path id="basket-rim-back" d="M147 484c72-104 190-147 339-147 150 0 276 43 338 147-75-68-190-105-338-105-146 0-265 37-339 105z" fill="#f2b45b" />
+    <path id="basket-slats" d="M151 480h670v27H151zm-11 59h692v27H140zm10 59h671v27H150z" fill="#c77a35" />
+    <path id="basket-rim-front" d="M104 506c22 132 183 213 382 213s363-81 388-213v44c-31 143-183 216-388 216S133 692 104 550z" fill="#f3b65b" />
+    <path id="basket-front-band" d="M103 681c46 127 195 190 383 190s339-63 388-190v45c-49 126-193 183-388 183s-337-57-383-183z" fill="#d98c3e" />
+    <rect id="basket-lock-left" x="190" y="673" width="29" height="157" rx="14" fill="#ffdc75" />
+    <rect id="basket-lock-right" x="746" y="673" width="29" height="157" rx="14" fill="#ffdc75" />
+    <rect id="basket-lock-center" x="465" y="689" width="31" height="191" fill="#ffdc75" />
+    <rect id="basket-lock-top" x="432" y="761" width="90" height="28" rx="14" fill="#ffe28a" />
+    <rect id="basket-lock-bottom" x="432" y="831" width="90" height="28" rx="14" fill="#ffe28a" />
+
+    <g id="greens">
+      <ellipse id="leaf-1" cx="267" cy="492" rx="46" ry="24" transform="rotate(28 267 492)" fill="#6ab83e" />
+      <ellipse id="leaf-2" cx="348" cy="537" rx="58" ry="27" transform="rotate(-25 348 537)" fill="#78c741" />
+      <ellipse id="leaf-3" cx="622" cy="512" rx="59" ry="26" transform="rotate(20 622 512)" fill="#69b93f" />
+      <ellipse id="leaf-4" cx="704" cy="554" rx="48" ry="25" transform="rotate(-28 704 554)" fill="#7bc943" />
+      <ellipse id="leaf-5" cx="295" cy="651" rx="59" ry="27" transform="rotate(-20 295 651)" fill="#69b93f" />
+      <ellipse id="leaf-6" cx="661" cy="660" rx="60" ry="28" transform="rotate(22 661 660)" fill="#6ab83e" />
+    </g>
+
+    <g id="dumplings">
+      <path id="dumpling-back-left" d="M206 473c-5-73 40-117 110-117 74 0 122 47 111 114-9 59-49 82-111 82-68 0-105-25-110-79z" fill="#fff0d9" />
+      <path id="fold-left-1" d="M280 373c-2 38-23 59-45 67 2 18 14 24 28 13 22-17 30-45 34-72z" fill="#ffd36d" />
+      <path id="fold-left-2" d="M322 363c5 35-2 65-12 83 4 17 17 20 27 7 14-22 15-54 9-87z" fill="#ffd36d" />
+      <path id="fold-left-3" d="M352 372c8 29 23 51 43 61 14-2 18-15 7-25-17-15-26-30-30-47z" fill="#ffd36d" />
+      <circle id="face1-eye1" cx="290" cy="449" r="8" fill="#493126" />
+      <circle id="face1-eye2" cx="355" cy="449" r="8" fill="#493126" />
+      <path id="face1-smile" d="M313 465c8 16 25 16 33 0" fill="none" stroke="#493126" stroke-width="7" stroke-linecap="round" />
+      <circle id="face1-cheek1" cx="264" cy="469" r="14" fill="#f58ca8" />
+      <circle id="face1-cheek2" cx="381" cy="469" r="14" fill="#f58ca8" />
+
+      <path id="dumpling-back-right" d="M470 469c-3-68 43-112 111-112 71 0 117 44 112 111-5 64-49 87-113 87-67 0-106-25-110-86z" fill="#fff1dd" />
+      <path id="fold-right-1" d="M532 375c-2 28-13 47-33 59 4 16 16 18 27 8 18-16 26-37 29-63z" fill="#ffe0a0" />
+      <path id="fold-right-2" d="M570 363c4 31 0 61-10 78 1 17 14 21 25 8 16-20 17-53 11-85z" fill="#ffe0a0" />
+      <path id="fold-right-3" d="M604 368c8 28 20 49 39 59 14-3 17-15 6-25-16-15-23-29-28-46z" fill="#ffe0a0" />
+      <circle id="face2-eye1" cx="552" cy="449" r="8" fill="#493126" />
+      <circle id="face2-eye2" cx="619" cy="449" r="8" fill="#493126" />
+      <path id="face2-smile" d="M574 467c8 15 25 15 34 0" fill="none" stroke="#493126" stroke-width="7" stroke-linecap="round" />
+      <circle id="face2-cheek1" cx="528" cy="470" r="14" fill="#f58ca8" />
+      <circle id="face2-cheek2" cx="646" cy="470" r="14" fill="#f58ca8" />
+
+      <path id="dumpling-front-left" d="M184 632c-3-74 46-119 119-119 75 0 120 46 116 116-4 70-50 96-119 96-71 0-113-27-116-93z" fill="#fff2dc" />
+      <path id="fold-front-left-1" d="M267 521c0 33-15 59-35 75 1 17 14 22 27 10 20-18 29-52 32-80z" fill="#d6c5f2" />
+      <path id="fold-front-left-2" d="M308 514c5 39-1 70-11 91 5 17 19 18 29 4 13-23 14-60 8-93z" fill="#d6c5f2" />
+      <path id="fold-front-left-3" d="M344 520c8 28 22 57 41 72 14-2 18-17 7-27-17-15-25-34-29-51z" fill="#d6c5f2" />
+      <circle id="face3-eye1" cx="269" cy="617" r="8" fill="#493126" />
+      <circle id="face3-eye2" cx="343" cy="617" r="8" fill="#493126" />
+      <path id="face3-smile" d="M293 635c9 16 27 16 36 0" fill="none" stroke="#493126" stroke-width="7" stroke-linecap="round" />
+      <circle id="face3-cheek1" cx="240" cy="638" r="15" fill="#f58ca8" />
+      <circle id="face3-cheek2" cx="373" cy="638" r="15" fill="#f58ca8" />
+
+      <path id="dumpling-front-right" d="M419 630c-4-73 42-119 116-119 74 0 121 45 117 115-5 70-50 96-119 96-70 0-111-27-114-92z" fill="#fff0d8" />
+      <path id="fold-front-right-1" d="M500 521c0 31-15 59-35 73 2 17 15 22 28 10 20-18 29-52 32-78z" fill="#ffe0aa" />
+      <path id="fold-front-right-2" d="M541 514c4 36-1 68-10 88 5 18 18 20 28 5 14-23 14-59 9-91z" fill="#ffe0aa" />
+      <path id="fold-front-right-3" d="M578 520c8 27 22 55 41 70 14-2 18-17 7-27-16-15-25-32-29-50z" fill="#ffe0aa" />
+      <circle id="face4-eye1" cx="502" cy="615" r="8" fill="#493126" />
+      <circle id="face4-eye2" cx="577" cy="615" r="8" fill="#493126" />
+      <path id="face4-smile" d="M526 633c9 16 27 16 36 0" fill="none" stroke="#493126" stroke-width="7" stroke-linecap="round" />
+      <circle id="face4-cheek1" cx="474" cy="637" r="15" fill="#f58ca8" />
+      <circle id="face4-cheek2" cx="608" cy="637" r="15" fill="#f58ca8" />
+      <path id="dumpling-heart" d="M646 559c-15-16-38 7 0 34 38-27 15-50 0-34z" fill="#f26798" />
+    </g>
+  </g>
+
+  <g id="soy-dish">
+    <ellipse id="dish-shadow" cx="820" cy="867" rx="148" ry="43" fill="#d681a5" />
+    <path id="dish-body" d="M685 819c0-52 56-88 136-88s137 36 137 88v31c0 55-56 91-137 91s-136-36-136-91z" fill="#fff0dd" />
+    <ellipse id="dish-rim" cx="821" cy="817" rx="137" ry="75" fill="#fff8e9" />
+    <ellipse id="soy" cx="821" cy="817" rx="102" ry="53" fill="#934b25" />
+    <circle id="soy-shine1" cx="876" cy="802" r="10" fill="#fffdf0" />
+    <circle id="soy-shine2" cx="906" cy="814" r="7" fill="#fffdf0" />
+    <circle id="dish-dot1" cx="729" cy="868" r="12" fill="#f27da8" />
+    <circle id="dish-dot2" cx="793" cy="897" r="12" fill="#f27da8" />
+    <circle id="dish-dot3" cx="878" cy="889" r="12" fill="#f27da8" />
+    <circle id="dish-dot4" cx="934" cy="857" r="12" fill="#f27da8" />
+  </g>
+
+  <g id="chopsticks">
+    <path id="stick-one" d="M58 893l634 83c17 2 22 29 4 28L57 918c-20-3-19-28 1-25z" fill="#fff0c8" />
+    <path id="stick-two" d="M76 862l623 83c18 3 21 29 3 27L72 889c-18-3-16-30 4-27z" fill="#fff7d9" />
+    <path id="stick-tip-one" d="M59 893l107 14-4 28-106-17c-20-3-19-28 3-25z" fill="#f17ca4" />
+    <path id="stick-tip-two" d="M76 862l104 14-4 28-104-15c-18-3-16-30 4-27z" fill="#f17ca4" />
+    <rect id="stick-band1" x="223" y="884" width="17" height="47" transform="rotate(7 223 884)" fill="#f58db1" />
+    <rect id="stick-band2" x="292" y="893" width="17" height="47" transform="rotate(7 292 893)" fill="#f58db1" />
+    <rect id="stick-band3" x="362" y="902" width="17" height="47" transform="rotate(7 362 902)" fill="#f58db1" />
+  </g>
+
+  <g id="foreground-sparkles">
+    <path id="sparkle-left" d="M111 735l8 22 23 8-23 8-8 23-8-23-23-8 23-8z" fill="#ffe45c" />
+    <path id="sparkle-right" d="M949 680l9 25 26 9-26 9-9 26-9-26-26-9 26-9z" fill="#ffe45c" />
+    <circle id="shine-left" cx="143" cy="789" r="7" fill="#fff4da" />
+    <circle id="shine-right" cx="962" cy="744" r="7" fill="#fff4da" />
+  </g>
+</svg>

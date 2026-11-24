@@ -1,0 +1,158 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024">
+  <title>Underwater coral reef sticker scene</title>
+  <desc>A cheerful sea turtle, striped fish, seahorse, starfish, treasure chest, corals, seaweed and bubbles in a bright flat pastel ocean.</desc>
+
+  <rect id="ocean" width="1024" height="1024" fill="#27a9df" />
+  <path id="wave-back" d="M0 90 Q150 35 290 83 T570 86 T840 30 T1024 58 V0 H0Z" fill="#58c5ed" />
+  <path id="wave-mid" d="M0 180 Q130 168 245 224 T505 205 T760 170 T1024 210 V325 Q900 280 770 300 T520 286 T250 315 T0 290Z" fill="#168fd0" />
+  <path id="wave-low" d="M0 292 Q150 280 285 335 T550 325 T800 300 T1024 315 V470 Q860 425 700 465 T400 470 T0 455Z" fill="#117fc4" />
+  <path id="sand" d="M0 910 Q180 885 355 913 T700 902 T1024 925 V1024 H0Z" fill="#ffe59a" />
+  <path id="sand-light" d="M0 935 Q190 914 380 944 T730 935 T1024 952 V1024 H0Z" fill="#ffedb2" />
+
+  <g id="bubbles" fill="#ffffff">
+    <circle cx="74" cy="48" r="6" /><circle cx="121" cy="98" r="16" /><circle cx="143" cy="141" r="14" />
+    <circle cx="115" cy="173" r="9" /><circle cx="128" cy="202" r="7" /><circle cx="352" cy="39" r="6" />
+    <circle cx="637" cy="23" r="11" /><circle cx="654" cy="67" r="17" /><circle cx="620" cy="106" r="14" />
+    <circle cx="648" cy="138" r="10" /><circle cx="625" cy="166" r="8" /><circle cx="701" cy="192" r="10" />
+    <circle cx="680" cy="240" r="16" /><circle cx="708" cy="277" r="13" /><circle cx="693" cy="312" r="9" />
+    <circle cx="956" cy="274" r="6" /><circle cx="583" cy="368" r="6" /><circle cx="858" cy="376" r="7" />
+    <circle cx="470" cy="402" r="6" /><circle cx="437" cy="430" r="14" /><circle cx="445" cy="467" r="9" />
+    <circle cx="456" cy="496" r="7" /><circle cx="713" cy="472" r="9" /><circle cx="567" cy="598" r="7" />
+    <circle cx="581" cy="631" r="12" /><circle cx="564" cy="666" r="9" /><circle cx="568" cy="698" r="7" />
+  </g>
+
+  <g id="far-seaweed" fill="#73cf5c">
+    <path d="M72 902 Q30 790 65 681 Q91 594 42 529 Q20 496 29 453 Q39 414 58 404 Q72 399 75 425 Q74 466 57 502 Q111 573 93 657 Q76 750 113 897Z" />
+    <path d="M113 910 Q88 789 130 694 Q153 642 119 600 Q101 577 108 548 Q119 514 139 511 Q159 515 157 540 Q150 579 141 598 Q188 653 157 724 Q130 800 157 904Z" />
+    <path d="M866 900 Q837 787 877 696 Q906 633 875 584 Q854 548 869 518 Q887 484 907 500 Q925 518 913 548 Q899 581 899 594 Q947 652 914 732 Q885 812 921 900Z" />
+    <path d="M937 907 Q927 797 965 702 Q1001 614 978 536 Q966 499 986 479 Q1009 458 1024 492 V912Z" />
+    <path d="M746 920 Q720 846 750 774 Q770 726 751 682 Q740 657 754 637 Q771 619 787 642 Q799 665 785 691 Q816 742 785 792 Q763 845 781 914Z" />
+  </g>
+  <g id="seaweed-light" fill="#a4df62">
+    <path d="M40 904 Q11 805 49 710 Q76 650 47 601 Q25 564 36 526 Q47 488 67 488 Q87 495 80 528 Q68 570 64 591 Q108 648 80 723 Q57 801 84 903Z" />
+    <path d="M871 905 Q854 822 888 754 Q916 700 898 657 Q881 618 897 590 Q913 565 931 581 Q948 601 932 633 Q918 666 923 682 Q965 738 938 795 Q915 847 941 909Z" />
+    <path d="M976 907 Q962 827 991 758 Q1011 711 995 667 Q984 638 998 617 Q1011 599 1024 614 V910Z" />
+  </g>
+
+  <g id="corals">
+    <path id="pink-coral" d="M0 824 Q22 785 61 810 Q75 823 80 853 Q90 818 117 796 Q145 773 167 795 Q181 809 169 835 Q211 785 207 733 Q204 700 229 691 Q258 682 270 710 Q279 731 264 754 Q294 722 321 735 Q346 747 334 774 Q323 796 289 810 Q251 828 237 872 Q210 918 170 934 L0 934Z" fill="#ee6ca8" />
+    <path id="purple-fan" d="M214 913 Q220 811 245 736 Q267 671 323 653 Q370 636 413 669 Q465 625 506 664 Q540 696 520 752 Q554 769 539 807 Q527 836 481 842 Q451 875 431 930Z" fill="#b894ea" />
+    <path id="fan-ribs" d="M276 863 L285 720 Q289 697 302 700 L315 865Z M326 860 L336 683 Q342 662 356 678 L359 866Z M375 866 L389 677 Q398 659 409 680 L400 875Z M417 877 L451 704 Q460 685 473 702 L438 891Z M249 877 L264 757 Q269 739 281 752 L277 881Z" fill="#906ad6" />
+    <path id="orange-coral" d="M798 910 Q793 844 824 784 Q851 733 834 691 Q820 660 841 642 Q861 626 880 647 Q895 664 881 697 Q912 726 924 760 Q936 702 963 669 Q986 641 1008 659 Q1028 679 1009 710 Q984 750 974 792 Q1002 762 1024 770 V930Z" fill="#ffad35" />
+    <circle cx="848" cy="676" r="11" fill="#ffe9a0" /><circle cx="874" cy="718" r="9" fill="#ffe9a0" />
+    <circle cx="944" cy="728" r="10" fill="#ffe9a0" /><circle cx="969" cy="786" r="9" fill="#ffe9a0" />
+    <path id="purple-tubes" d="M749 918 Q752 853 771 820 Q786 793 815 805 Q833 814 832 844 L829 919Z M815 921 Q818 848 844 823 Q868 801 892 816 Q906 827 901 853 L894 925Z M884 922 Q894 837 924 807 Q950 782 974 801 Q989 815 981 849 L962 931Z" fill="#9f72dd" />
+    <ellipse cx="790" cy="837" rx="25" ry="10" fill="#c89af0" /><ellipse cx="855" cy="838" rx="26" ry="10" fill="#c89af0" /><ellipse cx="934" cy="819" rx="25" ry="10" fill="#c89af0" />
+  </g>
+
+  <g id="turtle">
+    <path id="turtle-leg-back" d="M255 282 Q172 249 137 277 Q111 300 129 321 Q162 345 221 315Z" fill="#a9dd62" />
+    <path id="turtle-leg-one" d="M238 327 Q166 332 122 374 Q92 403 117 418 Q162 432 218 394 Q252 370 265 338Z" fill="#a9dd62" />
+    <path id="turtle-leg-two" d="M369 337 Q326 391 291 440 Q276 464 301 475 Q347 478 391 430 Q424 392 430 345Z" fill="#a9dd62" />
+    <path id="turtle-leg-front" d="M441 286 Q481 312 493 365 Q500 391 477 400 Q451 397 431 358 Q418 323 421 297Z" fill="#83d052" />
+    <path id="turtle-shell" d="M161 259 Q191 147 303 119 Q405 94 471 163 Q508 202 479 271 Q443 332 329 348 Q216 348 161 299Z" fill="#319e72" />
+    <path id="shell-patch-one" d="M170 231 Q187 172 231 139 Q261 128 266 156 Q269 187 234 219 Q202 244 170 231Z" fill="#ffe49a" />
+    <path id="shell-patch-two" d="M265 128 Q306 115 350 122 Q351 151 326 163 Q284 172 265 128Z" fill="#ffe49a" />
+    <ellipse id="shell-patch-three" cx="319" cy="243" rx="45" ry="28" fill="#ffe49a" />
+    <path id="shell-patch-four" d="M394 142 Q432 146 457 177 Q468 202 443 211 Q408 207 393 184 Q384 159 394 142Z" fill="#ffe49a" />
+    <path id="shell-rim" d="M145 258 Q258 307 383 275 Q435 260 468 226 Q483 243 468 273 Q412 331 307 344 Q204 342 151 300 Q137 281 145 258Z" fill="#c7f0c0" />
+    <g id="shell-stitches" fill="#ffffff">
+      <ellipse cx="241" cy="158" rx="7" ry="13" transform="rotate(-42 241 158)" /><ellipse cx="263" cy="179" rx="7" ry="12" transform="rotate(-48 263 179)" />
+      <ellipse cx="292" cy="185" rx="7" ry="13" transform="rotate(82 292 185)" /><ellipse cx="321" cy="183" rx="7" ry="13" transform="rotate(82 321 183)" />
+      <ellipse cx="351" cy="172" rx="7" ry="13" transform="rotate(43 351 172)" /><ellipse cx="376" cy="203" rx="7" ry="13" transform="rotate(-35 376 203)" />
+      <ellipse cx="395" cy="229" rx="7" ry="13" transform="rotate(-35 395 229)" /><ellipse cx="230" cy="264" rx="7" ry="13" transform="rotate(26 230 264)" />
+    </g>
+    <path id="turtle-neck" d="M421 173 Q450 113 513 116 Q569 120 591 168 Q607 214 579 246 Q551 276 499 267 Q459 256 433 230Z" fill="#b8e466" />
+    <circle id="turtle-cheek" cx="589" cy="186" r="11" fill="#f37ca9" />
+    <circle id="turtle-eye" cx="568" cy="161" r="9" fill="#292a52" />
+    <path id="turtle-smile" d="M545 190 Q555 202 568 190" fill="none" stroke="#292a52" stroke-width="7" stroke-linecap="round" />
+    <circle id="turtle-cheek-two" cx="489" cy="220" r="12" fill="#f37ca9" />
+    <g id="turtle-spots" fill="#52b87b"><circle cx="181" cy="350" r="11" /><circle cx="214" cy="342" r="10" /><circle cx="192" cy="375" r="11" /><circle cx="357" cy="370" r="11" /><circle cx="380" cy="345" r="10" /><circle cx="493" cy="328" r="10" /><circle cx="507" cy="299" r="9" /></g>
+  </g>
+
+  <g id="seahorse">
+    <path id="seahorse-body" d="M823 91 Q875 69 900 106 Q926 142 899 173 Q883 192 866 204 Q888 236 878 282 Q868 324 837 339 Q805 347 796 325 Q788 302 810 288 Q828 277 838 291 Q847 273 837 252 Q820 223 789 208 Q775 199 777 181 L754 176 Q741 171 747 154 Q752 145 769 151 L786 156 Q787 111 823 91Z" fill="#ffe29a" />
+    <path id="seahorse-fin" d="M865 181 Q923 158 946 181 Q953 197 921 204 Q949 214 943 231 Q934 246 901 226 Q923 247 906 258 Q884 256 860 233Z" fill="#c083df" />
+    <path id="seahorse-mane" d="M850 80 Q889 66 905 96 Q925 99 924 121 Q941 135 923 153 Q939 173 915 183 Q919 209 894 207 Q907 240 883 249 Q893 282 867 287 Q875 315 851 333 L837 316 Q855 280 851 242 Q846 196 857 159 Q866 115 850 80Z" fill="#ec77ae" />
+    <path id="seahorse-belly" d="M800 188 Q831 198 858 190 L858 207 Q829 216 802 204Z M806 218 Q832 228 862 220 L864 237 Q836 244 810 233Z" fill="#fff3bd" />
+    <circle id="seahorse-eye" cx="819" cy="117" r="8" fill="#292a52" /><circle cx="824" cy="114" r="3" fill="#ffffff" />
+  </g>
+
+  <g id="fish-large">
+    <path id="fish-large-body" d="M474 456 Q493 414 546 402 Q600 389 628 426 Q651 458 625 501 Q596 546 531 531 Q489 520 474 486Z" fill="#ff9d2e" />
+    <path id="fish-large-tail" d="M622 447 Q667 420 678 443 Q683 459 662 473 Q688 492 675 512 Q660 529 622 499Z" fill="#f48128" />
+    <path id="fish-large-stripe-one" d="M520 409 Q544 401 559 405 L551 528 Q530 528 513 520Z" fill="#fff7dc" />
+    <path id="fish-large-stripe-two" d="M574 405 Q595 410 608 422 L598 522 Q578 532 563 530Z" fill="#fff7dc" />
+    <circle id="fish-large-eye" cx="518" cy="473" r="8" fill="#292a52" />
+    <path id="fish-large-mouth" d="M489 483 Q498 495 509 483" fill="none" stroke="#292a52" stroke-width="6" stroke-linecap="round" />
+    <circle cx="525" cy="493" r="9" fill="#f47fa8" />
+  </g>
+
+  <g id="fish-small">
+    <path id="fish-small-body" d="M670 349 Q684 318 723 313 Q767 308 784 338 Q797 365 778 394 Q755 423 709 416 Q678 410 670 383Z" fill="#ff9b2e" />
+    <path id="fish-small-tail" d="M779 353 Q812 331 819 349 Q823 362 806 374 Q821 390 810 402 Q795 411 779 393Z" fill="#f47d27" />
+    <path id="fish-small-stripe-one" d="M705 316 L721 315 L717 414 L700 410Z" fill="#fff8df" />
+    <path id="fish-small-stripe-two" d="M740 315 Q752 318 760 325 L753 414 L735 416Z" fill="#fff8df" />
+    <circle id="fish-small-eye" cx="696" cy="374" r="6" fill="#292a52" />
+    <path id="fish-small-mouth" d="M680 382 Q687 391 694 382" fill="none" stroke="#292a52" stroke-width="5" stroke-linecap="round" />
+    <circle cx="705" cy="389" r="7" fill="#f47fa8" />
+  </g>
+
+  <g id="fish-tiny">
+    <path d="M703 506 Q718 485 748 490 Q775 495 781 518 Q786 543 763 555 Q732 566 710 548 Q697 532 703 506Z" fill="#ff9b2e" />
+    <path d="M778 514 Q807 493 811 512 Q813 523 800 531 Q814 544 805 553 Q790 559 777 545Z" fill="#f47d27" />
+    <path d="M727 493 L739 493 L738 557 L725 554Z M750 496 L761 501 L758 554 L746 557Z" fill="#fff8df" />
+    <circle cx="720" cy="529" r="5" fill="#292a52" />
+    <path d="M708 536 Q714 543 720 536" fill="none" stroke="#292a52" stroke-width="4" stroke-linecap="round" />
+  </g>
+
+  <g id="treasure">
+    <path id="chest-back" d="M571 769 Q579 706 646 682 Q721 656 786 692 Q820 713 823 769Z" fill="#8660be" />
+    <path id="chest-lid" d="M591 770 L596 709 Q600 686 627 680 L778 695 Q803 700 811 730 L815 777Z" fill="#ffd34f" />
+    <path id="chest-lid-inset" d="M611 746 L615 716 Q617 704 633 701 L773 714 Q790 718 796 739 L798 759Z" fill="#9f5f38" />
+    <path id="chest-body" d="M559 759 L814 780 L806 923 Q802 943 780 946 L574 920 Q557 916 557 897Z" fill="#d78a36" />
+    <path id="chest-front" d="M584 786 L789 803 L784 918 L582 895Z" fill="#a86034" />
+    <path id="chest-gold-band" d="M557 758 L814 780 L812 812 L558 790Z" fill="#ffd34f" />
+    <path id="chest-lock" d="M676 791 Q691 783 706 793 L704 820 L678 817Z" fill="#ffe488" />
+    <path id="chest-heart" d="M662 849 Q674 828 690 846 Q706 828 721 847 Q725 871 691 891 Q656 873 662 849Z" fill="#ef6ca2" />
+    <circle cx="576" cy="838" r="7" fill="#ffe9a0" /><circle cx="574" cy="869" r="7" fill="#ffe9a0" />
+    <circle cx="761" cy="884" r="7" fill="#ffe9a0" />
+    <path id="treasure-gem" d="M629 767 L646 748 L669 755 L674 778 L648 784Z" fill="#f383b8" />
+    <path id="treasure-gem-two" d="M722 772 L741 750 L767 760 L759 785Z" fill="#86d5ed" />
+    <g id="chest-coins" fill="#ffe56a"><circle cx="603" cy="774" r="14" /><circle cx="628" cy="782" r="13" /><circle cx="655" cy="787" r="14" /><circle cx="687" cy="790" r="13" /><circle cx="718" cy="794" r="14" /></g>
+  </g>
+
+  <g id="starfish">
+    <path id="star" d="M305 759 L322 812 L374 813 Q395 815 380 831 L339 860 L351 911 Q357 934 338 923 L296 896 L255 925 Q237 933 243 910 L256 859 L216 830 Q200 814 223 811 L273 811 L291 761 Q298 741 305 759Z" fill="#ffdc4f" />
+    <g id="star-stitches" fill="#ffffff">
+      <ellipse cx="299" cy="779" rx="5" ry="12" transform="rotate(-8 299 779)" /><ellipse cx="267" cy="822" rx="12" ry="5" transform="rotate(12 267 822)" />
+      <ellipse cx="334" cy="822" rx="12" ry="5" transform="rotate(-12 334 822)" /><ellipse cx="325" cy="879" rx="5" ry="12" transform="rotate(22 325 879)" />
+      <ellipse cx="270" cy="880" rx="5" ry="12" transform="rotate(-23 270 880)" />
+    </g>
+    <circle cx="290" cy="840" r="8" fill="#292a52" /><circle cx="322" cy="840" r="8" fill="#292a52" />
+    <path d="M298 850 Q306 860 315 850" fill="none" stroke="#292a52" stroke-width="5" stroke-linecap="round" />
+    <circle cx="280" cy="855" r="8" fill="#f47fa8" /><circle cx="332" cy="855" r="8" fill="#f47fa8" />
+  </g>
+
+  <g id="small-coral" fill="#f38bb8">
+    <path d="M420 1000 Q425 972 443 950 Q457 932 467 952 Q477 930 490 953 Q505 934 515 957 Q530 974 531 1000Z" />
+    <path d="M431 985 Q446 966 450 950 M469 985 L468 950 M500 987 Q495 966 490 952" fill="none" stroke="#d85e9d" stroke-width="7" stroke-linecap="round" />
+  </g>
+  <g id="sand-pebbles" fill="#f8c85e">
+    <ellipse cx="56" cy="964" rx="27" ry="12" /><ellipse cx="109" cy="989" rx="15" ry="7" /><ellipse cx="352" cy="987" rx="29" ry="12" /><ellipse cx="613" cy="987" rx="25" ry="9" /><ellipse cx="930" cy="996" rx="23" ry="9" />
+  </g>
+
+  <g id="sparkles" fill="#ffe05d">
+    <path d="M220 20 L228 39 L247 47 L228 54 L220 76 L212 55 L194 48 L212 39Z" />
+    <path d="M713 75 L720 91 L737 96 L721 102 L713 119 L706 102 L691 96 L706 90Z" />
+    <path d="M66 204 L74 222 L92 230 L74 237 L66 257 L58 238 L41 230 L58 222Z" />
+    <path d="M974 117 L983 137 L1001 145 L983 152 L974 173 L966 153 L947 145 L966 136Z" />
+    <path d="M644 565 L653 584 L672 591 L653 599 L644 620 L636 600 L619 591 L636 583Z" />
+    <path d="M385 462 L392 478 L407 484 L392 490 L385 507 L378 491 L364 484 L378 478Z" />
+  </g>
+  <g id="hearts" fill="#ef6ca8">
+    <path d="M401 58 Q405 36 423 45 Q438 30 450 47 Q461 66 437 87 Q413 76 401 58Z" />
+    <path d="M603 315 Q608 295 624 308 Q639 292 647 310 Q651 328 626 344 Q607 333 603 315Z" />
+    <path d="M788 445 Q793 426 808 440 Q823 426 830 443 Q833 459 808 476 Q792 463 788 445Z" />
+  </g>
+</svg>

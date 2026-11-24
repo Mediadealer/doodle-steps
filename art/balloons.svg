@@ -1,0 +1,150 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024">
+  <title>Hot air balloon festival at sunrise</title>
+  <desc>A cheerful sticker-book landscape with patterned hot air balloons, rolling hills, a river, farmhouse, trees, birds and clouds.</desc>
+
+  <rect id="sky" x="0" y="0" width="1024" height="1024" fill="#79c9f2" />
+  <circle id="sun" cx="520" cy="735" r="122" fill="#ffe878" />
+  <path id="sunray1" d="M520 575v-43M431 598l-25-43M360 662l-45-24M610 598l25-43M680 662l45-24" fill="none" stroke="#ffe878" stroke-width="18" stroke-linecap="round" />
+
+  <g id="clouds" fill="#fffdf5">
+    <path id="cloud1" d="M40 215c0-25 20-45 45-45 11-31 56-35 72-3 28-12 62 7 62 39 0 28-22 48-51 48H85c-26 0-45-15-45-39z" />
+    <path id="cloud2" d="M730 105c0-25 19-44 44-44 10-29 52-35 69-5 27-11 59 7 59 38 0 27-21 44-49 44h-80c-26 0-43-13-43-33z" />
+    <path id="cloud3" d="M826 480c0-29 23-52 51-52 12-34 61-41 80-6 31-12 67 8 67 44 0 31-24 51-56 51h-94c-29 0-48-15-48-37z" />
+    <path id="cloud4" d="M28 535c0-25 20-45 45-45 10-31 56-36 73-3 27-12 61 7 61 39 0 28-22 47-51 47H73c-26 0-45-15-45-38z" />
+  </g>
+
+  <g id="stars" fill="#ffe56b">
+    <path id="star1" d="M80 72l8 22 22 8-22 8-8 22-8-22-22-8 22-8z" />
+    <path id="star2" d="M319 143l7 18 18 7-18 7-7 18-7-18-18-7 18-7z" />
+    <path id="star3" d="M755 270l8 22 22 8-22 8-8 22-8-22-22-8 22-8z" />
+    <path id="star4" d="M936 588l8 22 22 8-22 8-8 22-8-22-22-8 22-8z" />
+  </g>
+
+  <g id="distantHills">
+    <path id="hillback" d="M0 690c125-80 220-45 328 12 112-84 212-82 320-18 125-76 252-49 376 31v309H0z" fill="#ba8ee4" />
+    <path id="hillmid" d="M0 730c111-72 221-50 345 25 107-88 209-72 320 9 119-78 239-69 359-8v268H0z" fill="#4b9f91" />
+    <path id="hillfront" d="M0 817c119-55 236-35 357 35 111-62 214-69 325-12 120-55 228-44 342 24v160H0z" fill="#9fdc68" />
+  </g>
+
+  <path id="river" d="M796 742c-94-24-204-7-263 26-63 35-27 57 35 77 49 16-7 42-83 63-104 29-105 70 9 116h273V769c-30-10-62-19-111-27-66-11-55-34 39-0 66 24 82 21 101 0z" fill="#65c5f2" />
+  <g id="riverSparkles" fill="#fffdf5">
+    <rect id="water1" x="733" y="777" width="42" height="6" rx="3" />
+    <rect id="water2" x="724" y="805" width="56" height="6" rx="3" />
+    <rect id="water3" x="600" y="838" width="58" height="6" rx="3" />
+    <rect id="water4" x="555" y="868" width="74" height="6" rx="3" />
+    <rect id="water5" x="596" y="931" width="90" height="6" rx="3" />
+    <rect id="water6" x="498" y="958" width="105" height="6" rx="3" />
+  </g>
+
+  <g id="farTrees">
+    <rect id="trunk1" x="834" y="651" width="17" height="75" rx="5" fill="#9b5e35" />
+    <circle id="tree1" cx="843" cy="631" r="48" fill="#76bd4a" />
+    <circle id="leaf1" cx="824" cy="620" r="6" fill="#fffdf5" />
+    <circle id="leaf2" cx="858" cy="609" r="6" fill="#fffdf5" />
+    <circle id="leaf3" cx="862" cy="642" r="6" fill="#fffdf5" />
+    <rect id="trunk2" x="71" y="724" width="22" height="82" rx="5" fill="#9b5e35" />
+    <circle id="tree2" cx="81" cy="699" r="61" fill="#82c63e" />
+    <circle id="leaf4" cx="57" cy="681" r="7" fill="#fffdf5" />
+    <circle id="leaf5" cx="91" cy="664" r="7" fill="#fffdf5" />
+    <circle id="leaf6" cx="114" cy="708" r="7" fill="#fffdf5" />
+  </g>
+
+  <g id="farmhouse">
+    <path id="house" d="M125 697l143-111 143 111v178H125z" fill="#fff4d5" />
+    <path id="roof" d="M107 700l161-132 161 132c9 8 2 26-11 26H118c-14 0-20-18-11-26z" fill="#ff6174" />
+    <path id="rooftrim" d="M118 725h300c-8 27-26 34-40 11-17 28-38 28-55 0-17 28-39 28-56 0-16 28-38 28-55 0-17 28-39 28-56 0-17 28-39 28-55 0-17 28-38 28-54 0-13 22-25 19-29-11z" fill="#ff6174" />
+    <path id="gable" d="M190 700l78-78 78 78z" fill="#fffdf5" />
+    <path id="attic" d="M252 687v-30c0-12 10-22 22-22s22 10 22 22v30z" fill="#ffc83e" />
+    <path id="atticbar" d="M252 671h44v8h-44zM274 635v52h8v-52z" fill="#fff4d5" />
+    <rect id="door" x="242" y="782" width="63" height="93" rx="32" fill="#9b603c" />
+    <circle id="doorheart" cx="274" cy="815" r="14" fill="#f45e91" />
+    <circle id="knob" cx="291" cy="843" r="7" fill="#ffe477" />
+    <g id="windows" fill="#ffc83e">
+      <rect id="win1" x="158" y="778" width="47" height="47" rx="4" />
+      <rect id="win2" x="329" y="778" width="47" height="47" rx="4" />
+    </g>
+    <g id="windowbars" fill="#fff4d5">
+      <rect id="bar1" x="177" y="778" width="8" height="47" />
+      <rect id="bar2" x="158" y="797" width="47" height="8" />
+      <rect id="bar3" x="348" y="778" width="8" height="47" />
+      <rect id="bar4" x="329" y="797" width="47" height="8" />
+    </g>
+    <path id="chimney" d="M165 622h38v64h-38z" fill="#ad6844" />
+    <g id="smoke" fill="#fffdf5"><circle id="smoke1" cx="184" cy="601" r="18" /><circle id="smoke2" cx="199" cy="570" r="22" /><circle id="smoke3" cx="183" cy="536" r="17" /></g>
+    <path id="pathway" d="M239 875h70c34 20 36 40 0 53h-70c-33-13-33-33 0-53z" fill="#ffd9c7" />
+    <ellipse id="step1" cx="273" cy="949" rx="43" ry="14" fill="#ffd9c7" />
+  </g>
+
+  <g id="foregroundTrees">
+    <rect id="trunk3" x="462" y="827" width="20" height="77" rx="5" fill="#995b35" />
+    <circle id="tree3" cx="472" cy="797" r="57" fill="#84c844" />
+    <circle id="dot1" cx="450" cy="788" r="7" fill="#fffdf5" /><circle id="dot2" cx="496" cy="779" r="7" fill="#fffdf5" /><circle id="dot3" cx="479" cy="816" r="7" fill="#fffdf5" />
+    <rect id="trunk4" x="942" y="796" width="23" height="77" rx="5" fill="#995b35" />
+    <circle id="tree4" cx="952" cy="765" r="65" fill="#83c746" />
+    <circle id="dot4" cx="922" cy="749" r="7" fill="#fffdf5" /><circle id="dot5" cx="968" cy="738" r="7" fill="#fffdf5" /><circle id="dot6" cx="960" cy="782" r="7" fill="#fffdf5" />
+  </g>
+
+  <g id="balloonLarge">
+    <path id="envelopeBig" d="M451 443c-60-39-91-96-84-174 8-98 74-151 153-151s145 53 153 151c7 78-24 135-84 174-38 25-100 25-138 0z" fill="#ff729f" />
+    <path id="bigStripe1" d="M456 436c-42-39-57-88-48-164 10-79 44-124 79-143l27-11-21 326c-13 0-25-3-37-8z" fill="#f45688" />
+    <path id="bigStripe2" d="M578 439c42-39 57-88 48-164-10-79-44-124-79-143l-27-11 21 326c13 0 25-3 37-8z" fill="#f45688" />
+    <path id="bigBand" d="M373 293c29-22 47-22 73 0 31-25 61-25 92 0 31-25 61-25 92 0 26-22 44-22 73 0v49c-29 22-47 22-73 0-31 25-61 25-92 0-31 25-61 25-92 0-26 22-44 22-73 0z" fill="#ffe983" />
+    <circle id="bigheart1" cx="474" cy="318" r="18" fill="#fffdf5" /><circle id="bigheart2" cx="537" cy="325" r="18" fill="#fffdf5" /><circle id="bigheart3" cx="600" cy="318" r="18" fill="#fffdf5" />
+    <path id="bigrope1" d="M447 427l25 91M615 427l-25 91" fill="none" stroke="#995b35" stroke-width="8" />
+    <rect id="bigbasket" x="474" y="509" width="114" height="66" rx="16" fill="#d99143" />
+    <rect id="bigbasketTop" x="461" y="500" width="140" height="20" rx="10" fill="#fff4d5" />
+    <circle id="bigface1" cx="511" cy="541" r="6" fill="#3e3842" /><circle id="bigface2" cx="551" cy="541" r="6" fill="#3e3842" />
+    <path id="bigsmile" d="M521 549q10 13 20 0" fill="none" stroke="#3e3842" stroke-width="5" stroke-linecap="round" />
+    <circle id="bigcheek1" cx="496" cy="552" r="8" fill="#f56e91" /><circle id="bigcheek2" cx="566" cy="552" r="8" fill="#f56e91" />
+  </g>
+
+  <g id="balloonLeft">
+    <path id="envelopeLeft" d="M66 304c-20-71 16-128 78-128s98 57 78 128c-13 46-43 72-78 83-35-11-65-37-78-83z" fill="#b38be4" />
+    <path id="leftcap" d="M66 267q20 25 40 0 20 25 40 0 20 25 40 0 20 25 40 0l-1 35c-43 54-116 54-158 0z" fill="#62d6a5" />
+    <g id="leftdots" fill="#fffdf5"><circle id="ld1" cx="104" cy="213" r="13" /><circle id="ld2" cx="159" cy="201" r="13" /><circle id="ld3" cx="187" cy="230" r="13" /><circle id="ld4" cx="76" cy="256" r="13" /></g>
+    <path id="leftropes" d="M117 382l10 38M171 382l-10 38" fill="none" stroke="#995b35" stroke-width="7" />
+    <rect id="leftbasket" x="111" y="413" width="67" height="45" rx="10" fill="#dc9848" />
+    <rect id="lefttop" x="106" y="406" width="77" height="14" rx="7" fill="#fff4d5" />
+    <circle id="leye1" cx="133" cy="435" r="4" fill="#3e3842" /><circle id="leye2" cx="157" cy="435" r="4" fill="#3e3842" />
+    <path id="lsmile" d="M138 441q7 8 14 0" fill="none" stroke="#3e3842" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <g id="balloonRight">
+    <path id="envelopeRight" d="M771 266c-16-73 19-126 77-126s93 53 77 126c-11 51-43 77-77 88-34-11-66-37-77-88z" fill="#ffd85c" />
+    <path id="rightstripe1" d="M778 191q70-36 140 0l7 31q-77-30-154 0z" fill="#ff8eb3" />
+    <path id="rightstripe2" d="M774 248q74-27 151 0l-7 28q-70-21-137 0z" fill="#70c8ec" />
+    <path id="rightstripe3" d="M790 151q58-22 116 0l12 25q-70-20-140 0z" fill="#fff4d5" />
+    <circle id="rheart1" cx="820" cy="221" r="12" fill="#fffdf5" /><circle id="rheart2" cx="870" cy="221" r="12" fill="#fffdf5" />
+    <path id="rightropes" d="M812 350l10 47M884 350l-10 47" fill="none" stroke="#995b35" stroke-width="7" />
+    <rect id="rightbasket" x="818" y="390" width="60" height="42" rx="10" fill="#dc9848" /><rect id="righttop" x="812" y="384" width="72" height="13" rx="7" fill="#fff4d5" />
+  </g>
+
+  <g id="balloonSmallLeft">
+    <path id="envelopeSmallLeft" d="M237 469c-9-48 17-82 58-82s67 34 58 82c-7 31-28 50-58 59-30-9-51-28-58-59z" fill="#64c9ef" />
+    <path id="smallleftband" d="M240 453q27 20 55 0 27 20 55 0v27q-27 21-55 0-28 21-55 0z" fill="#ffe77b" />
+    <circle id="sl1" cx="263" cy="441" r="7" fill="#fffdf5" /><circle id="sl2" cx="291" cy="423" r="7" fill="#fffdf5" /><circle id="sl3" cx="316" cy="443" r="7" fill="#fffdf5" />
+    <path id="smallleftropes" d="M268 525l10 31M322 525l-10 31" fill="none" stroke="#995b35" stroke-width="5" />
+    <rect id="smallleftbasket" x="274" y="552" width="43" height="29" rx="8" fill="#dc9848" /><rect id="smalllefttop" x="270" y="548" width="51" height="9" rx="5" fill="#fff4d5" />
+  </g>
+
+  <g id="balloonSmallRight">
+    <path id="envelopeSmallRight" d="M670 463c-8-51 20-87 62-87s70 36 62 87c-7 35-31 53-62 63-31-10-55-28-62-63z" fill="#f78ab0" />
+    <path id="smallrightstripe" d="M673 453q29 20 59 0 30 20 59 0v25q-29 21-59 0-30 21-59 0z" fill="#ffe36b" />
+    <circle id="flower" cx="732" cy="426" r="18" fill="#fffdf5" /><circle id="flower2" cx="732" cy="426" r="10" fill="#ffd34e" />
+    <path id="smallrightropes" d="M704 531l10 31M760 531l-10 31" fill="none" stroke="#995b35" stroke-width="5" />
+    <rect id="smallrightbasket" x="708" y="560" width="46" height="30" rx="8" fill="#dc9848" /><rect id="smallrighttop" x="704" y="555" width="54" height="10" rx="5" fill="#fff4d5" />
+  </g>
+
+  <g id="birds" fill="none" stroke="#3e4658" stroke-width="6" stroke-linecap="round">
+    <path id="bird1" d="M685 127q10-14 20 0 10-14 20 0" />
+    <path id="bird2" d="M729 105q10-14 20 0 10-14 20 0" />
+    <path id="bird3" d="M70 404q12-16 24 0 12-16 24 0" />
+  </g>
+
+  <g id="fence" fill="#fffdf5">
+    <rect id="fencebar1" x="35" y="864" width="97" height="10" rx="5" /><rect id="fencebar2" x="35" y="887" width="97" height="10" rx="5" />
+    <rect id="fencepost1" x="34" y="847" width="12" height="54" rx="6" /><rect id="fencepost2" x="75" y="847" width="12" height="54" rx="6" /><rect id="fencepost3" x="120" y="847" width="12" height="54" rx="6" />
+    <rect id="fencebar3" x="395" y="874" width="91" height="10" rx="5" /><rect id="fencebar4" x="395" y="897" width="91" height="10" rx="5" />
+    <rect id="fencepost4" x="394" y="857" width="12" height="54" rx="6" /><rect id="fencepost5" x="435" y="857" width="12" height="54" rx="6" /><rect id="fencepost6" x="475" y="857" width="12" height="54" rx="6" />
+  </g>
+</svg>

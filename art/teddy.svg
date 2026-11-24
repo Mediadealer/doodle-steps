@@ -1,0 +1,124 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024">
+  <title>Cozy Teddy Bear Storytime</title>
+  <desc>A sitting teddy bear hugs a star pillow beside storybooks and a toy rocket on a round rug.</desc>
+
+  <g id="background">
+    <rect id="sky" x="0" y="0" width="1024" height="1024" fill="#8edcf3" />
+    <path id="cloud-left" d="M42 180c0-38 30-68 68-68 10-34 40-57 77-57 38 0 69 25 78 60 8-4 18-6 28-6 31 0 56 25 56 56s-25 55-56 55H98c-31 0-56-18-56-40z" fill="#fff4ed" />
+    <path id="cloud-right" d="M748 175c0-35 27-63 62-63 10-32 38-53 72-53 37 0 67 24 75 57 8-4 17-6 27-6 29 0 53 24 53 53s-24 52-53 52H800c-29 0-52-18-52-40z" fill="#fff7f1" />
+    <circle id="sky-dot-one" cx="64" cy="270" r="12" fill="#f7b6da" />
+    <circle id="sky-dot-two" cx="939" cy="48" r="12" fill="#f7b6da" />
+    <circle id="sky-dot-three" cx="586" cy="104" r="11" fill="#ffe45d" />
+    <circle id="sky-dot-four" cx="981" cy="282" r="11" fill="#ffe45d" />
+    <path id="star-one" d="M292 29l6 17 18 6-18 6-6 18-6-18-18-6 18-6z" fill="#ffe45d" />
+    <path id="star-two" d="M936 191l8 23 24 8-24 8-8 24-8-24-24-8 24-8z" fill="#ffe45d" />
+    <path id="star-three" d="M55 328l7 20 21 7-21 7-7 21-7-21-21-7 21-7z" fill="#ffe45d" />
+    <path id="heart-one" d="M405 57c-17-22-52-10-43 18 7 20 43 45 43 45s36-25 43-45c9-28-26-40-43-18z" fill="#f85b93" />
+    <path id="heart-two" d="M651 244c-13-17-38-8-31 13 5 15 31 33 31 33s26-18 31-33c7-21-18-30-31-13z" fill="#f85b93" />
+  </g>
+
+  <g id="rug">
+    <ellipse id="rug-pink-edge" cx="516" cy="849" rx="482" ry="137" fill="#f27fb0" />
+    <ellipse id="rug-main" cx="516" cy="825" rx="454" ry="119" fill="#b897f1" />
+    <ellipse id="rug-border" cx="516" cy="819" rx="416" ry="95" fill="#fff4df" />
+    <ellipse id="rug-center" cx="516" cy="813" rx="400" ry="83" fill="#a984eb" />
+    <circle id="rug-dot-one" cx="112" cy="824" r="15" fill="#fff4df" />
+    <circle id="rug-dot-two" cx="184" cy="882" r="15" fill="#fff4df" />
+    <circle id="rug-dot-three" cx="292" cy="913" r="18" fill="#fff4df" />
+    <circle id="rug-dot-four" cx="384" cy="888" r="14" fill="#fff4df" />
+    <circle id="rug-dot-five" cx="713" cy="886" r="18" fill="#fff4df" />
+    <circle id="rug-dot-six" cx="806" cy="855" r="15" fill="#fff4df" />
+    <circle id="rug-dot-seven" cx="900" cy="806" r="14" fill="#fff4df" />
+  </g>
+
+  <g id="books">
+    <path id="book-bottom" d="M579 696q0-20 22-22l315 13q21 1 22 20v62q0 18-21 20l-312-9q-26-1-26-23z" fill="#43c89b" />
+    <path id="book-bottom-page" d="M811 686l105 5q18 1 20 17v40q0 14-18 16l-107-4z" fill="#fff0d7" />
+    <path id="book-bottom-stripe-one" d="M624 678l18 1 1 103-18-1z" fill="#fff0d7" />
+    <path id="book-bottom-stripe-two" d="M653 679l18 1 1 103-18-1z" fill="#fff0d7" />
+    <path id="book-middle" d="M572 597q0-23 24-24l327 17q22 2 22 22v61q0 20-22 21l-326-10q-24-1-24-23z" fill="#f65c91" />
+    <path id="book-middle-page" d="M827 590l93 5q18 1 19 18v40q0 14-18 16l-94-4z" fill="#fff0d7" />
+    <circle id="book-dot-one" cx="640" cy="636" r="16" fill="#fff0d7" />
+    <circle id="book-dot-two" cx="705" cy="639" r="16" fill="#fff0d7" />
+    <circle id="book-dot-three" cx="772" cy="642" r="16" fill="#fff0d7" />
+    <path id="book-top" d="M563 509q0-20 25-24l342 18q22 1 22 19v45q0 18-21 22l-338 17q-29 1-29-25z" fill="#8066d8" />
+    <path id="book-top-page" d="M824 506l99 5q18 1 18 16v39q0 11-17 14l-100 8z" fill="#fff0d7" />
+    <path id="book-top-stripe-one" d="M602 490l16-2 1 107-16 1z" fill="#fff0d7" />
+    <path id="book-top-stripe-two" d="M630 487l16-1 2 107-16 1z" fill="#fff0d7" />
+    <path id="book-star" d="M746 522l8 19 21 2-16 14 5 21-18-11-19 10 6-21-16-14 21-1z" fill="#ffe34f" />
+  </g>
+
+  <g id="rocket">
+    <path id="rocket-body" d="M778 461c-16-50-15-129 9-190 15-39 45-71 75-86 30 15 60 47 75 86 24 61 25 140 9 190z" fill="#fff5e7" />
+    <path id="rocket-nose" d="M787 271c13-42 47-76 75-87 29 12 63 45 77 87-43 12-108 12-152 0z" fill="#f65379" />
+    <path id="rocket-window" d="M823 337a40 40 0 1 0 80 0 40 40 0 1 0-80 0z" fill="#62c8f3" />
+    <circle id="rocket-window-core" cx="863" cy="337" r="28" fill="#50afe7" />
+    <circle id="rocket-window-shine" cx="849" cy="323" r="8" fill="#fff5e7" />
+    <circle id="rocket-window-dot" cx="879" cy="330" r="6" fill="#fff5e7" />
+    <path id="rocket-fin-left" d="M786 367c-39 21-60 57-60 96 0 15 5 25 15 26l59-30z" fill="#f65379" />
+    <path id="rocket-fin-right" d="M940 367c39 21 60 57 60 96 0 15-5 25-15 26l-59-30z" fill="#f65379" />
+    <path id="rocket-base" d="M783 459h159q-2 25-18 29H801q-16-4-18-29z" fill="#ed4e73" />
+    <circle id="rocket-button-one" cx="863" cy="404" r="13" fill="#ffda3f" />
+    <circle id="rocket-button-two" cx="863" cy="439" r="13" fill="#ffda3f" />
+    <path id="rocket-shine" d="M799 248q9-14 22-26" fill="none" stroke="#fff5e7" stroke-width="12" stroke-linecap="round" />
+  </g>
+
+  <g id="teddy">
+    <path id="bear-body" d="M207 558q10-94 116-102h143q103 8 115 103l-3 188q-3 91-181 91t-190-91z" fill="#c98254" />
+    <circle id="bear-ear-left" cx="223" cy="298" r="92" fill="#c98254" />
+    <circle id="bear-ear-left-inner" cx="223" cy="298" r="48" fill="#ffe8cf" />
+    <circle id="bear-ear-right" cx="475" cy="270" r="91" fill="#c98254" />
+    <circle id="bear-ear-right-inner" cx="475" cy="270" r="48" fill="#ffe8cf" />
+    <path id="bear-head" d="M172 246q-25 70-4 151 24 91 136 101 108 11 190-40 70-44 61-145-9-99-91-137-78-36-183-18-78 14-109 88z" fill="#d8915d" />
+    <path id="ear-bow" d="M204 210q-48-35-69-3-19 31 22 61 28 20 59 7 22-10 31-38-10-15-43-27z" fill="#f65391" />
+    <path id="ear-bow-two" d="M238 208q7-54 43-51 37 3 37 47-1 37-43 48-26 5-37-15z" fill="#f65391" />
+    <circle id="ear-bow-center" cx="239" cy="215" r="23" fill="#ffe05a" />
+    <path id="scarf" d="M164 486q102 37 284-5l21 59q-147 54-322 8z" fill="#fff0d8" />
+    <path id="scarf-pink-one" d="M194 494l34 8-15 61-39-10z" fill="#f34f83" />
+    <path id="scarf-pink-two" d="M273 504l37 1-1 65-38-2z" fill="#f34f83" />
+    <path id="scarf-tail" d="M187 534l-52 97q-9 18-25 8-11-7-2-25l39-95z" fill="#f34f83" />
+    <path id="scarf-tail-stripe-one" d="M129 577l18 8-17 34q-7 13-16 6z" fill="#fff0d8" />
+    <path id="scarf-tail-stripe-two" d="M105 608l17 8-13 27q-7 12-15 4z" fill="#f34f83" />
+    <path id="muzzle" d="M282 365q39-35 91-13 39 17 44 57 3 39-39 52-55 17-94-13-27-21-17-52 4-19 15-31z" fill="#fff0d8" />
+    <ellipse id="bear-nose" cx="327" cy="386" rx="21" ry="14" fill="#9b5936" />
+    <path id="bear-mouth" d="M327 397v15m0 0q-15 25-34 3m34-3q17 25 35 1" fill="none" stroke="#713b2a" stroke-width="9" stroke-linecap="round" />
+    <circle id="bear-eye-left" cx="262" cy="345" r="15" fill="#493027" />
+    <circle id="bear-eye-right" cx="405" cy="330" r="15" fill="#493027" />
+    <circle id="bear-eye-shine-left" cx="267" cy="339" r="5" fill="#fff" />
+    <circle id="bear-eye-shine-right" cx="410" cy="324" r="5" fill="#fff" />
+    <ellipse id="bear-cheek-left" cx="237" cy="407" rx="30" ry="18" fill="#f487a9" />
+    <ellipse id="bear-cheek-right" cx="440" cy="381" rx="29" ry="17" fill="#f487a9" />
+    <path id="head-stitches" d="M351 253l8 18m-3 16 8 18m-3 17 7 17" fill="none" stroke="#fff0d8" stroke-width="9" stroke-linecap="round" />
+    <path id="belly-patch" d="M278 596q61-28 119 2 36 19 31 74-5 57-66 67-69 11-105-29-29-33-10-78 9-22 31-36z" fill="#ffe9c9" />
+    <path id="patch-stitch" d="M290 613q-25 22-27 55m6 30q7 27 30 40m29 10q30 10 57 0m27-18q18-17 21-41" fill="none" stroke="#f17ca1" stroke-width="8" stroke-linecap="round" stroke-dasharray="13 17" />
+    <path id="patch-heart" d="M334 670c-12-17-38-9-31 12 5 14 31 31 31 31s26-17 31-31c7-21-19-29-31-12z" fill="#f36f9b" />
+    <path id="bear-arm-left" d="M207 572q-45 10-44 65 1 54 91 63 50 5 62-31 8-28-27-47-36-20-82-50z" fill="#d8915d" />
+    <path id="bear-arm-right" d="M436 568q45 3 55 53 9 45-23 65-35 22-76-11-25-20-8-52 16-29 52-55z" fill="#d8915d" />
+    <ellipse id="bear-foot-left" cx="223" cy="756" rx="88" ry="73" fill="#d8915d" />
+    <ellipse id="bear-foot-right" cx="458" cy="756" rx="88" ry="73" fill="#d8915d" />
+    <ellipse id="foot-pad-left" cx="223" cy="756" rx="55" ry="48" fill="#ffe9c9" />
+    <ellipse id="foot-pad-right" cx="458" cy="756" rx="55" ry="48" fill="#ffe9c9" />
+    <circle id="toe-left-one" cx="194" cy="738" r="13" fill="#f484aa" />
+    <circle id="toe-left-two" cx="224" cy="725" r="13" fill="#f484aa" />
+    <circle id="toe-left-three" cx="252" cy="740" r="13" fill="#f484aa" />
+    <circle id="toe-right-one" cx="430" cy="738" r="13" fill="#f484aa" />
+    <circle id="toe-right-two" cx="460" cy="725" r="13" fill="#f484aa" />
+    <circle id="toe-right-three" cx="488" cy="740" r="13" fill="#f484aa" />
+  </g>
+
+  <g id="star-pillow">
+    <path id="pillow-star" d="M369 487l25 48 54 8-39 38 9 54-49-25-49 25 9-54-39-38 54-8z" fill="#ffe354" />
+    <circle id="pillow-eye-left" cx="391" cy="549" r="8" fill="#57372c" />
+    <circle id="pillow-eye-right" cx="449" cy="551" r="8" fill="#57372c" />
+    <path id="pillow-smile" d="M413 564q14 19 28 0" fill="none" stroke="#57372c" stroke-width="7" stroke-linecap="round" />
+    <ellipse id="pillow-cheek-left" cx="375" cy="570" rx="19" ry="11" fill="#f48bab" />
+    <ellipse id="pillow-cheek-right" cx="466" cy="573" rx="19" ry="11" fill="#f48bab" />
+    <circle id="pillow-shine" cx="431" cy="512" r="7" fill="#fff8df" />
+  </g>
+
+  <g id="foreground-sparkles">
+    <path id="sparkle-left" d="M45 495l7 20 21 7-21 7-7 21-7-21-21-7 21-7z" fill="#ffe45d" />
+    <path id="sparkle-right" d="M615 320l7 20 21 7-21 7-7 21-7-21-21-7 21-7z" fill="#ffe45d" />
+    <circle id="sparkle-dot" cx="601" cy="472" r="11" fill="#b998ed" />
+  </g>
+</svg>

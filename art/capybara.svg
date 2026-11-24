@@ -1,0 +1,152 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024">
+  <title>Capybara Hot Spring Autumn Sticker Scene</title>
+  <desc>A relaxed capybara soaks in a rocky hot spring with an orange on its head, ducklings, bamboo, lanterns, steam, leaves and stars.</desc>
+
+  <rect id="sky" width="1024" height="1024" fill="#79c9f2" />
+
+  <g id="distant-foliage">
+    <path id="orange-canopy" fill="#ff9d62" d="M0 430c45-44 96-40 132-7 33-55 111-60 151-9 42-62 125-55 153 7 50-45 127-30 145 23 55-51 143-33 159 28 47-37 119-20 136 30 44-25 103-10 148 25v197H0z" />
+    <path id="pink-canopy" fill="#ef7395" d="M0 455c33-60 92-62 124-15 38-44 101-39 128 11 41-75 137-75 174 0 35-48 115-38 137 19 35-61 119-63 151 2 45-57 132-39 150 22 32-43 102-41 160 18v156H0z" />
+    <path id="golden-bush" fill="#ffd36b" d="M0 500c42-36 84-23 105 13 29-42 88-35 108 14 40-43 103-29 120 17 40-50 111-34 127 18 49-39 110-15 124 28 46-42 113-20 132 27 44-47 109-25 135 17 47-40 111-20 173 31v108H0z" />
+  </g>
+
+  <g id="bamboo">
+    <path id="bamboo-left" fill="#438c4b" d="M77 544 64 153l72-16 18 407z" />
+    <path id="bamboo-middle" fill="#59a84a" d="M164 532l31-400 45 4-18 404z" />
+    <path id="bamboo-right" fill="#397f4b" d="M235 542l40-368 51 7-40 365z" />
+    <path id="bamboo-leaf-a" fill="#8dca4d" d="M94 194C34 150 12 161 5 159c38-40 83-38 122-12z" />
+    <path id="bamboo-leaf-b" fill="#a8db55" d="M96 203c-42 24-68 74-73 112 41-29 65-61 81-103z" />
+    <path id="bamboo-leaf-c" fill="#a8db55" d="M191 185c20-51 62-82 119-84-22 47-61 73-116 98z" />
+    <path id="bamboo-leaf-d" fill="#65ad46" d="M251 182c53-45 98-42 133-8-43 13-86 14-133 8z" />
+    <path id="bamboo-leaf-e" fill="#a9db57" d="M258 192c42 3 82 32 98 70-43-15-75-35-98-70z" />
+    <path id="bamboo-leaf-f" fill="#55a749" d="M66 309c-38-37-70-38-105-10 35 19 69 26 105 10z" />
+    <path id="bamboo-leaf-g" fill="#a8db55" d="M91 315c-42 13-59 47-65 80 39-17 62-42 65-80z" />
+    <path id="bamboo-knot-1" fill="#d2ee91" d="M94 260h57q7 0 7 8v9q0 8-7 8H95q-7 0-7-8v-9q0-8 6-8z" />
+    <path id="bamboo-knot-2" fill="#d2ee91" d="M171 293h57q7 0 6 8l-1 9q0 8-7 8h-56q-7 0-7-8l1-9q0-8 7-8z" />
+    <path id="bamboo-knot-3" fill="#d2ee91" d="M235 281h56q7 0 6 8l-1 9q0 8-7 8h-55q-7 0-6-8l1-9q0-8 6-8z" />
+    <path id="bamboo-knot-4" fill="#d2ee91" d="M102 370h58q7 0 7 8v9q0 8-7 8h-57q-7 0-7-8v-9q0-8 6-8z" />
+    <path id="bamboo-knot-5" fill="#d2ee91" d="M174 397h52q7 0 7 8v9q0 8-7 8h-53q-7 0-7-8v-9q0-8 8-8z" />
+  </g>
+
+  <g id="lanterns">
+    <path id="lantern-cord-left" fill="#8c543b" d="M766 0h9v164h-9z" />
+    <path id="lantern-cord-right" fill="#8c543b" d="M887 0h9v218h-9z" />
+    <path id="lantern-top-left" fill="#b96545" d="M710 164h56q8 0 8 8v12h-72v-12q0-8 8-8z" />
+    <path id="lantern-left" fill="#f38aa5" d="M678 184h121v112q0 27-25 36H703q-25-9-25-36z" />
+    <path id="lantern-left-stripe1" fill="#fff0d6" d="M680 202h117v18H680z" />
+    <path id="lantern-left-stripe2" fill="#fff0d6" d="M678 241h121v18H678z" />
+    <path id="lantern-left-stripe3" fill="#fff0d6" d="M684 280h110v17H684z" />
+    <path id="lantern-left-base" fill="#b96545" d="M710 296h57v15q0 8-8 8h-41q-8 0-8-8z" />
+    <path id="lantern-left-tassel" fill="#ffd36b" d="M732 319h15l3 50q-10 8-20 0z" />
+    <path id="lantern-top-right" fill="#b96545" d="M862 218h55q8 0 8 8v12h-71v-12q0-8 8-8z" />
+    <path id="lantern-right" fill="#ffd36b" d="M831 239h113v105q0 28-22 38h-69q-22-10-22-38z" />
+    <circle id="lantern-dot1" fill="#fff8df" cx="853" cy="276" r="12" />
+    <circle id="lantern-dot2" fill="#fff8df" cx="887" cy="250" r="11" />
+    <circle id="lantern-dot3" fill="#fff8df" cx="922" cy="276" r="12" />
+    <circle id="lantern-dot4" fill="#fff8df" cx="887" cy="303" r="12" />
+    <circle id="lantern-dot5" fill="#fff8df" cx="854" cy="330" r="12" />
+    <circle id="lantern-dot6" fill="#fff8df" cx="919" cy="330" r="12" />
+    <path id="lantern-right-base" fill="#b96545" d="M862 344h52v14q0 8-8 8h-36q-8 0-8-8z" />
+    <path id="lantern-right-tassel" fill="#ffd36b" d="M879 366h15l4 54q-8 8-16 0z" />
+    <path id="lantern-branch" fill="#8c543b" d="M668 92c103 48 190 43 270-17l8 13c-79 77-186 79-285 21z" />
+    <path id="lantern-branch-diagonal" fill="#8c543b" d="M805 49 1024 215v38L790 75z" />
+  </g>
+
+  <g id="sky-details">
+    <path id="heart-sky" fill="#f06488" d="M344 88c-30-29-57 8 0 52 57-44 30-81 0-52z" />
+    <path id="star-sky" fill="#ffd45d" d="m460 24 8 27 23 7-23 7-8 28-8-28-24-7 24-7z" />
+    <path id="star-small" fill="#ffda63" d="m965 351 6 15 15 5-15 5-6 18-6-18-15-5 15-5z" />
+    <circle id="pink-dot" fill="#f8b0c5" cx="39" cy="45" r="8" />
+    <circle id="white-dot" fill="#fff9ed" cx="273" cy="47" r="8" />
+    <circle id="pink-dot-2" fill="#f8b0c5" cx="408" cy="119" r="8" />
+    <circle id="yellow-dot" fill="#ffdb72" cx="985" cy="284" r="8" />
+    <path id="red-leaf-top" fill="#ec3150" d="M954 53c-27-22-32-3-17 10-25-4-30 12-2 17-15 18 1 29 15 7 8 26 24 18 17-5 24 1 27-15-4-17 22-17 12-31-9-12z" />
+    <path id="yellow-leaf-top" fill="#ffe16f" d="M778 48c-18-35-35-33-26-7l-22-2c-10 7 9 18 27 20-22 22-7 32 8 9 5 29 21 21 20-5 26 3 22-12-7-15z" />
+    <path id="orange-leaf-mid" fill="#ff6d20" d="M587 220c-29-22-24-4-15 7-31-3-36 12-6 17-20 17-10 29 11 10 2 30 18 25 19-6 18 20 29 6 8-11 19-20 8-27-17-17z" />
+    <path id="red-leaf-mid" fill="#ee3152" d="M362 313c-32-29-35-12-20 2-31-7-36 10-5 18-24 19-12 35 10 11 3 31 20 27 20-6 24 21 35 4 8-13 28-24 8-31-18-12z" />
+    <path id="star-mid" fill="#ffdb64" d="m544 320 8 22 23 8-23 8-8 25-8-25-22-8 22-8z" />
+  </g>
+
+  <g id="rocks">
+    <path id="rock-left-back" fill="#a99cc7" d="M0 632c4-92 78-121 140-75 41-72 137-67 166 7 39-57 115-40 132 23v123H0z" />
+    <path id="rock-right-back" fill="#a99cc7" d="M624 581c45-72 143-73 177-2 58-55 139-19 144 53l79 39v153H603z" />
+    <path id="rock-left-front" fill="#c6b9d5" d="M0 683c36-75 109-65 137-11 39-26 90-2 91 45v119H0z" />
+    <path id="rock-right-front" fill="#c6b9d5" d="M822 682c35-65 114-64 143-8 38-25 84 2 59 78v120H790z" />
+    <path id="rock-bottom-left" fill="#9487af" d="M0 782c45-24 110 12 111 73 39-36 99-14 112 37v132H0z" />
+    <path id="rock-bottom-mid" fill="#b9add0" d="M249 857c48-32 121-15 144 40 48-43 124-20 139 44v83H247z" />
+    <path id="rock-bottom-right" fill="#9487af" d="M437 936c31-70 119-78 160-20 57-60 146-27 157 56v51H424z" />
+    <path id="rock-shine1" fill="#fff7f1" d="M74 799q18-13 35-12 7 4-2 12l-23 13q-16 6-10-13z" />
+    <path id="rock-shine2" fill="#fff7f1" d="M335 881q20-10 39-5 7 5-3 11l-29 8q-16 2-7-14z" />
+    <path id="rock-shine3" fill="#fff7f1" d="M696 886q19-10 38-7 8 5-3 12l-29 8q-15 2-6-13z" />
+  </g>
+
+  <path id="pool" fill="#45c8cf" d="M98 705c61-111 231-146 425-137 201 8 360 52 405 143 35 70-17 139-116 173-167 58-520 62-687-2-91-35-79-112-27-177z" />
+
+  <g id="steam">
+    <path id="steam-one" fill="#fff9ed" d="M180 611c-42-40-11-86 28-65 38 21 19 63-8 63 34 26 13 66-17 51-25-12-19-35-3-49z" />
+    <circle id="steam-two" fill="#fff9ed" cx="201" cy="583" r="16" />
+    <path id="steam-three" fill="#fff9ed" d="M744 596c-35-35-10-79 27-61 37 18 22 57-5 61 32 24 14 60-14 48-25-10-25-31-8-48z" />
+    <circle id="steam-four" fill="#fff9ed" cx="776" cy="571" r="20" />
+  </g>
+
+  <g id="capybara">
+    <path id="capy-body" fill="#d99269" d="M271 711c-8-91 36-189 126-224 81-31 211-19 254 46 25 39 22 91-10 120-18 17-30 28-33 64-5 44 18 57-17 66-92 22-249 24-323 4-18-5-1-31 3-76z" />
+    <path id="capy-ear-left" fill="#956045" d="M324 501c-30-34-61-17-67 8-5 24 15 45 47 52z" />
+    <path id="capy-ear-right" fill="#956045" d="M464 477c14-34 47-29 55-5 8 23-13 42-40 47z" />
+    <path id="capy-face-patch" fill="#a96e4d" d="M482 526c43-36 103-16 126 25 19 34 15 90-17 108-28 15-93 14-112-17-18-30-22-91 3-116z" />
+    <path id="capy-belly-patch" fill="#ffdca1" d="M275 654c13-48 38-80 79-89 13 29 14 93-2 137-31-1-59-7-82-16-7-3-1-18 5-32z" />
+    <path id="capy-stitch" fill="#b97858" d="M327 586q-10 8-14 21l9 5q6-13 15-20zM312 632q-6 11-7 24l11 2q1-13 7-23zM310 682q-2 13 0 25l11-1q-2-13 1-25z" />
+    <path id="capy-eye" fill="#39251f" d="M398 540c13-15 36-15 47-2 5 7-1 14-9 10-10-7-20-7-29 1-7 6-14-2-9-9z" />
+    <path id="capy-nose" fill="#39251f" d="M527 565c9-10 31-8 34 1 2 7-5 12-15 12 5 12 19 13 24 2 4-8 12-5 11 4-3 25-37 25-45 4-8 20-43 17-47-4-2-9 7-12 12-4 6 11 21 9 25-2-9 0-6-8 1-13z" />
+    <ellipse id="capy-cheek" fill="#f36f86" cx="407" cy="582" rx="29" ry="21" />
+    <path id="orange" fill="#ff9d18" d="M383 432c-2-39 30-62 66-61 34 1 53 30 50 62-3 38-39 53-72 48-28-4-42-22-44-49z" />
+    <path id="orange-leaf" fill="#49a44f" d="M428 390c14-25 43-29 57-15-9 21-30 30-57 26z" />
+    <path id="orange-stem" fill="#4b6032" d="M424 393q-4-13 4-17 8 2 6 17z" />
+    <circle id="orange-shine" fill="#fff9e8" cx="403" cy="415" r="6" />
+    <circle id="orange-shine-small" fill="#fff9e8" cx="392" cy="430" r="4" />
+  </g>
+
+  <g id="duckling-back">
+    <path id="duck-back-body" fill="#ffdc58" d="M698 676c-1-39 21-72 57-73 35 0 51 30 47 60 31 0 41 23 26 47-17 28-91 27-120 7-13-9-13-28-10-41z" />
+    <path id="duck-back-wing" fill="#f6c842" d="M760 675c21-17 51-5 49 17-2 20-34 30-54 13z" />
+    <circle id="duck-back-eye" fill="#392b28" cx="753" cy="651" r="6" />
+    <path id="duck-back-beak" fill="#f58427" d="M715 642c-25-11-39 4-31 15 8 10 26 10 39 2z" />
+    <circle id="duck-back-cheek" fill="#ef7590" cx="777" cy="654" r="8" />
+    <circle id="duck-back-shine1" fill="#fffdf1" cx="774" cy="689" r="6" />
+    <circle id="duck-back-shine2" fill="#fffdf1" cx="789" cy="684" r="4" />
+    <path id="duck-back-ripple" fill="#e7fbf0" d="M694 716c35 17 91 21 135 0 8-4 13 5 5 10-42 28-111 21-146-1-7-5-2-13 6-9z" />
+  </g>
+
+  <g id="duckling-front">
+    <path id="duck-front-body" fill="#ffdc58" d="M578 746c-2-40 22-71 57-69 35 2 48 29 43 58 31 1 43 26 26 50-21 28-93 25-119 4-12-10-10-30-7-43z" />
+    <path id="duck-front-wing" fill="#f6c842" d="M640 744c20-17 52-4 49 17-4 21-34 30-55 12z" />
+    <circle id="duck-front-eye" fill="#392b28" cx="615" cy="730" r="6" />
+    <path id="duck-front-beak" fill="#f58427" d="M579 723c-24-12-39 3-31 15 8 11 28 11 40 2z" />
+    <circle id="duck-front-cheek" fill="#ef7590" cx="630" cy="735" r="8" />
+    <circle id="duck-front-shine1" fill="#fffdf1" cx="646" cy="758" r="6" />
+    <circle id="duck-front-shine2" fill="#fffdf1" cx="662" cy="753" r="4" />
+    <circle id="duck-front-shine3" fill="#fffdf1" cx="655" cy="770" r="4" />
+    <path id="duck-front-ripple" fill="#e7fbf0" d="M542 785c38 23 106 23 150 0 8-4 13 5 5 11-44 31-123 28-163 0-7-5 0-15 8-11z" />
+  </g>
+
+  <g id="water-details">
+    <path id="ripple-left" fill="#e7fbf0" d="M123 712c-12 17-2 30 15 35l113 9c11 1 14 12 2 14-48 1-97-5-128-17-31-12-28-41-9-51 9-5 14 2 7 10z" />
+    <path id="ripple-right" fill="#e7fbf0" d="M682 711c-8 15 3 26 20 29 36 6 101 8 135-9 10-5 16 4 7 11-36 27-124 26-164 10-28-12-22-37-7-48 8-6 14 0 9 7z" />
+    <path id="water-glint" fill="#a8edf0" d="M594 660q23-12 48-5 8 4 2 11-24 1-46 8-12 1-4-14z" />
+    <path id="water-glint-small" fill="#a8edf0" d="M627 634q19-4 35 0 8 3 3 9l-36-1q-8-2-2-8z" />
+  </g>
+
+  <g id="falling-leaves">
+    <path id="leaf-bottom-red" fill="#f04455" d="M875 845c-28-29-37-13-22 5-32-8-41 8-8 19-29 19-14 36 12 11 5 35 24 26 22-8 28 21 40 2 9-15 31-24 9-33-13-12z" />
+    <path id="leaf-bottom-yellow" fill="#ffc950" d="M204 825c-28-22-31-5-17 8-31-5-35 11-5 17-21 23-6 35 13 10 4 31 21 22 19-7 25 17 35 0 8-14 28-18 8-28-16-14z" />
+    <path id="leaf-water-red" fill="#f04455" d="M312 758c-28-22-30-6-16 7-29-3-34 12-5 17-21 21-8 33 12 10 3 28 19 21 18-7 25 17 33 1 7-13 28-17 8-28-16-14z" />
+    <path id="leaf-water-orange" fill="#ff7c22" d="M813 756c-25-20-29-4-15 8-27-3-34 11-5 17-20 21-7 33 11 10 4 28 19 20 18-7 24 15 34-1 7-13 27-17 9-27-16-15z" />
+  </g>
+
+  <g id="tiny-stars">
+    <path id="star-left" fill="#ffd45d" d="m407 209 6 14 15 5-15 5-6 17-6-17-15-5 15-5z" />
+    <path id="star-right" fill="#ffd45d" d="m969 355 6 14 15 5-15 5-6 17-6-17-15-5 15-5z" />
+    <circle id="sky-pink-small" fill="#f5b1c9" cx="507" cy="260" r="8" />
+    <circle id="sky-white-small" fill="#fffaf0" cx="626" cy="317" r="8" />
+  </g>
+</svg>

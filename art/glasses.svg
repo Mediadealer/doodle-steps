@@ -1,0 +1,130 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024">
+  <title>Friendly girl with succulent</title>
+  <desc>A bright sticker-book portrait of a freckled girl with red hair, glasses, daisies, a green sweater, and a potted succulent.</desc>
+
+  <rect id="background" x="0" y="0" width="1024" height="1024" fill="#f7b8d9" />
+
+  <g id="sky-details">
+    <circle id="sky-dot-1" cx="78" cy="105" r="9" fill="#b66be8" />
+    <circle id="sky-dot-2" cx="944" cy="84" r="9" fill="#ffffff" />
+    <circle id="sky-dot-3" cx="57" cy="860" r="8" fill="#ffffff" />
+    <circle id="sky-dot-4" cx="963" cy="926" r="8" fill="#b66be8" />
+    <circle id="sky-dot-5" cx="109" cy="221" r="8" fill="#ffffff" />
+    <circle id="sky-dot-6" cx="908" cy="260" r="8" fill="#ffffff" />
+    <path id="star-left" d="M120 71l10 23 25 2-19 16 6 25-22-13-22 13 6-25-19-16 25-2z" fill="#ffd33d" />
+    <path id="star-right" d="M900 145l9 21 23 3-17 15 5 23-20-12-20 12 5-23-17-15 23-3z" fill="#ffd33d" />
+    <path id="heart-left" d="M67 326c-20-24-58 2-38 29l38 39 38-39c21-27-18-53-38-29z" fill="#ee5087" />
+    <path id="heart-right" d="M931 480c-18-22-51 2-34 26l34 35 34-35c18-24-16-48-34-26z" fill="#ef5188" />
+    <path id="heart-bottom" d="M109 789c-17-21-48 2-32 25l32 33 32-33c16-23-15-46-32-25z" fill="#f48ab1" />
+    <path id="sparkle-left" d="M56 423l8 17 18 7-18 7-8 19-8-19-18-7 18-7z" fill="#ffd33d" />
+    <path id="sparkle-right" d="M951 747l7 16 17 7-17 7-7 18-7-18-17-7 17-7z" fill="#ffd33d" />
+    <circle id="tiny-pink-1" cx="176" cy="158" r="6" fill="#ee79b2" />
+    <circle id="tiny-pink-2" cx="857" cy="190" r="6" fill="#ee79b2" />
+  </g>
+
+  <g id="hair-back">
+    <path id="hair-silhouette" d="M212 535c-55-116-32-294 72-394C365 55 481 28 593 52c113 24 187 104 194 214 8 110-20 167 63 248 56 54 91 116 69 187-18 57-66 71-94 115-32 51-12 115-66 151-54 36-126 0-181 15-89 25-165 57-256 15-69-32-89-89-148-105-71-19-102-81-82-142 19-58 101-70 111-120 9-47-46-67- -1? 0 0z" fill="#e94c53" />
+    <path id="hair-left-wave" d="M283 325c-67 38-107 95-88 161 15 51 50 68 31 116-17 42-84 37-112 83-31 51-2 107 51 119 39 9 74-7 87-47 17-55-16-83 23-130 35-43 93-63 86-133-5-55-30-95-78-169z" fill="#e94c53" />
+    <path id="hair-right-wave" d="M674 286c94 24 153 83 146 152-5 51-53 70-28 118 24 45 91 43 118 87 32 53 5 112-49 124-41 9-76-9-87-50-14-54 20-84-20-130-39-45-104-68-104-143 0-59 11-106 24-158z" fill="#e94c53" />
+    <path id="hair-light-left" d="M244 593c-29 26-58 43-72 75-15 34-7 58 13 59 24 1 29-32 49-51 23-21 49-37 50-62 1-19-18-35-40-21z" fill="#f66a70" />
+    <path id="hair-light-right" d="M774 635c27 17 54 42 62 72 9 32-4 53-24 51-23-3-24-34-40-54-19-24-44-45-40-67 3-17 23-22 42-2z" fill="#f66a70" />
+    <path id="hair-highlight" d="M315 150c45-48 94-68 121-50 15 10 5 27-13 40-39 27-63 54-83 87-17 27-39 18-40-3-1-20 6-43 15-74z" fill="#f78391" />
+    <path id="hair-curl-left" d="M221 740c-21 30-20 60 1 77 22 17 44-4 55-34 11-31 31-48 48-70 18-24 14-57-6-67-17-9-29 10-37 34-12 31-42 38-61 60z" fill="#d9414b" />
+    <path id="hair-curl-right" d="M779 458c-22 9-23 33-12 55 16 32 12 54 3 78-10 28 9 52 28 42 27-14 31-54 19-84-10-25-13-56-38-91z" fill="#d9414b" />
+  </g>
+
+  <g id="sweater-back">
+    <path id="shoulders" d="M150 1024c9-135 68-260 185-306 61-24 112-29 177-29 66 0 119 7 180 32 111 46 168 169 181 303z" fill="#69ae58" />
+    <path id="sweater-light-panel" d="M163 937c47-44 105-61 164-53 35 5 59 18 86 38-43 0-86 8-123 24-41 17-72 34-110 49z" fill="#a8d879" />
+    <path id="sweater-right-panel" d="M694 886c57-31 113-32 170-8 18 24 32 62 40 105-67-36-126-51-210-42z" fill="#a8d879" />
+    <circle id="sweater-dot-1" cx="226" cy="792" r="18" fill="#f9efc8" />
+    <circle id="sweater-dot-2" cx="310" cy="870" r="18" fill="#f9efc8" />
+    <circle id="sweater-dot-3" cx="697" cy="807" r="19" fill="#f9efc8" />
+    <circle id="sweater-dot-4" cx="755" cy="905" r="18" fill="#f9efc8" />
+  </g>
+
+  <g id="neck-and-face">
+    <path id="neck" d="M443 534h140v135c-38 26-101 26-140 0z" fill="#fac4a4" />
+    <path id="face" d="M295 277c35-116 132-164 226-164 111 0 196 58 216 172 14 79 1 182-43 247-38 56-101 81-173 83-91 2-163-27-207-91-43-63-43-169-19-247z" fill="#ffd0b2" />
+    <path id="ear-left" d="M294 390c-42-18-72 16-61 62 10 41 49 56 81 30z" fill="#fac4a4" />
+    <path id="ear-right" d="M729 390c42-18 72 16 61 62-10 41-49 56-81 30z" fill="#fac4a4" />
+    <ellipse id="ear-left-inner" cx="275" cy="432" rx="18" ry="24" fill="#f5a88d" />
+    <ellipse id="ear-right-inner" cx="748" cy="432" rx="18" ry="24" fill="#f5a88d" />
+    <path id="bang-left" d="M267 274c34-116 140-169 247-154-27 31-44 71-66 119-31 67-71 105-130 133z" fill="#e94c53" />
+    <path id="bang-middle" d="M411 155c80-50 180-29 231 31-25 9-40 31-47 67-13 69-49 119-111 143 29-65 18-144-73-241z" fill="#e94c53" />
+    <path id="bang-right" d="M574 168c74-23 151 13 176 78 16 42 16 88 9 121-36-42-79-66-125-82-31-11-48-50-60-117z" fill="#e94c53" />
+    <path id="bang-light" d="M546 164c26-16 58-22 79-17 17 4 25 17 12 25-20 11-45 18-65 34z" fill="#f66a70" />
+  </g>
+
+  <g id="glasses">
+    <circle id="glasses-left" cx="393" cy="392" r="82" fill="#ffd84e" />
+    <circle id="glasses-left-lens" cx="393" cy="392" r="66" fill="#ffd0b2" />
+    <circle id="glasses-right" cx="630" cy="392" r="82" fill="#ffd84e" />
+    <circle id="glasses-right-lens" cx="630" cy="392" r="66" fill="#ffd0b2" />
+    <path id="glasses-bridge" d="M475 389c22-18 50-18 73 0l-7 17c-20-12-40-12-60 0z" fill="#ffd84e" />
+  </g>
+
+  <g id="face-features">
+    <ellipse id="eye-left" cx="390" cy="392" rx="21" ry="26" fill="#39383d" />
+    <ellipse id="eye-right" cx="628" cy="392" rx="21" ry="26" fill="#39383d" />
+    <circle id="eye-left-shine" cx="383" cy="383" r="6" fill="#ffffff" />
+    <circle id="eye-right-shine" cx="621" cy="383" r="6" fill="#ffffff" />
+    <path id="brow-left" d="M359 351c20-17 43-14 57 4l-7 8c-15-10-30-12-47 1z" fill="#c94a4f" />
+    <path id="brow-right" d="M602 355c18-18 42-19 59-3l-5 11c-17-11-32-10-49 3z" fill="#c94a4f" />
+    <ellipse id="cheek-left" cx="337" cy="477" rx="31" ry="18" fill="#f58daf" />
+    <ellipse id="cheek-right" cx="680" cy="477" rx="31" ry="18" fill="#f58daf" />
+    <path id="smile" d="M487 483c17 25 43 25 60 0 7-10 21-2 15 10-23 43-69 43-91 0-6-12 9-20 16-10z" fill="#d84b58" />
+    <circle id="freckle-1" cx="423" cy="452" r="5" fill="#b96945" />
+    <circle id="freckle-2" cx="443" cy="463" r="5" fill="#b96945" />
+    <circle id="freckle-3" cx="468" cy="451" r="5" fill="#b96945" />
+    <circle id="freckle-4" cx="579" cy="452" r="5" fill="#b96945" />
+    <circle id="freckle-5" cx="599" cy="463" r="5" fill="#b96945" />
+    <circle id="freckle-6" cx="622" cy="451" r="5" fill="#b96945" />
+  </g>
+
+  <g id="turtleneck">
+    <path id="collar" d="M370 595c51 27 233 27 284-2 19 20 23 62 8 82-56 42-245 39-299-3-14-20-10-59 7-77z" fill="#91cc60" />
+    <rect id="collar-rib-1" x="395" y="624" width="14" height="43" rx="7" fill="#f6f0c8" />
+    <rect id="collar-rib-2" x="445" y="631" width="14" height="43" rx="7" fill="#f6f0c8" />
+    <rect id="collar-rib-3" x="495" y="634" width="14" height="43" rx="7" fill="#f6f0c8" />
+    <rect id="collar-rib-4" x="545" y="631" width="14" height="43" rx="7" fill="#f6f0c8" />
+    <rect id="collar-rib-5" x="595" y="623" width="14" height="43" rx="7" fill="#f6f0c8" />
+  </g>
+
+  <g id="succulent">
+    <path id="plant-back-left" d="M514 824c-71-34-111-79-102-119 7-31 38-31 63 1 28 36 45 76 39 118z" fill="#3a9a61" />
+    <path id="plant-back-right" d="M526 824c38-91 78-128 108-110 29 18 12 67-25 104-26 26-55 34-83 36z" fill="#318b5b" />
+    <path id="plant-leaf-left" d="M510 833c-68-14-112-47-110-78 3-31 40-38 71-11 32 28 43 57 39 89z" fill="#b6df63" />
+    <path id="plant-leaf-center" d="M513 831c-25-69-15-126 17-139 31-13 57 19 49 62-8 38-32 64-66 77z" fill="#87cb59" />
+    <path id="plant-leaf-right" d="M525 834c29-67 70-101 101-86 28 14 19 53-12 80-28 24-61 31-89 34z" fill="#9bd35a" />
+    <ellipse id="plant-soil" cx="520" cy="827" rx="115" ry="24" fill="#76513e" />
+    <path id="pot" d="M408 820h224l-20 171c-4 24-25 33-92 33s-88-9-92-33z" fill="#f38bad" />
+    <path id="pot-rim" d="M393 805h254v43c-16 18-48 23-127 23s-111-5-127-23z" fill="#fff0c8" />
+    <circle id="pot-dot-1" cx="435" cy="834" r="12" fill="#f36d9b" />
+    <circle id="pot-dot-2" cx="495" cy="834" r="12" fill="#f36d9b" />
+    <circle id="pot-dot-3" cx="555" cy="834" r="12" fill="#f36d9b" />
+    <circle id="pot-dot-4" cx="615" cy="834" r="12" fill="#f36d9b" />
+    <path id="pot-heart" d="M520 913c-22-27-62 4-40 31l40 39 40-39c22-27-18-58-40-31z" fill="#ef4f8a" />
+  </g>
+
+  <g id="hands">
+    <path id="hand-left" d="M404 882c-28-13-61-3-70 24-8 25 14 50 41 57 25 8 54-2 56-25 2-19-16-28-31-29 17-8 20-20 13-27-5-6-13-7-25-5 16-7 27-23 16-31z" fill="#fac4a4" />
+    <path id="hand-right" d="M636 882c28-13 61-3 70 24 8 25-14 50-41 57-25 8-54-2-56-25-2-19 16-28 31-29-17-8-20-20-13-27 5-6 13-7 25-5-16-7-27-23-16-31z" fill="#fac4a4" />
+  </g>
+
+  <g id="hair-daisies">
+    <path id="daisy-left-petals" d="M213 266c-26-28-65-2-47 27-37-8-49 34-13 45-28 25 4 61 31 40 0 38 43 38 43 1 28 20 58-18 30-41 35-11 18-50-17-45 19-30-8-55-27-27z" fill="#fff9e9" />
+    <circle id="daisy-left-center" cx="208" cy="317" r="20" fill="#ffd33d" />
+    <path id="daisy-right-petals" d="M757 217c-26-28-65-2-47 27-37-8-49 34-13 45-28 25 4 61 31 40 0 38 43 38 43 1 28 20 58-18 30-41 35-11 18-50-17-45 19-30-8-55-27-27z" fill="#fff9e9" />
+    <circle id="daisy-right-center" cx="752" cy="268" r="20" fill="#ffd33d" />
+    <path id="daisy-lower-petals" d="M803 647c-23-25-58-2-42 24-33-7-44 31-12 41-25 22 4 54 28 35 0 34 38 34 38 1 25 18 52-16 27-36 31-10 16-44-15-40 17-27-7-49-24-25z" fill="#fff9e9" />
+    <circle id="daisy-lower-center" cx="798" cy="693" r="18" fill="#ffd33d" />
+  </g>
+
+  <g id="tiny-shines">
+    <circle id="shine-1" cx="170" cy="685" r="5" fill="#ffffff" />
+    <circle id="shine-2" cx="843" cy="555" r="5" fill="#ffffff" />
+    <circle id="shine-3" cx="899" cy="821" r="5" fill="#ffffff" />
+    <path id="mini-star" d="M873 365l5 11 12 4-12 4-5 12-5-12-12-4 12-4z" fill="#ffd33d" />
+  </g>
+</svg>

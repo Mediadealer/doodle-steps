@@ -1,0 +1,125 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024">
+  <title>Happy ramen bowl with dumplings</title>
+  <desc>A bright candy-colored sticker-book scene of a smiling ramen bowl, dumplings, steam, and floating stars.</desc>
+
+  <rect id="background" x="0" y="0" width="1024" height="1024" fill="#f7a8ce" />
+
+  <g id="sky-details">
+    <path id="star-one" d="M153 103l12 30 30 12-30 12-12 31-12-31-31-12 31-12z" fill="#ffe451" />
+    <path id="star-two" d="M865 198l9 22 22 9-22 9-9 23-9-23-22-9 22-9z" fill="#fff8e9" />
+    <path id="star-three" d="M932 322l16 39 39 16-39 16-16 40-16-40-39-16 39-16z" fill="#ffe451" />
+    <path id="star-four" d="M76 750l11 26 26 11-26 11-11 27-11-27-26-11 26-11z" fill="#fff8e9" />
+    <path id="star-five" d="M903 703l10 24 25 10-25 10-10 25-10-25-25-10 25-10z" fill="#ffe451" />
+    <path id="heart-one" d="M111 226c-24-29-67 4-20 54l20 20 20-20c47-50 4-83-20-54z" fill="#f5487b" />
+    <path id="heart-two" d="M899 430c-29-35-80 5-24 65l24 24 24-24c56-60 5-100-24-65z" fill="#f5487b" />
+    <circle id="sky-dot-one" cx="78" cy="590" r="11" fill="#a885e6" />
+    <circle id="sky-dot-two" cx="953" cy="572" r="10" fill="#a885e6" />
+    <circle id="sky-dot-three" cx="938" cy="112" r="9" fill="#fff8e9" />
+    <path id="small-spark" d="M270 192l7 17 17 7-17 7-7 18-7-18-17-7 17-7z" fill="#fff8e9" />
+  </g>
+
+  <g id="steam">
+    <path id="steam-left" d="M345 330c-34-38 20-62-8-102-28-40 16-76 2-119" fill="none" stroke="#fff3df" stroke-width="25" stroke-linecap="round" />
+    <path id="steam-middle" d="M498 330c-35-45 27-73-5-119-31-45 22-69-1-120" fill="none" stroke="#fff3df" stroke-width="27" stroke-linecap="round" />
+    <path id="steam-right" d="M628 331c-29-35 24-62-3-101-27-38 14-63 3-99" fill="none" stroke="#fff3df" stroke-width="24" stroke-linecap="round" />
+  </g>
+
+  <g id="chopsticks">
+    <path id="chopstick-one" d="M677 487L792 169q8-22 30-14l11 4q21 8 13 29L731 505z" fill="#f9bd61" />
+    <path id="chopstick-one-tip" d="M792 169l8-22q8-22 30-14l11 4q21 8 13 29l-8 21z" fill="#f35d76" />
+    <path id="chopstick-band-one" d="M764 244l23-61 48 18-22 61z" fill="#f35d76" />
+    <path id="chopstick-band-two" d="M731 337l20-57 48 18-21 57z" fill="#f35d76" />
+    <path id="chopstick-two" d="M731 505L853 198q9-22 31-13l10 5q21 8 12 29L784 521z" fill="#ffd079" />
+    <path id="chopstick-two-tip" d="M853 198l9-22q9-22 31-13l10 5q21 8 12 29l-9 21z" fill="#f35d76" />
+    <path id="chopstick-band-three" d="M823 274l24-61 48 19-24 60z" fill="#f35d76" />
+    <path id="chopstick-band-four" d="M787 366l22-57 48 19-23 57z" fill="#f35d76" />
+  </g>
+
+  <g id="bowl">
+    <path id="bowl-body" d="M111 448h802l-36 236c-22 145-129 226-365 226S169 829 147 684z" fill="#fff0d7" />
+    <path id="bowl-lower-blue" d="M179 743q72 135 333 148 242-10 333-148l-11 78q-99 115-322 117-220-4-322-117z" fill="#55b8e8" />
+    <path id="bowl-bottom-band" d="M245 859q267 82 534 0l-7 42q-257 78-520 0z" fill="#f64f76" />
+    <path id="bowl-rim-shadow" d="M54 433q11-112 458-132 440 20 458 132l-21 117q-57 110-438 118-388-8-438-118z" fill="#f45478" />
+    <ellipse id="rim-cream" cx="512" cy="433" rx="456" ry="171" fill="#fff0d7" />
+    <ellipse id="broth" cx="512" cy="434" rx="414" ry="130" fill="#ef941e" />
+    <path id="rim-front" d="M57 439q35 157 455 162 418-5 455-162l-13 92q-74 133-442 138-369-5-443-138z" fill="#f64f76" />
+    <path id="rim-front-light" d="M78 506q78 110 434 116 357-6 434-116l-7 37q-105 108-427 112-323-4-427-112z" fill="#ff7892" />
+    <circle id="rim-dot-one" cx="150" cy="536" r="17" fill="#fff0d7" />
+    <circle id="rim-dot-two" cx="283" cy="584" r="17" fill="#fff0d7" />
+    <circle id="rim-dot-three" cx="432" cy="604" r="17" fill="#fff0d7" />
+    <circle id="rim-dot-four" cx="590" cy="601" r="17" fill="#fff0d7" />
+    <circle id="rim-dot-five" cx="747" cy="572" r="17" fill="#fff0d7" />
+    <circle id="rim-dot-six" cx="862" cy="527" r="17" fill="#fff0d7" />
+  </g>
+
+  <g id="seaweed">
+    <path id="seaweed-sheet" d="M205 362l-39-117q-8-28 20-38l160-53q28-9 37 20l43 137z" fill="#27734b" />
+    <path id="seaweed-shine-one" d="M222 258l106-35q16-5 21 11 4 15-12 20l-106 35q-16 5-21-10-4-15 12-21z" fill="#9bd34c" />
+    <path id="seaweed-shine-two" d="M244 308l101-34q16-5 21 10 5 15-11 21l-101 34q-16 5-21-10-5-15 11-21z" fill="#9bd34c" />
+  </g>
+
+  <g id="noodles">
+    <path id="noodle-one" d="M170 440c48-45 87-45 135 0s87 45 135 0 87-45 135 0 87 45 135 0 87-45 135 0" fill="none" stroke="#ffd45b" stroke-width="28" stroke-linecap="round" />
+    <path id="noodle-two" d="M147 475c49-42 89-42 137 0s88 42 136 0 88-42 136 0 88 42 136 0 88-42 136 0" fill="none" stroke="#ffe28a" stroke-width="24" stroke-linecap="round" />
+    <path id="noodle-three" d="M244 515c47-45 86-45 134 0s87 45 135 0 87-45 135 0 87 45 135 0" fill="none" stroke="#ffc83d" stroke-width="25" stroke-linecap="round" />
+    <path id="noodle-four" d="M323 400c35-29 68-28 100 4s64 33 99 1 68-32 102 1 66 32 102 0" fill="none" stroke="#ffe28a" stroke-width="21" stroke-linecap="round" />
+  </g>
+
+  <g id="egg">
+    <ellipse id="egg-white" cx="240" cy="418" rx="99" ry="94" fill="#fff9eb" />
+    <ellipse id="egg-yolk" cx="242" cy="421" rx="58" ry="56" fill="#ffc432" />
+    <circle id="yolk-shine" cx="216" cy="402" r="12" fill="#fff9eb" />
+    <circle id="yolk-shine-small" cx="206" cy="431" r="8" fill="#fff9eb" />
+  </g>
+
+  <g id="fish-cake">
+    <path id="fish-cake-white" d="M443 371c-9-24 19-44 41-31 9-29 48-28 57-1 24-20 56 5 42 31 29 2 39 39 15 53 18 23-6 55-34 43-10 28-49 28-57 1-26 17-55-11-38-35-24-11-22-48 4-61z" fill="#fff1ec" />
+    <path id="fish-cake-pink" d="M472 407c-16-44 38-72 72-42 33 29 13 76-24 77-19 1-29-19-15-31 12-10 25 1 19 12 16-9 17-36-1-43-23-9-42 13-32 38z" fill="#f477a2" />
+    <circle id="fish-cake-center" cx="514" cy="410" r="10" fill="#f477a2" />
+  </g>
+
+  <g id="green-onions">
+    <ellipse id="onion-one" cx="362" cy="431" rx="33" ry="24" fill="#3caf39" />
+    <ellipse id="onion-one-hole" cx="362" cy="431" rx="17" ry="9" fill="#a9d94d" />
+    <ellipse id="onion-two" cx="447" cy="464" rx="34" ry="24" fill="#43b83d" />
+    <ellipse id="onion-two-hole" cx="447" cy="464" rx="17" ry="9" fill="#b1df52" />
+    <ellipse id="onion-three" cx="401" cy="501" rx="34" ry="24" fill="#36a936" />
+    <ellipse id="onion-three-hole" cx="401" cy="501" rx="17" ry="9" fill="#b1df52" />
+  </g>
+
+  <g id="bowl-face">
+    <circle id="eye-left" cx="344" cy="704" r="18" fill="#432b35" />
+    <circle id="eye-right" cx="680" cy="704" r="18" fill="#432b35" />
+    <circle id="eye-left-shine" cx="350" cy="697" r="6" fill="#fff9eb" />
+    <circle id="eye-right-shine" cx="686" cy="697" r="6" fill="#fff9eb" />
+    <ellipse id="cheek-left" cx="286" cy="741" rx="35" ry="18" fill="#f47b9a" />
+    <ellipse id="cheek-right" cx="738" cy="741" rx="35" ry="18" fill="#f47b9a" />
+    <path id="happy-mouth" d="M462 724q50 24 100 0 4 48-50 49-54-1-50-49z" fill="#f34e76" />
+    <path id="mouth-smile" d="M481 735q31 12 62 0-9 22-31 22-22 0-31-22z" fill="#ff9bb0" />
+    <path id="bowl-heart-left" d="M179 686c-20-24-54 4-16 42l16 16 16-16c38-38 4-66-16-42z" fill="#f74e77" />
+    <path id="bowl-heart-right" d="M845 686c-20-24-54 4-16 42l16 16 16-16c38-38 4-66-16-42z" fill="#f74e77" />
+  </g>
+
+  <g id="dumpling-plate">
+    <ellipse id="plate" cx="759" cy="868" rx="238" ry="91" fill="#48b9e9" />
+    <ellipse id="plate-inner" cx="759" cy="850" rx="195" ry="62" fill="#77d0ef" />
+    <path id="dumpling-back" d="M708 789q18-59 76-64 57-8 89 39 47-22 83 14 32 31 9 77H696q-18-34 12-66z" fill="#ffe2a0" />
+    <path id="dumpling-back-filling" d="M726 790q20-40 57-42 36-1 57 31 38-20 63 13l11 22H711z" fill="#e9982d" />
+    <path id="dumpling-middle" d="M608 805q21-63 79-62 57-8 89 42 45-18 75 20 26 32 3 77H593q-17-38 15-77z" fill="#ffe2a0" />
+    <path id="dumpling-middle-filling" d="M627 804q21-43 59-43 37 0 60 35 34-19 58 14l8 21H615z" fill="#e9982d" />
+    <path id="dumpling-front" d="M530 853q20-72 85-75 62-9 99 46 49-21 80 26 25 38-2 75H512q-18-38 18-72z" fill="#ffe5a6" />
+    <path id="dumpling-front-filling" d="M551 850q20-48 63-49 41 0 68 40 36-20 64 17l8 23H534z" fill="#e99a30" />
+    <path id="pleat-one" d="M620 856l-3 26" stroke="#f1b653" stroke-width="14" stroke-linecap="round" />
+    <path id="pleat-two" d="M664 852l-2 28" stroke="#f1b653" stroke-width="14" stroke-linecap="round" />
+    <path id="pleat-three" d="M710 858l-8 23" stroke="#f1b653" stroke-width="14" stroke-linecap="round" />
+    <path id="plate-shine" d="M554 932q43 20 91 20" fill="none" stroke="#fff5e4" stroke-width="14" stroke-linecap="round" />
+    <path id="plate-shine-two" d="M829 941q42-4 77-23" fill="none" stroke="#fff5e4" stroke-width="14" stroke-linecap="round" />
+  </g>
+
+  <g id="foreground-sparkles">
+    <circle id="sparkle-dot-one" cx="95" cy="382" r="9" fill="#fff8e9" />
+    <circle id="sparkle-dot-two" cx="955" cy="394" r="11" fill="#fff8e9" />
+    <path id="sparkle-lower" d="M918 780l8 20 20 8-20 8-8 21-8-21-20-8 20-8z" fill="#fff8e9" />
+    <circle id="sparkle-dot-three" cx="117" cy="906" r="9" fill="#fff8e9" />
+  </g>
+</svg>

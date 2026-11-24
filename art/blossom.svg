@@ -1,0 +1,125 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024">
+  <title>Spring Park Footbridge</title>
+  <desc>A bright sticker-book scene with a red bridge over a pond, blossom trees, fish, lily pads, lantern, mountain and drifting petals.</desc>
+  <rect id="sky" x="0" y="0" width="1024" height="1024" fill="#75c9f4" />
+  <circle id="sun" cx="812" cy="142" r="72" fill="#ffe477" />
+  <g id="clouds" fill="#fffaf4">
+    <path id="cloud-left" d="M46 190c0-28 23-51 51-51 11 0 21 3 30 9 10-31 39-52 74-52 37 0 68 25 76 59 8-5 18-8 28-8 29 0 52 23 52 52H46z" />
+    <path id="cloud-right" d="M694 238c0-26 21-47 47-47 9 0 18 3 25 7 9-25 33-42 61-42 31 0 57 21 64 49 7-4 15-6 24-6 25 0 45 20 45 45H694z" />
+  </g>
+  <g id="mountain">
+    <path id="mountain-body" d="M250 566 493 310c16-17 35-17 52 0l269 282-564-26z" fill="#8e83df" />
+    <path id="mountain-snow" d="M466 340c15-17 35-18 51 0l162 172c-17 8-31 1-43-13-13-15-26-14-36 5-9 18-27 18-39 0l-17-26c-8-12-18-12-27 2l-14 21c-11 16-27 15-37 0-10-15-20-18-33-5-14 13-28 13-42 3l75-159z" fill="#fffdf7" />
+  </g>
+  <g id="far-banks">
+    <path id="far-bank" d="M0 563c95-49 176-52 261-14 83-48 170-36 239 9 83-45 172-43 249 4 91-46 182-38 275 11v171H0z" fill="#54b68e" />
+    <path id="bank-light" d="M0 642c77-55 142-57 206-22 72-50 146-38 211 9 76-44 151-34 216 8 74-50 150-42 223 4 58-31 112-29 168-1v120H0z" fill="#9be45e" />
+  </g>
+  <g id="left-tree">
+    <path id="left-trunk" d="M70 620c22-118 34-208 78-294 31-59 74-87 121-125l27 33c-43 43-72 72-95 126-33 76-43 167-46 260H70z" fill="#a96b38" />
+    <path id="left-branch" d="M116 384c52-23 101-54 143-105l31 18c-30 57-86 96-161 125z" fill="#a96b38" />
+    <path id="left-crown" d="M0 252c0-66 49-116 111-116 25-63 100-83 155-43 53-28 123 8 123 71 53 5 83 51 67 96 30 24 29 75-6 98-22 56-91 68-132 33-37 46-107 43-137-8-71 23-143-29-143-101z" fill="#f38abe" />
+    <circle id="left-blossom-a" cx="75" cy="185" r="66" fill="#f68fbc" />
+    <circle id="left-blossom-b" cx="190" cy="151" r="76" fill="#f58abd" />
+    <circle id="left-blossom-c" cx="287" cy="218" r="70" fill="#f7a5ca" />
+    <circle id="left-blossom-d" cx="42" cy="293" r="58" fill="#f48bbd" />
+    <g id="left-flowers" fill="#fffaf7">
+      <path id="flower-one" d="M71 160c-26-31-58 8-27 26-35-4-39 42-3 40-19 31 24 50 38 17 17 31 52 5 29-21 35 3 37-42 3-40 19-30-23-50-40-22z" />
+      <path id="flower-two" d="M177 250c-24-27-53 7-25 24-30-3-34 36-2 35-17 29 22 44 34 15 15 28 45 4 25-19 30 2 32-36 2-34 18-27-20-44-34-21z" />
+    </g>
+    <g id="left-flower-centers" fill="#ffd35d">
+      <circle id="left-center-one" cx="78" cy="201" r="8" /><circle id="left-center-two" cx="62" cy="188" r="7" /><circle id="left-center-three" cx="94" cy="188" r="7" /><circle id="left-center-four" cx="78" cy="174" r="7" />
+      <circle id="left-center-five" cx="181" cy="286" r="7" /><circle id="left-center-six" cx="166" cy="274" r="6" /><circle id="left-center-seven" cx="196" cy="273" r="6" />
+    </g>
+  </g>
+  <g id="right-tree">
+    <path id="right-trunk" d="M889 666c-9-102-12-179-43-245-25-52-59-72-96-108l27-30c51 32 91 74 113 128 28 69 38 155 42 255z" fill="#a96b38" />
+    <path id="right-branch" d="M904 415c-48-21-82-57-111-104l28-22c40 51 75 79 128 103z" fill="#a96b38" />
+    <path id="right-crown" d="M689 282c-17-47 15-91 63-98 8-55 70-85 118-56 45-40 119-9 124 50 48 5 73 58 49 97 27 42-3 98-52 101-23 52-92 60-127 17-45 37-111 12-119-43-39 2-68-28-56-68z" fill="#f28aba" />
+    <circle id="right-blossom-a" cx="765" cy="279" r="70" fill="#f58fc0" />
+    <circle id="right-blossom-b" cx="881" cy="242" r="69" fill="#f6a6ca" />
+    <circle id="right-blossom-c" cx="971" cy="311" r="67" fill="#f48abd" />
+    <g id="right-flowers" fill="#fffaf7">
+      <path id="flower-three" d="M788 316c-24-28-53 7-25 24-30-3-34 36-2 35-17 29 22 44 34 15 15 28 45 4 25-19 30 2 32-36 2-34 18-27-20-44-34-21z" />
+      <path id="flower-four" d="M903 257c-25-30-56 8-27 25-32-3-36 39-3 38-18 30 23 47 36 16 16 30 48 5 27-20 32 3 34-39 3-37 19-29-21-47-36-22z" />
+    </g>
+    <g id="right-flower-centers" fill="#ffd35d">
+      <circle id="right-center-one" cx="801" cy="350" r="7" /><circle id="right-center-two" cx="785" cy="338" r="6" /><circle id="right-center-three" cx="816" cy="337" r="6" />
+      <circle id="right-center-four" cx="918" cy="296" r="7" /><circle id="right-center-five" cx="902" cy="283" r="6" /><circle id="right-center-six" cx="934" cy="283" r="6" />
+    </g>
+  </g>
+  <path id="pond" d="M0 728c146-56 269-45 386 2 107 43 183 43 292 0 127-50 240-50 346 2v292H0z" fill="#39bfe0" />
+  <g id="pond-shore">
+    <path id="left-shore" d="M0 724c92-49 191-36 272 22 19 14 31 27 31 42-80-19-179-20-303 30z" fill="#b5ed70" />
+    <path id="right-shore" d="M1024 725c-89-47-178-34-260 23-19 14-31 27-31 41 83-18 179-18 291 29z" fill="#b5ed70" />
+    <ellipse id="shore-rock-one" cx="137" cy="773" rx="62" ry="32" fill="#aaa8d5" />
+    <ellipse id="shore-rock-two" cx="225" cy="753" rx="54" ry="28" fill="#aaa8d5" />
+    <ellipse id="shore-rock-three" cx="833" cy="774" rx="62" ry="31" fill="#aaa8d5" />
+    <ellipse id="shore-rock-four" cx="916" cy="785" rx="53" ry="28" fill="#aaa8d5" />
+  </g>
+  <g id="bridge">
+    <path id="bridge-rail-left" d="M178 692V570h48v99c102-67 210-92 326-92s224 25 326 92v-99h48v122c-112-75-238-105-374-105S290 617 178 692z" fill="#d94051" />
+    <path id="bridge-rail-top" d="M202 576c92-66 218-91 350-91s258 25 350 91l-25 43c-91-57-201-82-325-82s-234 25-325 82z" fill="#ef5963" />
+    <path id="bridge-deck" d="M198 684c102-75 224-99 314-99s212 24 314 99v58c-104-61-208-86-314-86s-210 25-314 86z" fill="#f45b68" />
+    <path id="bridge-under" d="M198 742c104-61 208-86 314-86s210 25 314 86v37c-105-52-208-73-314-73s-209 21-314 73z" fill="#c83c4e" />
+    <g id="bridge-posts" fill="#dc4353">
+      <rect id="post-one" x="216" y="566" width="48" height="166" rx="9" />
+      <rect id="post-two" x="405" y="516" width="34" height="126" rx="7" />
+      <rect id="post-three" x="585" y="516" width="34" height="126" rx="7" />
+      <rect id="post-four" x="760" y="566" width="48" height="166" rx="9" />
+    </g>
+    <g id="bridge-caps" fill="#ffe47b">
+      <circle id="cap-one" cx="240" cy="548" r="25" /><circle id="cap-two" cx="422" cy="513" r="20" /><circle id="cap-three" cx="602" cy="513" r="20" /><circle id="cap-four" cx="784" cy="548" r="25" />
+    </g>
+    <g id="bridge-dots" fill="#fff8df">
+      <circle id="dot-one" cx="304" cy="676" r="10" /><circle id="dot-two" cx="366" cy="648" r="10" /><circle id="dot-three" cx="437" cy="630" r="10" /><circle id="dot-four" cx="512" cy="624" r="10" /><circle id="dot-five" cx="588" cy="630" r="10" /><circle id="dot-six" cx="658" cy="648" r="10" /><circle id="dot-seven" cx="721" cy="676" r="10" />
+    </g>
+  </g>
+  <g id="fish" fill="#fff9e7">
+    <path id="fish-orange" d="M342 825c35-32 90-39 130-8-10 35-51 51-93 38l-37 22c-16 8-25-8-11-21l18-17c-17-4-22-5-7-14z" />
+    <path id="fish-white" d="M548 905c34-31 91-29 126 5-11 32-51 45-89 28l-34 21c-16 8-25-6-11-20l17-16c-18-4-24-7-9-18z" />
+  </g>
+  <g id="fish-patches" fill="#f58b37">
+    <path id="fish-orange-patch" d="M389 808c20-8 43-8 62-1l-9 50c-20 5-40 2-57-5z" />
+    <path id="fish-white-patch" d="M604 886c17-4 34 1 48 12l-14 39c-17 4-31 1-45-6z" />
+  </g>
+  <g id="fish-details" fill="#f08ab7">
+    <circle id="fish-eye-one" cx="454" cy="824" r="6" /><circle id="fish-cheek-one" cx="437" cy="839" r="7" /><circle id="fish-eye-two" cx="650" cy="907" r="6" /><circle id="fish-cheek-two" cx="632" cy="918" r="7" />
+  </g>
+  <g id="lilies">
+    <path id="lily-one" d="M103 851c35-28 83-24 121 2-36 7-69 8-121-2z" fill="#75df58" /><path id="lily-two" d="M541 812c34-25 75-20 103 4-32 4-63 5-103-4z" fill="#75df58" /><path id="lily-three" d="M199 923c44-32 93-24 127 4-46 5-78 6-127-4z" fill="#48bd5a" />
+    <path id="lily-flower" d="M236 887c-28-31-57 7-27 25-36-8-39 39-4 39-18 31 25 47 39 13 18 32 52 4 29-22 35 2 38-42 3-40 18-28-22-48-40-15z" fill="#f28abe" />
+    <circle id="lily-center" cx="248" cy="922" r="13" fill="#ffd45d" />
+  </g>
+  <g id="lantern">
+    <path id="lantern-string" d="M320 0v253" fill="none" stroke="#fff1ba" stroke-width="7" />
+    <path id="lantern-top" d="M294 254h52l14 20h-80z" fill="#e63e63" />
+    <path id="lantern-body" d="M279 274h82c28 31 28 91 0 121h-82c-28-30-28-90 0-121z" fill="#ffe36c" />
+    <path id="lantern-stripe" d="M268 307h104v18H268z" fill="#f59aaf" />
+    <path id="lantern-bottom" d="M294 395h52v19h-52z" fill="#e63e63" />
+    <path id="lantern-tail" d="M312 414h17l8 45h-34z" fill="#ffd55c" />
+    <circle id="lantern-eye-one" cx="297" cy="350" r="6" fill="#493443" /><circle id="lantern-eye-two" cx="345" cy="350" r="6" fill="#493443" />
+    <path id="lantern-smile" d="M309 363c7 11 17 11 24 0" fill="none" stroke="#493443" stroke-width="6" stroke-linecap="round" />
+    <circle id="lantern-cheek-one" cx="282" cy="367" r="9" fill="#f39ab2" /><circle id="lantern-cheek-two" cx="360" cy="367" r="9" fill="#f39ab2" />
+  </g>
+  <g id="grass" fill="#31ae58">
+    <path id="grass-left" d="M41 749c-18-33-15-52-5-57 17 17 23 35 24 57 7-33 24-46 34-39 3 15-9 32-28 48 25-18 39-17 41-5-10 18-31 24-55 25z" />
+    <path id="grass-right" d="M947 749c-15-30-12-47-2-53 15 15 21 31 21 53 8-28 23-39 32-32 2 14-8 28-25 42 22-16 35-14 37-3-10 16-29 21-52 22z" />
+  </g>
+  <g id="water-lines" fill="#b8f2f2">
+    <rect id="water-line-one" x="351" y="738" width="76" height="8" rx="4" /><rect id="water-line-two" x="563" y="739" width="69" height="8" rx="4" /><rect id="water-line-three" x="448" y="868" width="65" height="8" rx="4" /><rect id="water-line-four" x="770" y="872" width="76" height="8" rx="4" />
+  </g>
+  <g id="petals" fill="#f5a8d0">
+    <path id="petal-one" d="M441 188c12-24 37-28 50-17-8 25-29 36-54 31z" />
+    <path id="petal-two" d="M659 292c18-10 35-3 42 11-16 14-34 13-49 0z" />
+    <path id="petal-three" d="M178 430c9-24 26-39 40-37 2 22-12 42-35 53z" />
+    <path id="petal-four" d="M843 521c14-22 36-30 48-22-8 24-27 36-51 35z" />
+    <path id="petal-five" d="M33 839c15-20 35-22 45-11-10 19-28 28-48 26z" />
+    <path id="petal-six" d="M869 837c17-17 36-17 44-5-13 17-31 22-49 18z" />
+  </g>
+  <g id="stars" fill="#ffe57d">
+    <path id="star-one" d="m103 55 8 20 21 3-16 14 4 21-17-10-18 10 5-21-16-14 21-3z" />
+    <path id="star-two" d="m603 58 7 17 18 3-14 12 3 18-14-9-16 9 4-18-14-12 18-3z" />
+    <path id="star-three" d="m930 166 7 18 19 3-14 12 4 19-16-10-16 10 4-19-15-12 19-3z" />
+  </g>
+</svg>

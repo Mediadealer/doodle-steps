@@ -1,0 +1,88 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024">
+  <rect id="sky" width="1024" height="1024" fill="#79c5f2" />
+  <g id="rainbow">
+    <path id="rainbow-pink" fill="#f05b9d" d="M120 505C137 241 337 78 527 78c207 0 363 137 405 363l-70 17C823 274 695 150 528 150c-158 0-316 139-335 355z" />
+    <path id="rainbow-yellow" fill="#ffe47b" d="M182 502c22-210 181-333 346-333 177 0 301 114 347 295l-65 19c-37-146-137-242-282-242-129 0-253 105-276 272z" />
+    <path id="rainbow-green" fill="#64d39a" d="M250 506c28-148 139-241 278-241 139 0 238 78 282 220l-65 20c-34-106-108-170-218-170-105 0-192 77-210 183z" />
+    <path id="rainbow-blue" fill="#5d9cea" d="M320 510c25-91 103-145 202-145 101 0 170 50 204 135l-64 26c-25-59-71-91-140-91-65 0-116 38-137 99z" />
+  </g>
+  <g id="sky-details" fill="#fff4d9">
+    <circle id="dot-one" cx="80" cy="150" r="8" />
+    <circle id="dot-two" cx="945" cy="112" r="8" />
+    <circle id="dot-three" cx="74" cy="820" r="7" />
+    <circle id="dot-four" cx="954" cy="875" r="7" />
+    <path id="star-left" fill="#ffe477" d="M77 59l9-29 10 29 26 9-26 10-11 27-9-27-26-10z" />
+    <path id="star-right" fill="#ffe477" d="M919 45l9 31 30 9-30 10-9 29-10-29-29-10 29-9z" />
+    <path id="star-bottom" fill="#ffe477" d="M948 743l8 25 26 8-26 9-8 27-9-27-25-9 25-8z" />
+    <path id="heart-left" fill="#f65e9d" d="M69 572c-28-31-69 10 0 57 69-47 28-88 0-57z" />
+    <path id="heart-right" fill="#f65e9d" d="M893 867c-25-29-63 9 0 52 63-43 25-81 0-52z" />
+  </g>
+  <g id="rain" fill="#d8f2ff">
+    <path id="drop-one" d="M112 360c0-25 22-53 22-53s22 28 22 53c0 31-44 31-44 0z" />
+    <path id="drop-two" d="M855 170c0-27 24-58 24-58s24 31 24 58c0 34-48 34-48 0z" />
+    <path id="drop-three" d="M78 700c0-26 23-57 23-57s23 31 23 57c0 33-46 33-46 0z" />
+    <path id="drop-four" d="M850 620c0-23 20-50 20-50s20 27 20 50c0 29-40 29-40 0z" />
+    <path id="drop-five" d="M934 355c0-21 18-45 18-45s18 24 18 45c0 27-36 27-36 0z" />
+  </g>
+  <g id="umbrella">
+    <path id="umbrella-pink" fill="#f35b9b" d="M560 278C667 169 806 147 911 216l-89 212-103-45-91-37z" />
+    <path id="umbrella-yellow" fill="#ffe27a" d="M628 253c71-61 142-75 206-44l-106 204-103-30z" />
+    <path id="umbrella-green" fill="#65d39d" d="M730 208c57-18 105-11 142 18l-62 202-89-15z" />
+    <path id="umbrella-purple" fill="#aa72df" d="M872 226c36 27 62 72 74 132l-18 136-104-70z" />
+    <path id="umbrella-scallops" fill="#fff2d8" d="M560 278c19 26 47 25 62 4 8 38 53 47 75 18 12 39 61 46 82 14 15 43 68 47 85 14 21 39 70 43 91 12 21 32 61 32 76-2l-2 45c-22 27-58 21-76-8-22 30-70 25-84-12-22 32-70 25-85-13-25 27-70 17-82-21-26 22-68 5-74-32-22 13-58-2-68-30z" />
+    <path id="umbrella-shaft" fill="#fff1d8" d="M748 352l22 8-144 484-24-7z" />
+    <circle id="umbrella-tip" cx="796" cy="211" r="29" fill="#fff1d8" />
+  </g>
+  <g id="hair-back" fill="#292633">
+    <path id="hair-mass" d="M270 476c0-145 89-226 222-226 140 0 221 92 221 231v202H270z" />
+    <path id="left-braid" d="M293 644c-61 35-88 88-62 128-36 43-8 89 35 88-5 50 46 70 76 34 35-42 30-93-1-126 35-42 19-94-48-124z" />
+    <path id="right-braid" d="M695 638c63 27 96 77 74 120 40 39 17 87-26 91 9 49-39 75-73 42-39-38-39-89-12-125-39-38-28-91 37-128z" />
+  </g>
+  <g id="coat">
+    <path id="coat-body" fill="#ffd94d" d="M188 1024c18-146 65-244 167-281 61-22 190-22 259 0 105 35 153 136 177 281z" />
+    <path id="coat-collar" fill="#ffe98b" d="M350 741l138 45 132-44-43 104-89-58-93 58z" />
+    <path id="coat-center" fill="#ffe578" d="M476 786h63v238h-63z" />
+    <path id="coat-pocket-left" fill="#ffecaa" d="M224 918c22-10 77-8 104 4 12 30 12 70 1 101h-105c-17-30-17-76 0-105z" />
+    <path id="coat-pocket-right" fill="#ffecaa" d="M579 924c26-12 78-11 101 3 14 29 15 68 4 97H577c-13-29-13-71 2-100z" />
+    <circle id="button-one" cx="438" cy="832" r="18" fill="#f05d9b" />
+    <circle id="button-two" cx="438" cy="922" r="18" fill="#f05d9b" />
+    <path id="raincoat-stitch" fill="#fff4b5" d="M250 755l22 6-3 11-22-6zm40 11l23 5-3 11-23-5zm43 8l23 3-2 11-23-3z" />
+  </g>
+  <g id="neck" fill="#9d5e42">
+    <path id="neck-shape" d="M438 674h105v91c-31 25-76 24-105-1z" />
+  </g>
+  <g id="face">
+    <path id="face-shape" fill="#b96f4e" d="M302 381c43-89 137-119 244-84 78 25 117 87 110 187-6 111-82 187-188 187-113 0-190-72-190-183 0-44 7-76 24-107z" />
+    <path id="ear-left" fill="#b96f4e" d="M302 505c-55-19-76 33-48 67 17 21 52 18 75-8z" />
+    <path id="ear-right" fill="#b96f4e" d="M640 503c50-19 72 26 48 62-17 25-48 21-70-4z" />
+    <path id="hair-top" fill="#292633" d="M292 438c-11-106 58-188 178-192 128-4 194 71 186 190-29-30-55-42-83-43-21-2-42-24-57-48-14 59-59 83-105 58-18 43-58 65-119 35z" />
+    <path id="hair-lock-left" fill="#292633" d="M300 434c-13 50-7 109 39 138l-6-111z" />
+    <path id="hair-lock-right" fill="#292633" d="M593 387c34 18 55 53 55 103l-31-18z" />
+    <circle id="eye-left" cx="391" cy="520" r="15" fill="#292633" />
+    <circle id="eye-right" cx="548" cy="510" r="15" fill="#292633" />
+    <circle id="eye-shine-left" cx="396" cy="515" r="5" fill="#fff" />
+    <circle id="eye-shine-right" cx="553" cy="505" r="5" fill="#fff" />
+    <ellipse id="cheek-left" cx="350" cy="586" rx="27" ry="17" fill="#ef7294" />
+    <ellipse id="cheek-right" cx="590" cy="576" rx="27" ry="17" fill="#ef7294" />
+    <ellipse id="nose" cx="472" cy="555" rx="11" ry="8" fill="#8f4c3d" />
+    <path id="smile" fill="#8f3049" d="M437 577c28 8 52 5 70-5-4 35-27 49-49 38-12-6-19-18-21-33z" />
+  </g>
+  <g id="braid-ribbons">
+    <path id="left-ribbon" fill="#f45d9d" d="M247 852l-55-42 7 55-42 30 59 5 15 50 22-50 56-11-48-27z" />
+    <path id="right-ribbon" fill="#f45d9d" d="M757 850l55-43-7 56 47 24-58 10-13 51-24-49-54-12 45-27z" />
+    <circle id="left-knot" cx="243" cy="850" r="16" fill="#fff1d8" />
+    <circle id="right-knot" cx="763" cy="850" r="16" fill="#fff1d8" />
+  </g>
+  <g id="hand" fill="#b96f4e">
+    <path id="hand-shape" d="M622 752c-16-24-56-22-68 2-13 27 14 47 35 56 18 8 39 2 47-17 7-15-4-29-14-41z" />
+  </g>
+  <g id="umbrella-hand-details" fill="#914c3c">
+    <path id="finger-one" d="M570 765c20 2 35 9 45 18l-5 7c-12-9-26-14-42-15z" />
+    <path id="finger-two" d="M563 783c18 2 32 8 43 16l-5 7c-12-8-25-12-40-13z" />
+  </g>
+  <g id="coat-charms">
+    <path id="heart-charm" fill="#f05d9b" d="M496 956c-28-32-65 9 0 55 65-46 28-87 0-55z" />
+    <circle id="charm-shine" cx="486" cy="963" r="5" fill="#fff4d9" />
+    <circle id="button-shine" cx="433" cy="827" r="5" fill="#fff4d9" />
+  </g>
+</svg>

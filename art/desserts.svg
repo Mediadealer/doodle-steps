@@ -1,0 +1,159 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024">
+  <title>Pastel dessert table</title>
+  <desc>A cheerful sticker-book dessert table with bubble tea, rainbow cake, macarons, donut, cupcake and sundae.</desc>
+
+  <rect id="background" width="1024" height="1024" fill="#f7a7ce" />
+  <path id="table" d="M0 560Q250 530 510 565T1024 550V1024H0Z" fill="#a99bea" />
+  <path id="tablecloth" d="M48 764Q52 712 101 698Q118 650 170 663Q199 619 245 643Q288 607 330 642Q385 612 418 658Q472 635 503 682Q558 650 595 695Q650 665 684 710Q737 680 774 726Q823 700 852 746Q911 730 932 779Q993 778 1002 829Q1011 887 954 901Q940 956 882 947Q851 987 804 962Q766 1001 715 973Q672 1009 625 978Q574 1013 529 980Q483 1011 438 978Q389 1001 354 967Q302 993 267 954Q214 975 184 931Q127 945 113 897Q57 901 35 856Q16 809 48 764Z" fill="#fff7f2" />
+
+  <g id="sky-details">
+    <circle id="sky-dot-1" cx="82" cy="181" r="9" fill="#fffdf9" />
+    <circle id="sky-dot-2" cx="196" cy="228" r="8" fill="#fffdf9" />
+    <circle id="sky-dot-3" cx="310" cy="151" r="8" fill="#fffdf9" />
+    <circle id="sky-dot-4" cx="420" cy="55" r="8" fill="#fffdf9" />
+    <circle id="sky-dot-5" cx="749" cy="47" r="8" fill="#fffdf9" />
+    <circle id="sky-dot-6" cx="854" cy="217" r="8" fill="#fffdf9" />
+    <circle id="sky-dot-7" cx="981" cy="112" r="8" fill="#fffdf9" />
+    <path id="star-left" d="M92 203l7 23 20 9-20 8-7 25-7-25-19-8 19-9Z" fill="#ffe05f" />
+    <path id="star-top" d="M355 29l8 30 24 11-24 10-8 31-8-31-25-10 25-11Z" fill="#ffe05f" />
+    <path id="star-right" d="M928 209l9 29 24 11-24 10-9 31-9-31-24-10 24-11Z" fill="#ffe05f" />
+    <path id="heart-left" d="M247 191Q263 171 280 188Q297 157 313 180Q330 209 282 239Q231 224 235 202Q237 194 247 191Z" fill="#f25d8d" />
+    <path id="heart-right" d="M724 181Q739 161 755 181Q775 155 789 183Q796 209 751 222Q725 212 718 193Z" fill="#f25d8d" />
+    <path id="sparkle" d="M676 45l9 2 8 19-6 25-8 4-8-5 8-25Z" fill="#ffe76b" />
+    <path id="sparkle-2" d="M700 112l16-23 20-7-2 14-28 25Z" fill="#ffe76b" />
+  </g>
+
+  <g id="bubble-tea">
+    <path id="tea-cup" d="M365 225Q512 198 659 225L631 570Q626 624 569 638L455 638Q398 624 392 570Z" fill="#fff4f0" />
+    <path id="tea-pink" d="M381 288Q511 309 643 287L625 558Q620 600 575 612L449 612Q405 599 400 558Z" fill="#f58eaf" />
+    <path id="tea-wave" d="M400 302q24-25 48 0q25-27 51 0q27-28 54 0q27-28 54 0q23-24 38-1v42H400Z" fill="#f9bfd0" />
+    <path id="tea-lid" d="M352 220Q354 198 382 193Q511 168 642 194Q671 198 673 220Q675 244 649 253Q510 270 376 252Q350 245 352 220Z" fill="#fffaf4" />
+    <path id="straw" d="M511 202L544 28Q548 16 564 19L593 25Q604 29 600 44L562 216Z" fill="#fffaf4" />
+    <path id="straw-pink-1" d="M533 91l49-14-10 45-48 14Z" fill="#f05f91" />
+    <path id="straw-pink-2" d="M516 163l48-14-10 44-47 10Z" fill="#f05f91" />
+    <ellipse id="straw-top" cx="571" cy="34" rx="28" ry="9" transform="rotate(12 571 34)" fill="#f36f9c" />
+    <circle id="tea-eye-left" cx="466" cy="322" r="15" fill="#47343a" />
+    <circle id="tea-eye-right" cx="575" cy="322" r="15" fill="#47343a" />
+    <circle id="tea-eye-shine-left" cx="470" cy="317" r="5" fill="#fffdf9" />
+    <circle id="tea-eye-shine-right" cx="579" cy="317" r="5" fill="#fffdf9" />
+    <path id="tea-smile" d="M503 338q9 18 20 0q10 18 21 0" fill="none" stroke="#47343a" stroke-width="7" stroke-linecap="round" />
+    <ellipse id="tea-cheek-left" cx="437" cy="352" rx="24" ry="15" fill="#f36f9c" />
+    <ellipse id="tea-cheek-right" cx="603" cy="352" rx="24" ry="15" fill="#f36f9c" />
+    <path id="strawberry" d="M486 402Q510 375 535 401Q567 442 524 480Q480 473 476 437Q476 418 486 402Z" fill="#f34872" />
+    <path id="berry-leaf" d="M510 402q-20-28-7-32q12-2 20 18q6-27 18-21q9 6-5 27q25-10 28 3q1 13-25 17q17 13 5 20q-15 5-30-11q-15 12-25 5q-8-10 13-26Z" fill="#62b85a" />
+    <circle id="berry-seed-1" cx="495" cy="426" r="5" fill="#fffdf9" />
+    <circle id="berry-seed-2" cx="520" cy="419" r="5" fill="#fffdf9" />
+    <circle id="berry-seed-3" cx="505" cy="445" r="5" fill="#fffdf9" />
+    <circle id="berry-seed-4" cx="530" cy="447" r="5" fill="#fffdf9" />
+    <g id="tea-pearls" fill="#84512f">
+      <circle cx="450" cy="502" r="18" /><circle cx="496" cy="526" r="18" /><circle cx="545" cy="506" r="18" />
+      <circle cx="584" cy="493" r="18" /><circle cx="464" cy="555" r="18" /><circle cx="530" cy="563" r="18" />
+    </g>
+    <circle id="tea-glint" cx="401" cy="407" r="8" fill="#fffdf9" />
+  </g>
+
+  <g id="rainbow-cake">
+    <path id="cake-body" d="M79 460L373 407V606Q371 635 343 643L103 678Q61 681 60 641V491Q61 471 79 460Z" fill="#fff4dc" />
+    <path id="cake-cream" d="M61 471Q89 425 133 431Q165 373 211 404Q243 356 293 402Q339 380 368 417Q382 440 373 463Q349 450 329 474Q301 501 276 474Q246 511 215 479Q184 516 151 481Q116 512 91 484Q73 476 61 471Z" fill="#fffaf2" />
+    <path id="cake-red-layer" d="M92 493L373 441V488L92 536Z" fill="#f45c83" />
+    <path id="cake-yellow-layer" d="M92 536L373 488V526L92 575Z" fill="#ffe15b" />
+    <path id="cake-green-layer" d="M92 575L373 526V564L92 613Z" fill="#76d49a" />
+    <path id="cake-blue-layer" d="M92 613L373 564V602L92 646Z" fill="#72cde8" />
+    <path id="cake-purple-layer" d="M92 646L373 602V626Q371 635 343 643L103 678Q92 678 92 665Z" fill="#a991e8" />
+    <path id="cake-heart" d="M186 390Q201 369 216 388Q235 364 249 390Q255 417 218 438Q180 426 181 405Z" fill="#f44f7c" />
+    <circle id="cake-dot-1" cx="151" cy="399" r="10" fill="#ffd52f" />
+    <circle id="cake-dot-2" cx="224" cy="402" r="10" fill="#f067a0" />
+    <circle id="cake-dot-3" cx="274" cy="395" r="10" fill="#ae8be8" />
+    <circle id="cake-dot-4" cx="317" cy="383" r="10" fill="#ffd52f" />
+  </g>
+
+  <g id="macarons">
+    <path id="macaron-purple" d="M686 490Q691 451 753 447H829Q888 452 895 490Q888 527 829 532H752Q695 526 686 490Z" fill="#8970dc" />
+    <path id="macaron-purple-cream" d="M687 484q18 25 39 5q20 26 42 3q22 26 44 2q23 25 43 0q24 21 40-4v24q-17 27-40 5q-21 25-43 1q-22 25-44 1q-22 24-43-1q-22 20-38-5Z" fill="#fff8e9" />
+    <path id="macaron-yellow" d="M686 414Q691 376 753 373H829Q888 378 895 414Q888 450 829 456H752Q695 450 686 414Z" fill="#ffd05b" />
+    <path id="macaron-yellow-cream" d="M687 409q18 25 39 5q20 26 42 3q22 26 44 2q23 25 43 0q24 21 40-4v24q-17 27-40 5q-21 25-43 1q-22 25-44 1q-22 24-43-1q-22 20-38-5Z" fill="#fff8e9" />
+    <path id="macaron-pink" d="M698 342Q703 300 762 296H823Q883 300 890 342Q883 382 823 388H762Q707 382 698 342Z" fill="#ee638d" />
+    <path id="macaron-pink-cream" d="M699 337q18 26 38 5q21 26 42 3q22 26 43 2q22 25 42 0q23 21 38-4v24q-15 27-38 5q-20 25-42 1q-21 25-43 1q-21 24-42-1q-21 20-38-5Z" fill="#fff8e9" />
+    <circle id="macaron-highlight-1" cx="721" cy="302" r="8" fill="#fffdf9" />
+    <circle id="macaron-highlight-2" cx="752" cy="282" r="8" fill="#fffdf9" />
+    <circle id="macaron-highlight-3" cx="789" cy="283" r="8" fill="#fffdf9" />
+    <circle id="macaron-highlight-4" cx="821" cy="300" r="8" fill="#fffdf9" />
+  </g>
+
+  <g id="donut">
+    <path id="donut-base" d="M87 770Q87 685 174 654Q264 620 355 658Q431 692 433 767Q429 846 350 886Q256 925 163 884Q87 850 87 770Z" fill="#ffd795" />
+    <path id="donut-icing" d="M88 762Q97 695 178 667Q266 638 352 672Q420 700 431 758Q409 786 381 778Q363 815 331 790Q307 821 273 790Q241 824 209 794Q170 819 145 786Q112 800 88 762Z" fill="#f2679d" />
+    <ellipse id="donut-hole" cx="263" cy="750" rx="45" ry="29" fill="#dc873f" />
+    <ellipse id="donut-hole-light" cx="263" cy="764" rx="43" ry="17" fill="#fff0d5" />
+    <g id="donut-sprinkles">
+      <rect id="sprinkle-1" x="132" y="716" width="39" height="13" rx="7" transform="rotate(-28 132 716)" fill="#fffdf9" />
+      <rect id="sprinkle-2" x="174" y="675" width="38" height="13" rx="7" transform="rotate(-25 174 675)" fill="#ffd824" />
+      <rect id="sprinkle-3" x="311" y="684" width="40" height="13" rx="7" transform="rotate(18 311 684)" fill="#ffe36a" />
+      <rect id="sprinkle-4" x="351" y="726" width="33" height="13" rx="7" transform="rotate(51 351 726)" fill="#fffdf9" />
+      <rect id="sprinkle-5" x="119" y="765" width="34" height="13" rx="7" transform="rotate(-12 119 765)" fill="#ef9ce3" />
+      <rect id="sprinkle-6" x="183" y="747" width="31" height="13" rx="7" transform="rotate(48 183 747)" fill="#64c9e7" />
+      <rect id="sprinkle-7" x="329" y="780" width="33" height="13" rx="7" transform="rotate(-49 329 780)" fill="#ffe36a" />
+    </g>
+    <circle id="donut-eye-left" cx="208" cy="841" r="12" fill="#49353d" />
+    <circle id="donut-eye-right" cx="310" cy="841" r="12" fill="#49353d" />
+    <circle id="donut-shine-left" cx="211" cy="838" r="4" fill="#fffdf9" />
+    <circle id="donut-shine-right" cx="313" cy="838" r="4" fill="#fffdf9" />
+    <path id="donut-smile" d="M245 858q10 15 20 0q10 15 20 0" fill="none" stroke="#49353d" stroke-width="7" stroke-linecap="round" />
+    <ellipse id="donut-cheek-left" cx="177" cy="865" rx="22" ry="13" fill="#f36f9c" />
+    <ellipse id="donut-cheek-right" cx="342" cy="865" rx="22" ry="13" fill="#f36f9c" />
+  </g>
+
+  <g id="cupcake">
+    <path id="cupcake-wrapper" d="M433 727L674 727L648 919Q553 952 458 919Z" fill="#65c9e8" />
+    <path id="wrapper-stripe-left" d="M470 735h35l-13 184-34-9Z" fill="#fff8ed" />
+    <path id="wrapper-stripe-center" d="M536 730h39l-1 212-38 2Z" fill="#fff8ed" />
+    <path id="wrapper-stripe-right" d="M608 732h36l-24 185-34 10Z" fill="#fff8ed" />
+    <path id="frosting" d="M420 727Q425 688 459 681Q447 639 482 626Q512 616 531 641Q548 599 584 624Q613 639 605 674Q645 669 663 700Q680 730 656 754Q628 774 597 758Q572 789 535 765Q504 795 473 766Q435 780 420 727Z" fill="#fffaf2" />
+    <path id="frosting-yellow" d="M455 759Q508 784 551 757Q597 784 650 752L649 800Q555 829 457 795Z" fill="#ffc95b" />
+    <circle id="cupcake-dot-1" cx="493" cy="654" r="10" fill="#ffd51f" />
+    <circle id="cupcake-dot-2" cx="585" cy="667" r="10" fill="#f067a0" />
+    <circle id="cupcake-dot-3" cx="620" cy="700" r="10" fill="#ffd51f" />
+    <circle id="cupcake-dot-4" cx="462" cy="690" r="10" fill="#65c9e8" />
+    <circle id="cherry" cx="560" cy="603" r="42" fill="#f24e70" />
+    <path id="cherry-stem" d="M559 570q2-40 24-59" fill="none" stroke="#604234" stroke-width="8" stroke-linecap="round" />
+    <circle id="cherry-shine" cx="545" cy="590" r="8" fill="#fffdf9" />
+    <circle id="cupcake-eye-left" cx="518" cy="817" r="11" fill="#49353d" />
+    <circle id="cupcake-eye-right" cx="593" cy="817" r="11" fill="#49353d" />
+    <path id="cupcake-smile" d="M546 835q10 15 20 0" fill="none" stroke="#49353d" stroke-width="7" stroke-linecap="round" />
+    <ellipse id="cupcake-cheek-left" cx="500" cy="846" rx="20" ry="12" fill="#f36f9c" />
+    <ellipse id="cupcake-cheek-right" cx="613" cy="846" rx="20" ry="12" fill="#f36f9c" />
+    <path id="cupcake-heart" d="M548 865Q558 849 570 865Q585 847 597 868Q601 891 573 909Q544 892 548 865Z" fill="#f14f83" />
+  </g>
+
+  <g id="sundae">
+    <path id="sundae-bowl" d="M704 716Q824 694 945 716L925 794Q907 836 832 849Q753 837 730 795Z" fill="#72d4ed" />
+    <path id="sundae-rim" d="M691 703Q821 679 958 704Q972 711 960 724Q834 752 705 725Q687 719 691 703Z" fill="#fff9ed" />
+    <path id="sundae-stem" d="M810 839H865L875 891Q844 907 806 891Z" fill="#72d4ed" />
+    <ellipse id="sundae-foot" cx="840" cy="892" rx="80" ry="17" fill="#72d4ed" />
+    <path id="icecream-chocolate" d="M703 697Q697 648 737 623Q777 598 817 635Q849 666 825 714Z" fill="#754532" />
+    <path id="icecream-vanilla" d="M758 688Q755 620 797 576Q837 541 878 575Q913 604 897 680Z" fill="#fff0c9" />
+    <path id="icecream-pink" d="M830 700Q828 650 861 620Q897 592 932 620Q966 650 952 708Z" fill="#f2769d" />
+    <path id="pink-drip" d="M830 649q20 22 38 3q18-18 31 6q12 25 30 3q17-22 27 0v48l-125-5Z" fill="#fff8ed" />
+    <path id="sundae-wafer-1" d="M882 641l25-111q4-16 20-13l15 4q15 5 9 20l-30 110Z" fill="#c88742" />
+    <path id="wafer-stripe-1" d="M896 590l38 15-8 26-37-14Z" fill="#ffe1a2" />
+    <path id="sundae-wafer-2" d="M913 662l35-112q5-15 20-10l14 6q14 6 5 21l-38 108Z" fill="#c88742" />
+    <path id="wafer-stripe-2" d="M927 606l39 15-10 26-37-15Z" fill="#ffe1a2" />
+    <path id="sundae-star" d="M817 669l12 25 28 3-21 18 6 28-25-14-25 14 7-28-22-18 29-3Z" fill="#ffe05d" />
+    <circle id="sundae-eye-left" cx="790" cy="762" r="11" fill="#49353d" />
+    <circle id="sundae-eye-right" cx="869" cy="762" r="11" fill="#49353d" />
+    <circle id="sundae-shine-left" cx="793" cy="759" r="4" fill="#fffdf9" />
+    <circle id="sundae-shine-right" cx="872" cy="759" r="4" fill="#fffdf9" />
+    <path id="sundae-smile" d="M818 780q11 16 22 0" fill="none" stroke="#49353d" stroke-width="7" stroke-linecap="round" />
+    <ellipse id="sundae-cheek-left" cx="769" cy="791" rx="19" ry="11" fill="#f36f9c" />
+    <ellipse id="sundae-cheek-right" cx="891" cy="791" rx="19" ry="11" fill="#f36f9c" />
+    <circle id="sundae-dot" cx="910" cy="729" r="7" fill="#fffdf9" />
+  </g>
+
+  <g id="cloth-dots" fill="#ad9be9">
+    <circle id="cloth-dot-1" cx="73" cy="794" r="9" /><circle id="cloth-dot-2" cx="91" cy="866" r="9" />
+    <circle id="cloth-dot-3" cx="126" cy="921" r="9" /><circle id="cloth-dot-4" cx="220" cy="948" r="9" />
+    <circle id="cloth-dot-5" cx="419" cy="967" r="9" /><circle id="cloth-dot-6" cx="521" cy="970" r="9" />
+    <circle id="cloth-dot-7" cx="715" cy="955" r="9" /><circle id="cloth-dot-8" cx="897" cy="916" r="9" />
+    <circle id="cloth-dot-9" cx="968" cy="864" r="9" />
+  </g>
+</svg>
