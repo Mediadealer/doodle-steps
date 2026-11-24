@@ -8,3 +8,4 @@ art/*.png
 art/*.jpg
 art/*.jpeg
 art/*.webp
+tools/kie-cli.mjs
