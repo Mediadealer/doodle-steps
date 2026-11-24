@@ -25,7 +25,10 @@ if (!opt.prompt || !opt.out) { console.error('usage: node tools/gen-image.js --p
 
 // The house style: what makes an image trace cleanly into coloring steps.
 const STYLE = 'Flat vector illustration in a cheerful sticker-book style. Solid flat colors only: no gradients, no shading, no soft shadows, no texture, no glow. No outlines around shapes. Clean, clearly separated shapes with crisp edges, each one a single color. A limited palette of about 14 distinct colors. Plain single-color background. The whole subject fits inside the square frame with a small margin. Original design: no text, no letters, no logos, no watermark, no existing characters or brands.';
-const prompt = opt.raw ? opt.prompt : `${opt.prompt.trim().replace(/[.\s]+$/, '')}. ${STYLE}`;
+// With --ref, the reference image is a sheet of this app's own hand-made
+// pictures and the job is to draw a NEW scene that looks like it belongs with them.
+const HOUSE = 'The reference image is a style sheet of four finished pictures. Draw a completely new picture, of the scene described below, that looks like it was made by the same artist for the same sticker-book: chunky rounded shapes, a bright candy palette with soft pastels, flat solid colors, no outlines, no gradients, no shading. Build every object from a few clearly separate solid-colored pieces layered back to front (a whole body shape, then a patch on it, then small features, then tiny shine dots), so it could be colored in one piece at a time. Add the same kind of small charming details: tiny dot eyes and rosy cheeks where a face fits, stitches, stripes, polka dots, and little hearts, sparkles and stars floating in the sky. Fill the whole square with the scene, with sky or a plain backdrop edge to edge. Do not copy any object from the reference. No text, no letters, no logos, no existing characters or brands. The new scene: ';
+const prompt = opt.raw ? opt.prompt : opt.ref ? `${HOUSE}${opt.prompt.trim().replace(/[.\s]+$/, '')}.` : `${opt.prompt.trim().replace(/[.\s]+$/, '')}. ${STYLE}`;
 
 function readKey() {
   if (process.env.KIE_API_KEY) return process.env.KIE_API_KEY.trim();
@@ -48,6 +51,7 @@ function inputFor(model) {
     // --format svg (Sunburst only): the model draws the image, then a text model writes it out as SVG
     const base = { prompt, aspect_ratio: '1:1', resolution: '1K', quality: 'medium', background: 'opaque', output_format: opt.format === 'svg' ? 'svg' : 'png' };
     if (opt.format === 'svg') base.svg = { model: opt['svg-model'] || 'gpt-5.6-luna' };
+    if (opt.ref) base.input_urls = [opt.ref];      // --ref URL: a style reference (image-to-image models only)
     return base;
   }
   if (model.startsWith('gpt-image')) return { prompt, aspect_ratio: '1:1', resolution: '1K' };
