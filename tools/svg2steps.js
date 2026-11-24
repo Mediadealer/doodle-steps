@@ -416,6 +416,66 @@ for (let j = steps.length - 1; j >= 0; j--) {
   if (!tryMerge(j, 0) && !tryMerge(j, 45)) steps.splice(j, 1);
 }
 
+// ---------- drop steps nobody would see ----------
+// Paint every step onto a coarse grid in order; a step that is almost entirely
+// painted over by later ones is a wasted coloring step, so it is removed.
+(() => {
+  const G = 200, S = 600 / G;
+  const owner = new Int16Array(G * G).fill(-1);
+  const flatten = segs => {                 // -> list of closed point loops
+    const loops = [];
+    let cur = null, x = 0, y = 0;
+    for (const s of segs) {
+      if (s[0] === 'M') { cur = [[s[1], s[2]]]; loops.push(cur); x = s[1]; y = s[2]; }
+      else if (!cur) continue;
+      else if (s[0] === 'L') { cur.push([s[1], s[2]]); x = s[1]; y = s[2]; }
+      else if (s[0] === 'Q') { for (let t = 1; t <= 6; t++) { const u = t / 6, v = 1 - u; cur.push([v * v * x + 2 * v * u * s[1] + u * u * s[3], v * v * y + 2 * v * u * s[2] + u * u * s[4]]); } x = s[3]; y = s[4]; }
+      else if (s[0] === 'C') { for (let t = 1; t <= 8; t++) { const u = t / 8, v = 1 - u; cur.push([v * v * v * x + 3 * v * v * u * s[1] + 3 * v * u * u * s[3] + u * u * u * s[5], v * v * v * y + 3 * v * v * u * s[2] + 3 * v * u * u * s[4] + u * u * u * s[6]]); } x = s[5]; y = s[6]; }
+    }
+    return loops;
+  };
+  const area = new Float64Array(steps.length);
+  steps.forEach((st, k) => {
+    const mine = new Uint8Array(G * G);
+    for (const part of st.parts) {
+      const loops = flatten(part.segs);
+      if (st.line) {
+        const r = Math.max(1, Math.round(st.line / 2 / S));
+        for (const lp of loops) for (let i = 0; i + 1 < lp.length; i++) {
+          const n = Math.max(1, Math.ceil(Math.hypot(lp[i + 1][0] - lp[i][0], lp[i + 1][1] - lp[i][1]) / S));
+          for (let t = 0; t <= n; t++) {
+            const px = Math.floor((lp[i][0] + ((lp[i + 1][0] - lp[i][0]) * t) / n) / S), py = Math.floor((lp[i][1] + ((lp[i + 1][1] - lp[i][1]) * t) / n) / S);
+            for (let dy = -r; dy <= r; dy++) for (let dx = -r; dx <= r; dx++) { const X = px + dx, Y = py + dy; if (X >= 0 && Y >= 0 && X < G && Y < G) mine[Y * G + X] = 1; }
+          }
+        }
+        continue;
+      }
+      for (let gy = 0; gy < G; gy++) {
+        const yc = (gy + 0.5) * S, hits = [];
+        for (const lp of loops) for (let i = 0; i < lp.length; i++) {
+          const a = lp[i], b = lp[(i + 1) % lp.length];
+          if ((a[1] <= yc) !== (b[1] <= yc)) hits.push([a[0] + ((yc - a[1]) * (b[0] - a[0])) / (b[1] - a[1]), b[1] > a[1] ? 1 : -1]);
+        }
+        hits.sort((p, q) => p[0] - q[0]);
+        let wind = 0;
+        for (let i = 0; i + 1 < hits.length; i++) {
+          wind += hits[i][1];
+          if (st.eo ? (i + 1) % 2 === 1 : wind !== 0) {
+            const x0 = Math.max(0, Math.round(hits[i][0] / S)), x1 = Math.min(G, Math.round(hits[i + 1][0] / S));
+            for (let gx = x0; gx < x1; gx++) mine[gy * G + gx] = 1;
+          }
+        }
+      }
+    }
+    for (let i = 0; i < mine.length; i++) if (mine[i]) { owner[i] = k; area[k]++; }
+  });
+  const seen = new Float64Array(steps.length);
+  for (let i = 0; i < owner.length; i++) if (owner[i] >= 0) seen[owner[i]]++;
+  const before = steps.length;
+  steps = steps.filter((st, k) => area[k] < 4 || seen[k] / area[k] >= 0.12);
+  if (steps.length < before) console.log(`dropped ${before - steps.length} step(s) that later steps cover up`);
+})();
+
 // ---------- write the picture ----------
 const r1 = v => String(Math.round(v * 10) / 10);
 const dOf = segs => segs.map(s => s[0] + s.slice(1).map(r1).join(' ')).join('');
