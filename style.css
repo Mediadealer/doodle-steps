@@ -80,6 +80,9 @@ body {
 }
 .dot.done { background: var(--sun); }
 .dot.now { width: 26px; height: 26px; background: var(--coral); }
+.dots.many { gap: 4px; }
+.dots.many .dot { width: 11px; height: 11px; border-width: 2px; }
+.dots.many .dot.now { width: 17px; height: 17px; }
 
 .work { display: flex; gap: 20px; padding: 0 16px 16px; min-height: 0; justify-content: center; align-items: center; }
 
@@ -115,8 +118,8 @@ body {
 .swatch { width: 30px; height: 30px; border-radius: 50%; border: 3px solid var(--ink); flex: none; }
 .step-hint { font-size: 1rem; font-weight: 500; opacity: .7; }
 
-.brushes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-.brush { display: grid; place-items: center; padding: 0; height: 60px; }
+.brushes { display: grid; grid-template-columns: repeat(6, 1fr); gap: 7px; }
+.brush { display: grid; place-items: center; padding: 0; height: 54px; border-radius: 13px; }
 .brush i { display: block; border-radius: 50%; background: var(--ink); border: 2px solid var(--ink); }
 .brush.on { background: var(--card); outline: 5px solid var(--teal); outline-offset: 2px; }
 

@@ -4,9 +4,9 @@
   const SIZE = 600;            // logical page size (lesson coordinates)
   const PX = 900;              // real canvas pixels
   const K = PX / SIZE;
-  const S = 200;               // small buffer used to score the colouring
+  const S = 300;               // small buffer used to score the colouring
   const SK = S / SIZE;
-  const BRUSHES = [8, 16, 30, 50];
+  const BRUSHES = [4, 8, 16, 30, 50, 80];
   const CAN_NEXT = 0.6;        // how much must be coloured before Next unlocks
   const AUTO_NEXT = 0.95;      // lift the finger above this and it moves on by itself
 
@@ -152,7 +152,7 @@
     }
 
     if (cur.points) {
-      const R = 3;
+      const R = 5;
       let hit = 0;
       for (const [x, y] of cur.points) {
         let found = false;
@@ -294,7 +294,8 @@
     b.className = 'btn brush';
     b.dataset.size = size;
     b.setAttribute('aria-label', `Brush size ${size}`);
-    b.innerHTML = `<i style="width:${Math.max(8, size * 0.8)}px;height:${Math.max(8, size * 0.8)}px"></i>`;
+    const dot = 5 + BRUSHES.indexOf(size) * 5.4;
+    b.innerHTML = `<i style="width:${dot}px;height:${dot}px"></i>`;
     b.addEventListener('click', () => setBrush(size));
     $('#brushes').append(b);
   }
@@ -353,6 +354,7 @@
 
     const dots = $('#dots');
     dots.innerHTML = '';
+    dots.classList.toggle('many', lesson.steps.length > 16);
     lesson.steps.forEach((_, n) => {
       const d = document.createElement('span');
       d.className = 'dot' + (n < i ? ' done' : n === i ? ' now' : '');
