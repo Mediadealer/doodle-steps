@@ -71,9 +71,10 @@
 
   // ---------- pictures as SVG (home cards + reference) ----------
   function picSvg(l) {
+    // a step's d is one path, or a list of separate shapes of the same color
     const shapes = l.steps.map(s => s.line
-      ? `<path d="${s.d}" fill="none" stroke="${s.color}" stroke-width="${s.line}" stroke-linecap="round" stroke-linejoin="round"/>`
-      : `<path d="${s.d}" fill="${s.color}"/>`).join('');
+      ? `<path d="${[].concat(s.d).join('')}" fill="none" stroke="${s.color}" stroke-width="${s.line}" stroke-linecap="round" stroke-linejoin="round"/>`
+      : [].concat(s.d).map(d => `<path d="${d}" fill="${s.color}"${s.eo ? ' fill-rule="evenodd"' : ''}/>`).join('')).join('');
     return `<svg viewBox="0 0 ${SIZE} ${SIZE}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${l.name}"><rect width="${SIZE}" height="${SIZE}" fill="${l.bg}"/>${shapes}</svg>`;
   }
   const starText = (n, of = 3) => '★'.repeat(n) + `<i>${'★'.repeat(of - n)}</i>`;
@@ -105,12 +106,14 @@
   // ---------- step preparation: masks used for scoring ----------
   function traceShape(ctx, step, path, grow) {
     ctx.lineCap = ctx.lineJoin = 'round';
-    if (step.line) {
-      ctx.lineWidth = step.line + grow;
-      ctx.stroke(path);
-    } else {
-      ctx.fill(path);
-      if (grow) { ctx.lineWidth = grow; ctx.stroke(path); }
+    for (const p of path) {
+      if (step.line) {
+        ctx.lineWidth = step.line + grow;
+        ctx.stroke(p);
+      } else {
+        ctx.fill(p, step.eo ? 'evenodd' : 'nonzero');
+        if (grow) { ctx.lineWidth = grow; ctx.stroke(p); }
+      }
     }
   }
 
@@ -124,18 +127,26 @@
     const out = new Uint8Array(S * S);
     let area = 0;
     for (let i = 0; i < out.length; i++) if (data[i * 4 + 3] > 100) { out[i] = 1; area++; }
-    return { bits: out, area };
+    // edge length, used to judge how thick the shape is (for picking a brush)
+    let edge = 0;
+    for (let y = 0; y < S; y++) {
+      for (let x = 0; x < S; x++) {
+        const i = y * S + x;
+        if (out[i] && (x === 0 || y === 0 || x === S - 1 || y === S - 1 || !out[i - 1] || !out[i + 1] || !out[i - S] || !out[i + S])) edge++;
+      }
+    }
+    return { bits: out, area, edge };
   }
 
   function prepStep(step) {
-    const path = new Path2D(step.d);
+    const path = [].concat(step.d).map(d => new Path2D(d));   // always a list
     const exact = mask(step, path, 0);
     const tol = mask(step, path, step.line ? 40 : 26);   // forgiving edge
     let points = null;
     if (step.line) {
       // points along the line; each one counts as traced if there is paint near it
       const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      p.setAttribute('d', step.d);
+      p.setAttribute('d', [].concat(step.d).join(''));
       $('#measure').append(p);
       const len = p.getTotalLength();
       const n = Math.max(6, Math.round(len / 6));
@@ -219,20 +230,21 @@
 
     guide.globalAlpha = step.line ? 0.4 : 0.28;
     guide.fillStyle = guide.strokeStyle = step.color;
-    if (step.line) { guide.lineWidth = step.line; guide.stroke(path); }
-    else guide.fill(path);
+    traceShape(guide, step, path, 0);
     guide.globalAlpha = 1;
 
     // two-tone dashes so the outline shows on any colour
     guide.lineCap = 'butt';
     guide.lineWidth = step.line ? 2 : 3;
     guide.setLineDash([9, 9]);
-    guide.strokeStyle = '#ffffff';
-    guide.lineDashOffset = 0;
-    guide.stroke(path);
-    guide.strokeStyle = 'rgba(30,30,45,.75)';
-    guide.lineDashOffset = 9;
-    guide.stroke(path);
+    for (const p of path) {
+      guide.strokeStyle = '#ffffff';
+      guide.lineDashOffset = 0;
+      guide.stroke(p);
+      guide.strokeStyle = 'rgba(30,30,45,.75)';
+      guide.lineDashOffset = 9;
+      guide.stroke(p);
+    }
     guide.setLineDash([]);
   }
 
@@ -405,7 +417,8 @@
     setErasing(false);
 
     // pick a brush that suits the size of the shape
-    const want = step.line || Math.sqrt(cur.exact.area / (SK * SK)) / 5;
+    // (thickness of the shape is roughly 2 x area / edge length)
+    const want = step.line || (0.6 * (2 * cur.exact.area) / Math.max(1, cur.exact.edge)) / SK;
     setBrush(BRUSHES.reduce((a, b) => (Math.abs(b - want) < Math.abs(a - want) ? b : a)));
 
     $('#stepCount').textContent = `Step ${i + 1} of ${lesson.steps.length}`;

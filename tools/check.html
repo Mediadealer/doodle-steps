@@ -47,16 +47,18 @@
   function mask(step) {
     cx.setTransform(1, 0, 0, 1, 0, 0); cx.clearRect(0, 0, S, S); cx.setTransform(SK, 0, 0, SK, 0, 0);
     cx.lineCap = cx.lineJoin = 'round';
-    const p = new Path2D(step.d);
-    if (step.line) { cx.lineWidth = step.line; cx.stroke(p); } else cx.fill(p);
+    for (const d of [].concat(step.d)) {
+      const p = new Path2D(d);
+      if (step.line) { cx.lineWidth = step.line; cx.stroke(p); } else cx.fill(p, step.eo ? 'evenodd' : 'nonzero');
+    }
     const d = cx.getImageData(0, 0, S, S).data, bits = new Uint8Array(S * S);
     let area = 0;
     for (let i = 0; i < bits.length; i++) if (d[i * 4 + 3] > 100) { bits[i] = 1; area++; }
     return { bits, area };
   }
   const shape = s => s.line
-    ? `<path d="${s.d}" fill="none" stroke="${s.color}" stroke-width="${s.line}" stroke-linecap="round" stroke-linejoin="round"/>`
-    : `<path d="${s.d}" fill="${s.color}"/>`;
+    ? `<path d="${[].concat(s.d).join('')}" fill="none" stroke="${s.color}" stroke-width="${s.line}" stroke-linecap="round" stroke-linejoin="round"/>`
+    : [].concat(s.d).map(d => `<path d="${d}" fill="${s.color}"${s.eo ? ' fill-rule="evenodd"' : ''}/>`).join('');
   const svg = (l, upto) => `<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><rect width="600" height="600" fill="${l.bg}"/>${l.steps.slice(0, upto).map(shape).join('')}</svg>`;
 
   let errors = 0, warnings = 0, shown = 0;

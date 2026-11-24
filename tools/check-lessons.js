@@ -77,13 +77,16 @@ for (const l of sb.LESSONS) {
     if (names.has(s.name)) W.push(`${at}: another step has the same name`);
     names.add(s.name);
     if (!HEX.test(s.color || '')) E.push(`${at}: color "${s.color}" must be #rrggbb`);
-    if (s.line !== undefined && !LINES.includes(s.line)) E.push(`${at}: line must be one of ${LINES.join(', ')}`);
-    const p = points(s.d);
-    if (typeof p === 'string') { E.push(`${at}: ${p}`); return; }
+    if (s.line !== undefined && !(typeof s.line === 'number' && s.line >= 2 && s.line <= 30)) E.push(`${at}: line must be a number from 2 to 30 (hand-written pictures use ${LINES.join(', ')})`);
+    // d is one path, or a list of separate same-color shapes
+    const parts = [].concat(s.d).map(points);
+    const bad = parts.find(q => typeof q === 'string');
+    if (!parts.length || bad) { E.push(`${at}: ${bad || 'no path'}`); return; }
+    const p = [].concat(...parts);
     const xs = p.map(q => q[0]), ys = p.map(q => q[1]);
     const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
     if (x0 < -40 || y0 < -40 || x1 > 640 || y1 > 640) E.push(`${at}: goes off the 600 x 600 page (x ${x0}..${x1}, y ${y0}..${y1})`);
-    if (!s.line && !/[AQC]/.test(s.d) && x1 - x0 < 7 && y1 - y0 < 7) E.push(`${at}: too small to color (under 7 units)`);
+    if (!s.line && !/[AQC]/.test([].concat(s.d).join('')) && x1 - x0 < 7 && y1 - y0 < 7) E.push(`${at}: too small to color (under 7 units)`);
     if (i === 0 && s.line) W.push(`${at}: the first step should be a big shape, not a line`);
   });
 

@@ -9,6 +9,31 @@ Doodle Steps shows a child one dashed shape at a time to color in, back to front
 
 The players are kids of about 12. Favourite subjects, in order: scenic views, portraits of girls, cute animals and stuffies, food and drinks with faces. Ask nothing unless the request is truly unclear: pick subjects yourself and vary them.
 
+There are two ways to make a picture. **Prefer route A** when the request is for detailed or realistic-looking art: it gives real illustrated curves and costs almost nothing. Use route B (drawing it yourself from shapes) for simple pictures, or when no suitable art can be found.
+
+## Route A: convert a finished illustration
+
+`tools/svg2steps.js` turns an SVG illustration into a picture file with no AI involved.
+
+1. **Get an SVG you are allowed to use.** Openclipart (openclipart.org) is all public domain (CC0). Search `https://openclipart.org/search/?query=<words>`, download with `https://openclipart.org/download/<id>` and save it as `art/<id-you-choose>.svg`. Art the user supplies is also fine. Do not take art from anywhere whose licence you cannot state, and skip anything that shows an existing character, brand or real person even if the site calls it free.
+2. **Pick art that converts well:** flat solid colors, clean shapes, 20 to 400 shapes, one clear subject or scene. Skip: black-and-white engravings and silhouettes, traced photos, anything built from gradients or thousands of tiny paths, files of 1 MB or more, and art with thick black outlines around everything. Look at the SVG in the browser before converting it.
+3. **Convert:**
+
+   ```
+   node tools/svg2steps.js art/seaside.svg --id seaside --name "Seaside" --steps 45 --source https://openclipart.org/detail/220755 --license "Public domain (CC0), Openclipart"
+   ```
+
+   `--steps` is a target: the tool merges same-colored then similar-colored shapes until it is near that number. It cannot invent steps, so simple art gives a short picture whatever you ask for. It writes `pictures/<id>.js` and adds the script tag to `index.html` itself.
+4. **Add a line to `art/SOURCES.md`** with the file, the source URL and the licence.
+5. **Run both checks** from "Checking" below and look at the result next to the original SVG. If shapes are missing, the wrong color, or the picture is tiny or cut off, the art probably uses something the converter skips (gradients as key shapes, clipping, masks, text, embedded bitmaps): choose different art instead of trying to patch the output.
+6. **Rename the steps (optional but nice).** The tool names steps by color ("Dark green parts 2"). Looking at the step strip in `tools/check.html?id=<id>`, replace the `"name"` values in `pictures/<id>.js` with what each step really is ("Lighthouse stripes", "Seagull wings"). Change names only; never edit the path data by hand.
+
+Converted steps may have a `d` that is a list of paths, an `eo: true` flag (shapes with cut-out holes) and any `line` width. Leave those as the tool wrote them.
+
+## Route B: draw it yourself from shapes
+
+Everything from here to "Checking" describes route B.
+
 ## Hard rules
 
 - **Original subjects only.** No existing characters, mascots, logos, brands, celebrities or real people, and nothing drawn "in the style of" a named show, game or artist. A generic fox, a girl with braids, a lighthouse: fine.
