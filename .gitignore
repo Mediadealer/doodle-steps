@@ -2,3 +2,9 @@
 !.claude/skills/
 !.claude/launch.json
 art/_cand/
+.env
+.env.*
+art/*.png
+art/*.jpg
+art/*.jpeg
+art/*.webp

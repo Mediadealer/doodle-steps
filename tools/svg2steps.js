@@ -356,6 +356,10 @@ for (const r of raw) {
 if (!items.length) { console.error('Nothing visible to convert.'); process.exit(1); }
 
 // ---------- merge shapes into steps ----------
+// A shape covering the whole page becomes the page color itself, not a step:
+// coloring the entire page edge to edge is a chore, not a drawing step.
+let pageColor = null;
+if (hasBackdrop && !items[0].line && areaOf(items[0].bb) >= 0.9 * 600 * 600 && items.length > 5) pageColor = items.shift().color;
 let steps = items.map(t => ({ parts: [t], bb: t.bb, color: t.color, line: t.line, eo: t.eo, area: areaOf(t.bb) }));
 // Step j may join another step of the same kind and (nearly) the same color,
 // as long as nothing that overlaps it sits between them in the stack: then
@@ -417,7 +421,7 @@ const r1 = v => String(Math.round(v * 10) / 10);
 const dOf = segs => segs.map(s => s[0] + s.slice(1).map(r1).join(' ')).join('');
 const used = {};
 const out = steps.map((s, i) => {
-  const base = i === 0 && hasBackdrop ? 'Background' : `${colorName(s.color)} ${s.line ? 'lines' : s.parts.length > 1 ? 'parts' : 'shape'}`;
+  const base = i === 0 && hasBackdrop && !pageColor ? 'Background' : `${colorName(s.color)} ${s.line ? 'lines' : s.parts.length > 1 ? 'parts' : 'shape'}`;
   used[base] = (used[base] || 0) + 1;
   const step = { name: used[base] > 1 ? `${base} ${used[base]}` : base, color: hex(s.color) };
   if (s.line) { step.line = s.line; step.d = s.parts.map(p => dOf(p.segs)).join(''); }
@@ -426,6 +430,7 @@ const out = steps.map((s, i) => {
 });
 
 let bg = opt.bg && /^#[0-9a-f]{6}$/i.test(opt.bg) ? opt.bg.toLowerCase() : null;
+if (!bg && pageColor) bg = hex(pageColor);
 if (!bg) {
   let c = hasBackdrop ? mix(steps[0].color, [255, 255, 255], 0.7) : [251, 247, 239];
   if (dist(c, steps[0].color) < 45) c = mix(steps[0].color, dist(steps[0].color, [255, 255, 255]) < 120 ? [120, 130, 150] : [255, 255, 255], 0.55);

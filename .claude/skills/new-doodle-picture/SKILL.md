@@ -28,6 +28,21 @@ There are two ways to make a picture. **Prefer route A** when the request is for
 5. **Run both checks** from "Checking" below and look at the result next to the original SVG. If shapes are missing, the wrong color, or the picture is tiny or cut off, the art probably uses something the converter skips (gradients as key shapes, clipping, masks, text, embedded bitmaps): choose different art instead of trying to patch the output.
 6. **Rename the steps (optional but nice).** The tool names steps by color ("Dark green parts 2"). Looking at the step strip in `tools/check.html?id=<id>`, replace the `"name"` values in `pictures/<id>.js` with what each step really is ("Lighthouse stripes", "Seagull wings"). Change names only; never edit the path data by hand.
 
+### Route A with generated art (best when a specific subject is wanted)
+
+If a Kie.ai key is set up (`KIE_API_KEY` in the environment or in the git-ignored `.env` file), one command generates an illustration, traces it and converts it:
+
+```
+node tools/make-picture.js --id treehouse --name "Treehouse" --steps 45 --prompt "a girl with braids reading a book in a cozy treehouse, a cat asleep on the branch, lanterns, leaves"
+```
+
+- **Each run costs credits on the user's Kie account.** Generate only what was asked for. Never loop on regenerating: at most two attempts per picture, then report what is wrong and stop.
+- **Write the prompt as a plain description of the scene and what is in it.** The script adds the house style itself (flat colors, no gradients, no outlines, no text, original design). Name concrete things to raise the detail: more named objects means more steps. Keep subjects original: no existing characters, brands or real people.
+- **Never read, print, log or commit the key**, and never write it into any file other than `.env`. If no key is set the script says so: tell the user and stop, or fall back to Openclipart.
+- **If the result is muddy** (lots of slivers, speckled areas, lost detail), re-trace the same image without paying again: `--image art/<id>.png` plus a different `--colors` (10 to 14 for cleaner and simpler, 20 to 24 to keep more detail). If the image itself has shading or gradients, regenerate once with a simpler prompt.
+- The raw image stays in `art/` but is git-ignored; the traced `art/<id>.svg` is what gets committed. `art/SOURCES.md` is updated for you.
+- Then do steps 5 and 6 above (checks, look at it, rename the steps). The prompt tells you what is in the picture, which makes naming easy.
+
 Converted steps may have a `d` that is a list of paths, an `eo: true` flag (shapes with cut-out holes) and any `line` width. Leave those as the tool wrote them.
 
 ## Route B: draw it yourself from shapes
