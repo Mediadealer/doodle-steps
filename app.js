@@ -69,14 +69,16 @@
 
   function renderHome() {
     const best = store.get('best', {});
+    const progress = store.get('progress', {});
     const cards = $('#cards');
     cards.innerHTML = '';
     for (const l of LESSONS) {
+      const at = progress[l.id] && progress[l.id].step < l.steps.length ? progress[l.id].step : 0;
       const b = document.createElement('button');
       b.className = 'card';
       b.innerHTML = `${picSvg(l)}
         <div class="card-foot"><span class="card-name">${l.name}</span><span class="card-stars">${starText(best[l.id] || 0)}</span></div>
-        <div class="card-steps">${l.steps.length} steps</div>`;
+        <div class="card-steps${at ? ' going' : ''}">${at ? `Keep going: step ${at + 1} of ${l.steps.length}` : `${l.steps.length} steps`}</div>`;
       b.addEventListener('click', () => startLesson(l));
       cards.append(b);
     }
@@ -322,7 +324,21 @@
   paintSound();
 
   // ---------- lesson flow ----------
-  function startLesson(l) {
+  // Progress is kept on the device after every step, so a long picture can be
+  // finished later. Only the four most recent unfinished pictures are kept.
+  function saveProgress(nextStep) {
+    const p = store.get('progress', {});
+    p[lesson.id] = { step: nextStep, stars, img: paper.canvas.toDataURL('image/png'), t: Date.now() };
+    Object.keys(p).sort((a, b) => p[b].t - p[a].t).slice(4).forEach(id => delete p[id]);
+    store.set('progress', p);
+  }
+  function clearProgress(id) {
+    const p = store.get('progress', {});
+    delete p[id];
+    store.set('progress', p);
+  }
+
+  function startLesson(l, fresh = false) {
     lesson = l; stars = []; busy = false;
     clearTimeout(autoTimer);
     paper.setTransform(1, 0, 0, 1, 0, 0);
@@ -331,7 +347,24 @@
     $('#refPic').innerHTML = picSvg(l);
     pop.hidden = true;
     show('draw');
-    startStep(0);
+
+    if (fresh) clearProgress(l.id);
+    const saved = store.get('progress', {})[l.id];
+    if (saved && saved.img && saved.step > 0 && saved.step < l.steps.length) {
+      stars = Array.isArray(saved.stars) ? saved.stars.slice(0, saved.step) : [];
+      const img = new Image();
+      img.onload = () => {
+        if (lesson !== l) return;
+        paper.setTransform(1, 0, 0, 1, 0, 0);
+        paper.globalCompositeOperation = 'destination-over';   // under anything painted since
+        paper.drawImage(img, 0, 0);
+        paper.globalCompositeOperation = 'source-over';
+      };
+      img.src = saved.img;
+      startStep(saved.step);
+    } else {
+      startStep(0);
+    }
   }
 
   function startStep(i) {
@@ -400,7 +433,7 @@
     setTimeout(() => {
       pop.hidden = true;
       busy = false;
-      if (stepIdx + 1 < lesson.steps.length) startStep(stepIdx + 1);
+      if (stepIdx + 1 < lesson.steps.length) { saveProgress(stepIdx + 1); startStep(stepIdx + 1); }
       else showFinish();
     }, 900);
   }
@@ -421,6 +454,7 @@
     const best = store.get('best', {});
     best[lesson.id] = Math.max(best[lesson.id] || 0, avg);
     store.set('best', best);
+    clearProgress(lesson.id);
 
     $('#finalPic').src = finalCanvas().toDataURL('image/png');
     $('#origPic').innerHTML = picSvg(lesson);
@@ -456,7 +490,11 @@
       setTimeout(() => URL.revokeObjectURL(a.href), 2000);
     });
   });
-  $('#againBtn').addEventListener('click', () => startLesson(lesson));
+  $('#againBtn').addEventListener('click', () => startLesson(lesson, true));
+  $('#restartBtn').addEventListener('click', () => {
+    if (busy || !lesson) return;
+    if (stepIdx === 0 || confirm('Start this picture over from the beginning?')) startLesson(lesson, true);
+  });
   $('#moreBtn').addEventListener('click', () => show('home'));
 
   show('home');
