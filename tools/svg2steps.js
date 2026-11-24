@@ -472,14 +472,64 @@ for (let j = steps.length - 1; j >= 0; j--) {
   const seen = new Float64Array(steps.length);
   for (let i = 0; i < owner.length; i++) if (owner[i] >= 0) seen[owner[i]]++;
   const before = steps.length;
-  steps = steps.filter((st, k) => area[k] < 4 || seen[k] / area[k] >= 0.12);
+  steps.forEach((st, k) => { st.cells = area[k]; st.vis = area[k] ? seen[k] / area[k] : 1; });   // of 40000 grid cells
+  steps = steps.filter(st => st.cells < 4 || st.vis >= 0.12);
   if (steps.length < before) console.log(`dropped ${before - steps.length} step(s) that later steps cover up`);
 })();
+
+// ---------- page-wide patterns are scenery, not steps ----------
+// A checkered tablecloth or a field of polka dots behind everything would be
+// one step of many separate little shapes (8 or more, spread over the page). Those go into `base`: the app draws
+// them on the page before step 1.
+const baseSteps = [];
+for (let i = 0; i < Math.min(4, steps.length);) {
+  const s = steps[i];
+  if (!s.line && s.parts.length >= 8 && areaOf(s.bb) >= 0.75 * 600 * 600) { baseSteps.push(s); steps.splice(i, 1); }
+  else i++;
+}
+if (baseSteps.length) console.log(`moved ${baseSteps.length} page-wide pattern(s) into the pre-drawn background`);
+
+// ---------- big things first, little decorations last ----------
+// Sparkles, dots and confetti that nothing else covers can be painted at any
+// time without changing the picture, so they go to the end: the picture then
+// opens with a real shape instead of two tiny stars.
+{
+  const late = [];
+  const early = steps.slice(0, 8);            // only what would have opened the picture
+  for (const s of early) {
+    if (late.length < 6 && s.cells !== undefined && s.cells < 2500 && s.vis >= 0.9) { late.push(s); steps.splice(steps.indexOf(s), 1); }
+  }
+  steps.push(...late);
+  if (late.length) console.log(`moved ${late.length} small decoration step(s) to the end`);
+}
+
+// ---------- no step is a chore ----------
+// A step of many scattered pieces (27 bubbles) is split into groups of nearby
+// pieces, at most 7 each. They stay next to each other in the order, so the
+// picture is unchanged.
+{
+  const MAXP = 7, split = [];
+  let extra = 0;
+  for (const s of steps) {
+    if (s.line || s.parts.length <= MAXP + 2) { split.push(s); continue; }
+    const sorted = s.parts.slice().sort((p, q) => (p.bb[0] + p.bb[2]) - (q.bb[0] + q.bb[2]) || (p.bb[1] - q.bb[1]));
+    const groups = Math.ceil(sorted.length / MAXP), size = Math.ceil(sorted.length / groups);
+    for (let g = 0; g < groups; g++) {
+      const parts = sorted.slice(g * size, (g + 1) * size);
+      if (!parts.length) continue;
+      split.push(Object.assign({}, s, { parts, bb: parts.reduce((a, p) => union(a, p.bb), parts[0].bb) }));
+    }
+    extra += groups - 1;
+  }
+  steps = split;
+  if (extra) console.log(`split scattered steps into ${extra} more step(s)`);
+}
 
 // ---------- write the picture ----------
 const r1 = v => String(Math.round(v * 10) / 10);
 const dOf = segs => segs.map(s => s[0] + s.slice(1).map(r1).join(' ')).join('');
 const used = {};
+const baseOut = baseSteps.map(s => ({ color: hex(s.color), d: s.parts.map(p => dOf(p.segs)), ...(s.eo ? { eo: true } : {}) }));
 const out = steps.map((s, i) => {
   const base = i === 0 && hasBackdrop && !pageColor ? 'Background' : `${colorName(s.color)} ${s.line ? 'lines' : s.parts.length > 1 ? 'parts' : 'shape'}`;
   used[base] = (used[base] || 0) + 1;
@@ -504,7 +554,8 @@ const js = `// pictures/${opt.id}.js — made by tools/svg2steps.js from ${path.
 (() => {
   LESSONS.push({
     id: ${JSON.stringify(opt.id)}, name: ${JSON.stringify(name)}, bg: ${JSON.stringify(bg)},
-    steps: [
+${baseOut.length ? `    base: ${JSON.stringify(baseOut)},
+` : ''}    steps: [
 ${out.map(s => '      ' + JSON.stringify(s) + ',').join('\n')}
     ],
   });

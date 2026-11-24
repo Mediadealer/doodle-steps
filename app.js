@@ -72,7 +72,8 @@
   // ---------- pictures as SVG (home cards + reference) ----------
   function picSvg(l) {
     // a step's d is one path, or a list of separate shapes of the same color
-    const shapes = l.steps.map(s => s.line
+    // l.base (optional) is scenery that is already on the page before step 1
+    const shapes = [...(l.base || []), ...l.steps].map(s => s.line
       ? `<path d="${[].concat(s.d).join('')}" fill="none" stroke="${s.color}" stroke-width="${s.line}" stroke-linecap="round" stroke-linejoin="round"/>`
       : [].concat(s.d).map(d => `<path d="${d}" fill="${s.color}"${s.eo ? ' fill-rule="evenodd"' : ''}/>`).join('')).join('');
     return `<svg viewBox="0 0 ${SIZE} ${SIZE}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${l.name}"><rect width="${SIZE}" height="${SIZE}" fill="${l.bg}"/>${shapes}</svg>`;
@@ -385,6 +386,11 @@
     paper.setTransform(1, 0, 0, 1, 0, 0);
     paper.clearRect(0, 0, PX, PX);
     stage.style.background = l.bg;
+    for (const b of l.base || []) {             // pre-drawn background pattern
+      paper.setTransform(K, 0, 0, K, 0, 0);
+      paper.fillStyle = paper.strokeStyle = b.color;
+      traceShape(paper, b, [].concat(b.d).map(d => new Path2D(d)), 0);
+    }
     $('#refPic').innerHTML = picSvg(l);
     pop.hidden = true;
     show('draw');

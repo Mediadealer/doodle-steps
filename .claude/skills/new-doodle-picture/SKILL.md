@@ -47,6 +47,17 @@ node tools/make-picture.js --id treehouse --name "Treehouse" --steps 45 --prompt
 - On the trace route the raw image stays in `art/` but is git-ignored; `art/<id>.svg` is what gets committed. `art/SOURCES.md` is updated for you.
 - Then do steps 5 and 6 above (checks, look at it, rename the steps). The prompt tells you what is in the picture, which makes naming easy.
 
+### What the converter does for playability (and what to still look for)
+
+A picture is only good if every step is something a child can reasonably color. The converter handles the common problems itself:
+
+- **Page-wide patterns** (a checkered tablecloth, a field of dots: 8 or more pieces spread over the page, early in the stack) are moved to `base`, which the app draws on the page before step 1.
+- **Small free-floating decorations** that open the picture (sparkles, hearts, steam) are moved to the end, so it opens with a real shape.
+- **Scattered steps** of 10 or more pieces are split into groups of nearby pieces.
+- **Steps that end up hidden** under later ones are dropped.
+
+When you look at the step strip, check the first five steps especially. If a step would have the child coloring dozens of tiny things, or the picture opens with something trivial, do not publish it as is: re-convert with a different `--steps`, or regenerate. The user rejected a picture whose first step was a grid of dozens of small squares.
+
 Converted steps may have a `d` that is a list of paths, an `eo: true` flag (shapes with cut-out holes) and any `line` width. Leave those as the tool wrote them.
 
 ## Route B: draw it yourself from shapes

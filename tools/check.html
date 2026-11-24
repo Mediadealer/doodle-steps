@@ -59,7 +59,7 @@
   const shape = s => s.line
     ? `<path d="${[].concat(s.d).join('')}" fill="none" stroke="${s.color}" stroke-width="${s.line}" stroke-linecap="round" stroke-linejoin="round"/>`
     : [].concat(s.d).map(d => `<path d="${d}" fill="${s.color}"${s.eo ? ' fill-rule="evenodd"' : ''}/>`).join('');
-  const svg = (l, upto) => `<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><rect width="600" height="600" fill="${l.bg}"/>${l.steps.slice(0, upto).map(shape).join('')}</svg>`;
+  const svg = (l, upto) => `<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><rect width="600" height="600" fill="${l.bg}"/>${(l.base || []).map(shape).join('')}${l.steps.slice(0, upto).map(shape).join('')}</svg>`;
 
   let errors = 0, warnings = 0, shown = 0;
   const out = document.getElementById('out');
