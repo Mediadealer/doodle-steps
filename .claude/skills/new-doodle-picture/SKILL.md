@@ -36,12 +36,15 @@ If a Kie.ai key is set up (`KIE_API_KEY` in the environment or in the git-ignore
 node tools/make-picture.js --id treehouse --name "Treehouse" --steps 45 --prompt "a girl with braids reading a book in a cozy treehouse, a cat asleep on the branch, lanterns, leaves"
 ```
 
+- **Default route:** Kie's GPT Image 2.6 Sunburst draws the picture and returns real vector art (SVG), which converts directly. About 9 credits (roughly 5 US cents) per picture. This gave the best result in testing: crisp shapes, rich color, around 100 shapes for a busy prompt.
+- **Fallback route, `--route trace`:** a flat PNG from another model (default Seedream 5 Lite, about 5.5 credits) traced by `tools/png2svg.js`. Use it if the default fails or looks wrong. Tracing loses very thin details and anything nearly the same color as what is behind it.
 - **Each run costs credits on the user's Kie account.** Generate only what was asked for. Never loop on regenerating: at most two attempts per picture, then report what is wrong and stop.
 - **Kie's own CLI** is at `tools/kie-cli.mjs` (git-ignored; if it is missing, fetch it again with `curl -fsSL https://kie.ai/cli/kie-cli.mjs -o tools/kie-cli.mjs`). Use it to look things up rather than guessing: `node tools/kie-cli.mjs price <keyword>` for live prices (works without a key), `list --task "Text to Image"` for exact model ids (needs the key), `doc <model id>` for a model's request fields, `balance` for remaining credits. It prints a harmless "Assertion failed" line when it exits on Windows.
 - **Write the prompt as a plain description of the scene and what is in it.** The script adds the house style itself (flat colors, no gradients, no outlines, no text, original design). Name concrete things to raise the detail: more named objects means more steps. Keep subjects original: no existing characters, brands or real people.
 - **Never read, print, log or commit the key**, and never write it into any file other than `.env`. If no key is set the script says so: tell the user and stop, or fall back to Openclipart.
-- **If the result is muddy** (lots of slivers, speckled areas, lost detail), re-trace the same image without paying again: `--image art/<id>.png` plus a different `--colors` (10 to 14 for cleaner and simpler, 20 to 24 to keep more detail). If the image itself has shading or gradients, regenerate once with a simpler prompt.
-- The raw image stays in `art/` but is git-ignored; the traced `art/<id>.svg` is what gets committed. `art/SOURCES.md` is updated for you.
+- **To redo a conversion without paying again**, pass the file you already have: `--image art/<id>.svg` (for example with a different `--steps`), or on the trace route `--image art/<id>.png` plus a different `--colors` (10 to 14 for cleaner and simpler, 20 to 24 to keep more detail).
+- **If the key is rejected for its IP whitelist**, tell the user: their Kie key only works from listed addresses and this computer's public address has to be added at kie.ai/api-key. Do not try to work around it.
+- On the trace route the raw image stays in `art/` but is git-ignored; `art/<id>.svg` is what gets committed. `art/SOURCES.md` is updated for you.
 - Then do steps 5 and 6 above (checks, look at it, rename the steps). The prompt tells you what is in the picture, which makes naming easy.
 
 Converted steps may have a `d` that is a list of paths, an `eo: true` flag (shapes with cut-out holes) and any `line` width. Leave those as the tool wrote them.

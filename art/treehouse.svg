@@ -1,0 +1,138 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024">
+  <title>Cozy oak treehouse at sunset</title>
+  <desc>Flat cheerful sticker-book illustration of a wooden treehouse, sleeping cat, lanterns, tire swing, birds, hills and clouds.</desc>
+
+  <rect id="background" width="1024" height="1024" fill="#ff8750" />
+
+  <g id="landscape">
+    <circle id="sun" cx="799" cy="820" r="132" fill="#ffd31a" />
+    <path id="back-hills" fill="#23853a" d="M0 762Q107 742 214 786Q327 828 426 794Q511 766 584 794Q694 832 791 793Q908 748 1024 760V1024H0Z" />
+    <path id="front-hills" fill="#74c82c" d="M0 927Q128 866 258 928Q384 983 505 917Q615 860 738 895Q868 932 1024 864V1024H0Z" />
+    <path id="far-cloud-left" fill="#fff3c2" d="M438 714Q442 695 464 695Q473 674 495 675Q510 649 535 664Q554 650 571 672Q591 672 597 691Q582 712 553 712H463Q442 712 438 714Z" />
+    <path id="far-cloud-right" fill="#fff3c2" d="M813 614Q818 589 845 589Q855 565 881 577Q896 550 923 558Q947 548 960 574Q989 572 1009 601Q1018 625 987 635H842Q820 635 813 614Z" />
+  </g>
+
+  <g id="tree">
+    <path id="trunk" fill="#71350f" d="M145 1000Q178 940 164 842Q153 751 112 664Q78 592 91 501Q105 414 189 338Q232 298 242 232Q249 182 211 142L281 133Q337 188 358 252Q379 319 347 384Q318 441 329 505Q342 574 388 637Q428 688 422 775Q417 867 466 922Q510 964 563 982Q578 990 535 989Q465 973 411 985Q371 996 327 986Q264 974 214 997Q176 1010 145 1000Z" />
+    <path id="branch-left" fill="#71350f" d="M274 439Q204 370 120 320Q79 295 35 291Q24 290 42 306Q110 344 169 408Q207 450 245 492Z" />
+    <path id="branch-right" fill="#71350f" d="M329 506Q454 493 565 438Q625 408 691 365Q711 351 724 367Q678 428 601 473Q501 532 379 566Z" />
+    <path id="high-branch" fill="#71350f" d="M263 258Q310 143 400 78Q447 43 466 39L473 62Q421 125 389 210Q355 278 331 312Z" />
+    <path id="far-right-branch" fill="#71350f" d="M678 433Q745 359 776 247Q790 196 831 146L865 173Q837 251 827 322Q818 397 766 484Z" />
+
+    <g id="canopy" fill="#16852a">
+      <circle id="canopy-a" cx="104" cy="104" r="72" />
+      <circle id="canopy-b" cx="164" cy="72" r="74" />
+      <circle id="canopy-c" cx="246" cy="54" r="83" />
+      <circle id="canopy-d" cx="337" cy="48" r="78" />
+      <circle id="canopy-e" cx="427" cy="42" r="76" />
+      <circle id="canopy-f" cx="519" cy="30" r="90" />
+      <circle id="canopy-g" cx="674" cy="113" r="78" />
+      <circle id="canopy-h" cx="764" cy="126" r="82" />
+      <circle id="canopy-i" cx="852" cy="154" r="70" />
+      <circle id="canopy-j" cx="924" cy="219" r="71" />
+      <circle id="canopy-k" cx="963" cy="290" r="48" />
+      <circle id="canopy-l" cx="727" cy="243" r="83" />
+      <circle id="canopy-m" cx="630" cy="245" r="76" />
+      <circle id="canopy-n" cx="530" cy="250" r="72" />
+      <circle id="canopy-o" cx="63" cy="302" r="65" />
+      <circle id="canopy-p" cx="30" cy="378" r="54" />
+    </g>
+    <g id="lower-foliage" fill="#238c31">
+      <circle id="foliage-a" cx="764" cy="464" r="60" />
+      <circle id="foliage-b" cx="820" cy="457" r="43" />
+      <circle id="foliage-c" cx="849" cy="499" r="55" />
+      <circle id="foliage-d" cx="715" cy="514" r="61" />
+      <circle id="foliage-e" cx="48" cy="623" r="37" />
+      <circle id="foliage-f" cx="76" cy="652" r="45" />
+    </g>
+  </g>
+
+  <g id="treehouse">
+    <path id="house-wall" fill="#b96b27" d="M105 380L305 261L488 384V570H105Z" />
+    <path id="wall-panel-one" fill="#d28635" d="M167 349L305 272L305 570H167Z" />
+    <path id="wall-panel-two" fill="#c2762c" d="M311 273L448 365V570H311Z" />
+    <path id="roof" fill="#df2933" d="M47 391L298 228Q306 224 315 231L492 371Q501 379 492 389L476 402L305 279L166 391L57 396Q44 397 47 391Z" />
+    <path id="roof-shadow" fill="#b51d2b" d="M166 391L305 279L476 402L459 414L305 302L176 402Z" />
+    <path id="chimney" fill="#a51624" d="M153 311V220Q153 215 159 215H214Q220 215 220 222V282Z" />
+    <path id="chimney-cap" fill="#a51624" d="M151 217Q151 212 157 212H215Q220 212 220 218V233H151Z" />
+    <path id="door" fill="#a51624" d="M146 570V464Q146 414 194 414Q242 414 242 464V570Z" />
+    <circle id="door-knob" cx="220" cy="494" r="10" fill="#ffd31a" />
+    <circle id="window-frame" cx="332" cy="413" r="69" fill="#8c4a16" />
+    <circle id="window-light" cx="332" cy="413" r="55" fill="#ffd31a" />
+    <path id="window-cross-v" fill="#8c4a16" d="M324 354H340V472H324Z" />
+    <path id="window-cross-h" fill="#8c4a16" d="M275 405H389V421H275Z" />
+    <path id="deck" fill="#d9923b" d="M91 563H484V592H91Z" />
+    <path id="deck-front" fill="#f2ad4d" d="M92 568H495V592H92Z" />
+    <path id="deck-post-a" fill="#b96b27" d="M121 590H140V659H121Z" />
+    <path id="deck-post-b" fill="#b96b27" d="M442 590H461V665H442Z" />
+    <path id="railing-top" fill="#f2ad4d" d="M278 489H466V508H278Z" />
+    <path id="railing-a" fill="#d9923b" d="M293 505H311V568H293Z" />
+    <path id="railing-b" fill="#d9923b" d="M350 505H368V568H350Z" />
+    <path id="railing-c" fill="#d9923b" d="M409 505H427V568H409Z" />
+    <path id="support-a" fill="#b96b27" d="M154 591L190 665H173L139 604Z" />
+    <path id="support-b" fill="#b96b27" d="M405 591L377 675H361L391 591Z" />
+  </g>
+
+  <g id="rope-ladder">
+    <path id="ladder-left" fill="#fff3c2" d="M233 590H245L241 944Q239 956 229 948Z" />
+    <path id="ladder-right" fill="#fff3c2" d="M316 590H328L337 947Q333 957 325 949Z" />
+    <path id="rung-one" fill="#f2ad4d" d="M227 624Q227 617 235 617H324Q333 617 333 625V640H227Z" />
+    <path id="rung-two" fill="#f2ad4d" d="M227 696Q227 689 235 689H326Q334 689 334 697V712H227Z" />
+    <path id="rung-three" fill="#f2ad4d" d="M226 768Q226 761 234 761H329Q337 761 337 769V784H226Z" />
+    <path id="rung-four" fill="#f2ad4d" d="M226 840Q226 833 234 833H331Q339 833 339 841V856H226Z" />
+    <path id="rung-five" fill="#f2ad4d" d="M226 912Q226 905 234 905H334Q342 905 342 913V928H226Z" />
+  </g>
+
+  <g id="lanterns">
+    <path id="lantern-string" fill="#fff3c2" d="M393 151Q545 290 795 198L802 207Q548 315 399 165Z" />
+    <path id="hanger-one" fill="#fff3c2" d="M447 187H457V225H447Z" />
+    <path id="hanger-two" fill="#fff3c2" d="M552 237H562V259H552Z" />
+    <path id="hanger-three" fill="#fff3c2" d="M649 243H659V264H649Z" />
+    <path id="hanger-four" fill="#fff3c2" d="M748 215H758V246H748Z" />
+    <path id="pink-lantern" fill="#f06491" d="M426 224Q426 219 433 219H494Q502 219 502 225Q502 267 464 267Q426 267 426 224Z" />
+    <path id="pink-cap" fill="#fff3c2" d="M445 215H483V226H445Z" />
+    <path id="pink-bottom" fill="#fff3c2" d="M445 266H483V279Q464 284 445 279Z" />
+    <path id="yellow-lantern" fill="#ffd31a" d="M522 255Q522 248 530 248H590Q598 248 598 255Q598 295 560 295Q522 295 522 255Z" />
+    <path id="yellow-cap" fill="#fff3c2" d="M541 244H579V256H541Z" />
+    <path id="yellow-bottom" fill="#fff3c2" d="M541 294H579V307Q560 311 541 307Z" />
+    <path id="blue-lantern" fill="#55b8dd" d="M620 250Q620 243 628 243H688Q696 243 696 250Q696 290 658 290Q620 290 620 250Z" />
+    <path id="blue-cap" fill="#fff3c2" d="M639 239H677V251H639Z" />
+    <path id="blue-bottom" fill="#fff3c2" d="M639 289H677V302Q658 306 639 302Z" />
+    <path id="red-lantern" fill="#f23b3b" d="M716 246Q716 239 724 239H784Q792 239 792 246Q792 286 754 286Q716 286 716 246Z" />
+    <path id="red-cap" fill="#fff3c2" d="M735 235H773V247H735Z" />
+    <path id="red-bottom" fill="#fff3c2" d="M735 285H773V298Q754 302 735 298Z" />
+  </g>
+
+  <g id="cat">
+    <path id="cat-body" fill="#f26b16" d="M513 500Q484 475 498 451Q512 429 540 438Q559 404 590 416L610 399L618 429Q653 420 670 440L690 437L678 462Q682 499 646 512Q580 532 513 500Z" />
+    <path id="cat-tail" fill="#f26b16" d="M570 478Q532 452 508 471Q485 489 508 503Q540 517 576 491Z" />
+    <path id="cat-face" fill="#f26b16" d="M565 443Q581 419 612 427Q641 433 650 462Q655 491 625 505Q590 510 568 487Q557 468 565 443Z" />
+    <path id="cat-ear-cut" fill="#f26b16" d="M572 439L575 419L592 435Z" />
+    <path id="cat-eye-left" fill="#71350f" d="M585 461Q589 475 596 461L600 461Q596 482 586 475Q579 470 581 461Z" />
+    <path id="cat-eye-right" fill="#71350f" d="M622 458Q626 472 633 458L637 458Q633 479 623 472Q616 467 618 458Z" />
+    <path id="cat-nose" fill="#71350f" d="M605 478Q612 474 618 478Q615 485 611 485Q607 485 605 478Z" />
+    <path id="cat-mouth" fill="#71350f" d="M611 484V492Q604 497 599 491M611 492Q618 498 624 491" />
+  </g>
+
+  <g id="swing">
+    <path id="swing-rope" fill="#fff3c2" d="M635 518H647V718H635Z" />
+    <path id="swing-knot" fill="#fff3c2" d="M630 516Q630 504 639 504Q647 504 650 516Q653 531 641 540Q627 536 630 516Z" />
+    <circle id="tire" cx="641" cy="780" r="73" fill="#1f304b" />
+    <circle id="tire-hole" cx="641" cy="780" r="35" fill="#ff8750" />
+    <path id="tire-rope-bottom" fill="#fff3c2" d="M635 709H647V747Q647 756 641 756Q635 756 635 747Z" />
+  </g>
+
+  <g id="birds" fill="#176bb4">
+    <path id="bird-large" d="M909 419Q939 409 967 438Q984 418 1003 435Q981 443 968 459Q943 480 918 461L940 452Z" />
+    <path id="bird-small" d="M869 489Q894 481 916 503Q929 486 947 500Q928 507 917 521Q894 535 878 519L895 512Z" />
+  </g>
+
+  <g id="foreground-foliage" fill="#16852a">
+    <circle id="bush-one" cx="50" cy="879" r="32" />
+    <circle id="bush-two" cx="79" cy="864" r="34" />
+    <circle id="bush-three" cx="105" cy="889" r="32" />
+    <circle id="bush-four" cx="912" cy="981" r="50" />
+    <circle id="bush-five" cx="969" cy="961" r="49" />
+    <circle id="bush-six" cx="1009" cy="988" r="48" />
+  </g>
+</svg>

@@ -208,8 +208,17 @@ function toPath(pts) {
 
 const hex = c => '#' + c.map(v => Math.round(v).toString(16).padStart(2, '0')).join('');
 const shapes = [];
+// The color around the edge of the image is the page itself: write it once as
+// a full-page backdrop and skip its patches, even if the subject cuts it in two.
+const edgeCount = new Uint32Array(K);
+for (let x = 0; x < W; x++) { edgeCount[lab[x]]++; edgeCount[lab[(H - 1) * W + x]]++; }
+for (let y = 0; y < H; y++) { edgeCount[lab[y * W]]++; edgeCount[lab[y * W + W - 1]]++; }
+let pageLabel = -1;
+for (let k = 0; k < K; k++) if (edgeCount[k] >= (W + H) && (pageLabel < 0 || edgeCount[k] > edgeCount[pageLabel])) pageLabel = k;
+if (pageLabel >= 0) shapes.push({ d: `M0 0L${W} 0L${W} ${H}L0 ${H}Z`, area: Infinity, fill: hex(cents[pageLabel]) });
 for (const c of comp.list) {
   if (c.area < MIN_AREA) continue;
+  if (c.label === pageLabel && (c.x0 === 0 || c.y0 === 0 || c.x1 === W - 1 || c.y1 === H - 1)) continue;
   const o = outline(c);
   if (!o) continue;
   const d = toPath(simplify(o.pts, 1.1));

@@ -44,6 +44,12 @@ if (!key) {
 // request body per model family (see https://docs.kie.ai)
 function inputFor(model) {
   if (model.startsWith('seedream/')) return { prompt, aspect_ratio: '1:1', quality: 'basic', output_format: 'png', nsfw_checker: true };
+  if (model.startsWith('gpt-image-2-6/')) {
+    // --format svg (Sunburst only): the model draws the image, then a text model writes it out as SVG
+    const base = { prompt, aspect_ratio: '1:1', resolution: '1K', quality: 'medium', background: 'opaque', output_format: opt.format === 'svg' ? 'svg' : 'png' };
+    if (opt.format === 'svg') base.svg = { model: opt['svg-model'] || 'gpt-5.6-luna' };
+    return base;
+  }
   if (model.startsWith('gpt-image')) return { prompt, aspect_ratio: '1:1', resolution: '1K' };
   if (model.startsWith('flux-2/')) return { prompt, aspect_ratio: '1:1', resolution: '1K', nsfw_checker: true };
   if (model.startsWith('ideogram/')) return { prompt, image_size: 'square_hd', style: 'DESIGN', rendering_speed: 'BALANCED' };
