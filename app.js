@@ -423,6 +423,7 @@
     store.set('best', best);
 
     $('#finalPic').src = finalCanvas().toDataURL('image/png');
+    $('#origPic').innerHTML = picSvg(lesson);
     $('#finalStars').innerHTML = starText(avg);
 
     const conf = $('#confetti');
