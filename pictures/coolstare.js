@@ -1,0 +1,71 @@
+// pictures/coolstare.js — hand-drawn: a cool character with hair swept over one eye and a cat on the shoulder
+(() => {
+  const { E, C, H, SP, ST, INK } = DS;
+  const HAIR = '#2d2a4a', HAIR_LIGHT = '#57528a', PINK = '#ff5a8a', TEAL = '#2f9e8f', TEAL_DARK = '#237a6e';
+  LESSONS.push({
+    id: 'coolstare',
+    name: 'Cool stare',
+    bg: '#b9b3e6',
+    steps: [
+      { name: 'Backdrop', color: '#d8d3f5', d: C(300, 290, 250) },
+      { name: 'Backdrop ring', color: '#8f86d9', line: 8, d: C(300, 290, 250) },
+      { name: 'Back hair', color: HAIR, d: 'M160 300C140 90 460 90 440 300L446 480L154 480Z' },
+      { name: 'Neck', color: '#f2c4a6', d: 'M258 400L258 480L342 480L342 400Z' },
+      { name: 'Neck shadow', color: '#dba083', d: 'M258 430L342 430L342 448Q300 470 258 448Z' },
+      // hoodie
+      { name: 'Hoodie', color: TEAL, d: 'M80 600Q100 500 258 470L300 505L342 470Q500 500 520 600Z' },
+      { name: 'Hood', color: TEAL_DARK, d: 'M210 500Q215 430 258 415L258 478ZM390 500Q385 430 342 415L342 478Z' },
+      { name: 'Choker', color: INK, line: 8, d: 'M258 458Q300 474 342 458' },
+      { name: 'Choker charm', color: '#e6e9f5', d: C(300, 478, 7) },
+      { name: 'Hoodie strings', color: '#ffffff', line: 4, d: 'M274 512L270 560M326 512L330 560' },
+      { name: 'String tips', color: PINK, d: C(270, 565, 5) + C(330, 565, 5) },
+      { name: 'Moon print', color: '#ffffff', d: C(236, 562, 16) },
+      { name: 'Moon shadow', color: TEAL, d: C(244, 556, 13) },
+      { name: 'Hoodie pocket', color: TEAL_DARK, line: 5, d: 'M340 562L390 554M340 562L344 600' },
+      { name: 'Hoodie seams', color: TEAL_DARK, line: 5, d: 'M135 540Q120 565 116 600M465 540Q480 565 484 600' },
+      // the face
+      { name: 'Face', color: '#fbd9c2', d: 'M185 250C185 350 230 415 300 440C370 415 415 350 415 250C415 150 185 150 185 250Z' },
+      { name: 'Blush', color: '#ffb0bd', d: E(236, 360, 20, 10) },
+      { name: 'Cheek star sticker', color: '#ffd84a', d: ST(266, 368, 10, 4.5) },
+      { name: 'Nose', color: '#dba083', line: 4, d: 'M300 340L294 358L303 361' },
+      { name: 'Straight mouth', color: '#b8405a', line: 5, d: 'M272 396L328 393' },
+      { name: 'Eye', color: '#ffffff', d: 'M210 300Q240 278 280 294L274 320Q244 328 216 316Z' },
+      { name: 'Violet eye color', color: '#7a5cff', d: E(248, 306, 13, 14) },
+      { name: 'Pupil', color: INK, d: E(248, 306, 5, 8) },
+      { name: 'Eye sparkle', color: '#ffffff', d: C(253, 300, 4) },
+      { name: 'Sharp eyelash', color: INK, line: 6, d: 'M206 302Q240 276 284 294M206 302L193 295' },
+      { name: 'Lower lash', color: '#c98f72', line: 4, d: 'M222 322Q246 330 270 322' },
+      { name: 'Eyebrow', color: HAIR, line: 5, d: 'M214 270Q246 258 280 268' },
+      { name: 'Beauty mark', color: INK, d: C(226, 338, 4) },
+      // the fringe
+      { name: 'Big fringe', color: HAIR, d: 'M240 148C320 135 425 160 436 260C442 330 425 380 398 420C385 370 360 340 330 310C290 270 255 220 240 148Z' },
+      { name: 'Fringe strands', color: HAIR_LIGHT, line: 4, d: 'M285 180Q340 240 378 340M300 165Q345 190 372 235' },
+      { name: 'Pink streak', color: PINK, d: 'M318 152C378 165 412 205 420 270C423 320 414 362 400 400C402 340 394 290 378 250C360 208 342 180 318 152Z' },
+      { name: 'Side bang', color: HAIR, d: 'M240 148C200 160 172 200 170 270C168 300 172 330 180 350C190 300 205 262 232 240C245 215 245 180 240 148Z' },
+      { name: 'Hair shine', color: HAIR_LIGHT, line: 5, d: 'M188 250Q194 205 224 180' },
+      { name: 'Hair clips', color: '#ffd84a', line: 5, d: 'M176 268L198 254M178 284L200 270' },
+      { name: 'Front locks', color: HAIR, d: 'M162 320C150 420 160 500 150 545L172 580L195 550L205 480C200 420 196 370 192 320ZM438 320C450 420 440 500 450 545L428 580L405 550L395 480C400 420 404 370 408 320Z' },
+      { name: 'Lock strands', color: HAIR_LIGHT, line: 4, d: 'M176 380Q170 450 174 510M424 380Q430 450 426 510' },
+      { name: 'Pink tips', color: PINK, d: 'M151 522L199 522L195 550L172 580L150 545ZM449 522L401 522L405 550L428 580L450 545Z' },
+      // the cat on the shoulder
+      { name: 'Cat ears', color: '#6f6c85', d: 'M92 474L88 432L122 456ZM152 474L156 432L122 456Z' },
+      { name: 'Inside the cat ears', color: '#ffb3c6', d: 'M99 462L97 444L112 455ZM145 462L147 444L132 455Z' },
+      { name: 'Cat head', color: '#6f6c85', d: C(122, 492, 34) },
+      { name: 'Cat eyes', color: '#ffd84a', d: E(109, 488, 8, 9) + E(135, 488, 8, 9) },
+      { name: 'Cat pupils', color: INK, d: E(109, 488, 4, 7) + E(135, 488, 4, 7) },
+      { name: 'Cat nose', color: '#ffb3c6', d: C(122, 502, 4) },
+      { name: 'Cat whiskers', color: '#ffffff', line: 4, d: 'M106 503L82 497M106 509L84 514M138 503L162 497M138 509L160 514' },
+      { name: 'Cat collar', color: PINK, line: 5, d: 'M100 518Q122 530 144 518' },
+      { name: 'Cat paws', color: '#8b88a3', d: E(108, 528, 12, 8) + E(136, 528, 12, 8) },
+      // around the picture
+      { name: 'Thought bubble', color: '#ffffff', d: E(490, 105, 72, 46) + 'M452 138L428 184L482 148Z' },
+      { name: 'Bubble dots', color: INK, d: C(464, 105, 7) + C(490, 105, 7) + C(516, 105, 7) },
+      { name: 'Music notes', color: '#5b4fc7', d: E(70, 152, 10, 8, -20) + E(105, 142, 10, 8, -20) },
+      { name: 'Note stems', color: '#5b4fc7', line: 4, d: 'M79 150L79 100L114 92L114 140' },
+      { name: 'Little stars', color: '#ffffff', d: ST(525, 265, 13, 6) + ST(75, 300, 11, 5) + ST(545, 430, 11, 5) },
+      { name: 'Sparkles', color: '#ffd84a', d: SP(150, 70, 14) + SP(560, 340, 12) + SP(60, 400, 11) + SP(380, 50, 10) },
+      { name: 'Hearts', color: PINK, d: H(500, 200, 11) + H(110, 230, 10) },
+      { name: 'Confetti dots', color: '#7a5cff', d: C(230, 55, 6) + C(40, 220, 6) + C(565, 520, 6) + C(555, 205, 5) },
+    ],
+  });
+})();
